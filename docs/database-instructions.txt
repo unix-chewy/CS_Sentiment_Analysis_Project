@@ -1,0 +1,23 @@
+login -> database
+
+Note: ID 1 - Admin, ID 2 - User, insert these
+INSERT INTO roles (id, role_name) VALUES (2, 'User');
+INSERT INTO roles (id, role_name) VALUES (1, 'Admin');
+INSERT INTO users (first_name, last_name, email, password, role_id) VALUES ('Admin', 'NaSaSu', 'Nasasu@gmail.com', MD5('adminpass'), 1); - > Login as Admin
+
+CREATE TABLE roles (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    role_name VARCHAR(50) NOT NULL UNIQUE
+);
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(100) NOT NULL,
+    last_name VARCHAR(100) NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    role_id INT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (role_id) REFERENCES roles(id)
+);
+

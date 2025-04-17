@@ -9,29 +9,31 @@
 <body>
     <div class="container">
         <div class="login-content">
-            <div class="login-options">
-                <p>Log In</p>
-                <button class="btn btn-qr">Login with QR</button>
-            </div>
-
             <form class="login-form" method="POST" action="../controllers/login-register.php">
                 <div class="form-group">
-                    <input type="text" name="email" placeholder="Email" required>
+                    <input type="text" name = "fname" placeholder="First Name" required>
                 </div>
                 <div class="form-group">
-                    <input type="password" name="pass" placeholder="Password" required>
+                    <input type="text" name = "lname" placeholder="Last Name" required>
                 </div>
-                <button type="submit" class="btn btn-submit" name="login_button">LOG IN</button>
+                <div class="form-group">
+                    <input type="email" name = "email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" name = "pass" placeholder="Password" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" name = "confirm_pass" placeholder="Confirm Password" required>
+                </div>
+                <button type="submit" class="btn btn-submit" name="signup_button">SIGN UP</button>
             </form>
-
             <div class="footer-links">
-                <a href="#" class="forgot-password">Forgot Password</a>
                 <div class="or-divider">──────────    OR    ──────────</div>
                 <div class="social-login">
                     <button class="btn-social facebook"><i class="icon-fb"></i>Facebook</button>
                     <button class="btn-social google"><i class="icon-google"></i>Google</button>
                 </div>
-                <p class="signup-link">New to Shopee? <a href="signup.php" id="signup-href">Sign Up</a></p>
+                <p class="signup-link">Have an account? <a href="login.php" id="signup-href">Log in</a></p>
             </div>
         </div>
     </div>
