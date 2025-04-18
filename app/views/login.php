@@ -7,31 +7,49 @@
     <link rel="stylesheet" href="../../public/assets/css/login.css">
 </head>
 <body>
-    <div class="container">
-        <div class="login-content">
-            <div class="login-options">
-                <p>Log In</p>
-                <button class="btn btn-qr">Login with QR</button>
+    <div class="promo-header-links">
+        <a href="#" class="shopee-login">
+        <img src="../../public/assets/images/shopee-header.png" alt="icon" class="shopee-header-image">
+        <span class="shopee-login-text">Log In</span>
+        </a>
+        <a href="#" class="help-link">Need Help?</a>
+    </div>
+
+    <div class="wrapper">
+        <div class="center-background-bar"></div> 
+        <div class="login-page">
+            <!-- Left -->
+            <div class="image-section">
+                <img src="../../public/assets/images/shopee-1.png" alt="Placeholder Image" class="image-left">
             </div>
+            <!-- Right  -->
+            <div class="login-section">
+                <div class="login-content">
+                    <div class="login-options">
+                        <p>Log In</p>
+                        <button class="btn btn-qr">Login with QR</button>
+                    </div>
 
-            <form class="login-form" method="POST" action="../controllers/login-register.php">
-                <div class="form-group">
-                    <input type="text" name="email" placeholder="Email" required>
-                </div>
-                <div class="form-group">
-                    <input type="password" name="pass" placeholder="Password" required>
-                </div>
-                <button type="submit" class="btn btn-submit" name="login_button">LOG IN</button>
-            </form>
+                    <form class="login-form" method="POST" action="../controllers/login-register.php">
+                        <div class="form-group">
+                            <input type="text" name="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" name="pass" placeholder="Password" required>
+                        </div>
+                        <button type="submit" class="btn btn-submit" name="login_button">LOG IN</button>
+                    </form>
 
-            <div class="footer-links">
-                <a href="#" class="forgot-password">Forgot Password</a>
-                <div class="or-divider">──────────    OR    ──────────</div>
-                <div class="social-login">
-                    <button class="btn-social facebook"><i class="icon-fb"></i>Facebook</button>
-                    <button class="btn-social google"><i class="icon-google"></i>Google</button>
+                    <div class="footer-links">
+                        <a href="#" class="forgot-password">Forgot Password</a>
+                        <div class="or-divider">──────────    OR    ──────────</div>
+                        <div class="social-login">
+                            <button class="btn-social facebook"><i class="icon-fb"></i>Facebook</button>
+                            <button class="btn-social google"><i class="icon-google"></i>Google</button>
+                        </div>
+                        <p class="signup-link">New to Shopee? <a href="signup.php" id="signup-href">Sign Up</a></p>
+                    </div>
                 </div>
-                <p class="signup-link">New to Shopee? <a href="signup.php" id="signup-href">Sign Up</a></p>
             </div>
         </div>
     </div>
