@@ -4,16 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopee Login</title>
-    <link rel="stylesheet" href="../../public/assets/css/login.css">
+    <link rel="stylesheet" href="../../public/assets/css/login-register.css">
 </head>
 <body>
-    <div class="promo-header-links">
-        <a href="#" class="shopee-login">
-        <img src="../../public/assets/images/shopee-header.png" alt="icon" class="shopee-header-image">
-        <span class="shopee-login-text">Log In</span>
-        </a>
-        <a href="#" class="help-link">Need Help?</a>
-    </div>
+
+    <header class="promo-header">
+        <div class="promo-header-links">
+            <a href="#" class="shopee-login">
+                <img src="../../public/assets/images/shopee-header.png" alt="icon" class="shopee-header-image">
+                <span class="shopee-login-text">Log In</span>
+            </a>
+            <a href="#" class="help-link">Need Help?</a>
+        </div>
+    </header>
+
 
     <div class="wrapper">
         <div class="center-background-bar"></div> 
