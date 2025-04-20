@@ -55,7 +55,16 @@
   .nav-link:hover {
     opacity: 0.8;
   }
+
+  .social-media-icon.facebook {
+    background-image: url('../images/facebook-icon.png');
+  }
   
+  .social-media-icon.instagram {
+    background-image: url('../images/instagram-icon.png');
+  }
+  
+
   .social-media-label {
     font-size: 12px;
     margin-right: 5px;
@@ -101,50 +110,52 @@
   }
   
   .logo {
-    font-size: 28px;
-    font-weight: bold;
-    color: white;
+    width: 150px; /* Set the width of the logo */
+    height: 28px; /* Set the height of the logo */
+    background-image: url('../images/shopee-header-2.png');
+    background-size: contain; /* Ensures the image is scaled to fit the element while maintaining aspect ratio */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center; /* Centers the image within the element */
     cursor: pointer;
-    white-space: nowrap;
-    background-image: url('../images/shopee-header.png');
-  }
+}
+
   
   .search-bar {
     flex-grow: 1;
     max-width: 840px;
   }
   
-  .search-form {
+  .search-input-container {
     display: flex;
     height: 40px;
     border-radius: 2px;
     overflow: hidden;
-    border: 1px solid #f53d2d;
-  }
-  
-  .search-input {
+    border: 1px solid #FA593E;
+}
+
+.search-input {
     flex-grow: 1;
     padding: 0 15px;
     border: none;
     outline: none;
     font-size: 14px;
-  }
-  
-  .search-button {
-    width: 60px;
-    background-color: #f53d2d;
-    color: white;
+}
+
+.search-button {
+    width: 40px;
+    background-image: url('../images/search-icon.png'); 
+    background-size: 40px; 
+    background-repeat: no-repeat;
+    background-position: center;
     border: none;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .search-button:hover {
-    background-color: #e53935;
-  }
-  
+    background-color: #f53d2d; 
+}
+
+.search-button:hover {
+  filter: brightness(1.2); 
+}
+
   .cart-wrapper {
     width: 120px;
     display: flex;
@@ -159,10 +170,37 @@
     display: block;
     width: 40px;
     height: 40px;
-    background-image: url('../images/shopee-1.png'); /* for testing */
+    background-image: url('../images/shopping-cart.png'); 
     background-size: 24px;
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
   }
+
+  .nav-item.notifications::before,
+  .nav-item.help::before,
+  .nav-item.language::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    vertical-align: middle;
+  }
+
+  .nav-item.notifications::before {
+    background-image: url('../images/notification-icon.png');
+  }
+
+  .nav-item.help::before {
+    background-image: url('../images/help-icon.png');
+  }
+
+  .nav-item.language::before {
+    background-image: url('../images/language-icon.png');
+  }
+
   

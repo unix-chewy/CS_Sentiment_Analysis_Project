@@ -18,8 +18,8 @@
           <a class="nav-link" href="#">Download</a>
           <span class="social-media-label">Follow us on</span>
           <div class="social-media-links">
-            <a class="social-media-icon" href="#" title="Facebook"></a>
-            <a class="social-media-icon" href="#" title="Instagram"></a>
+            <a class="social-media-icon facebook" href="#" title="Facebook"></a>
+            <a class="social-media-icon instagram" href="#" title="Instagram"></a>
           </div>
         </div>
 
@@ -27,13 +27,13 @@
 
         <!-- Right section links -->
         <ul class="right-section">
-          <li class="nav-item">
+          <li class="nav-item notifications">
             <a href="#" class="nav-link">Notifications</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item help">
             <a href="#" class="nav-link">Help</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item language">
             <a href="#" class="nav-link">English</a>
           </li>
         </ul>
@@ -43,14 +43,15 @@
     <!-- Logo + Search -->
     <div class="logo-search-wrapper">
       <div class="logo-search-container">
-        <div class="logo">Shopee</div>
+        <div class="logo"></div>
 
         <div class="search-bar">
-          <form class="search-form">
+          <div class="search-input-container">
             <input type="text" class="search-input" placeholder="Search...">
-            <button class="search-button">Search</button>
-          </form>
+            <button class="search-button"></button>
+          </div>
         </div>
+
 
         <div class="cart-wrapper">
           <div class="cart-icon-container">
