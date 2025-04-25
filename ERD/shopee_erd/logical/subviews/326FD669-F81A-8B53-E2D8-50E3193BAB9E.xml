@@ -14,9 +14,20 @@
 <display>false</display>
 <notation>1</notation>
 <objectViews>
+<OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="03A496B4-1C16-A870-D306-248590689FB6" otype="Entity" vid="A5BA86B8-363E-020C-B352-6B72F9D3C1C1">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="964" y="42" width="170" height="110"/>
+</OView>
+<OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="1C74CBB7-4829-FC3A-3EEB-63C562C9D035" otype="Entity" vid="311D307A-CF9B-B9F5-B1BC-F0CDF951C88E">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="963" y="505" width="170" height="110"/>
+</OView>
 <OView class="oracle.dbtools.crest.swingui.TVNote" oid="2369C00B-9D8C-9EAE-0026-B3F3B9CEB3C7" otype="Note" vid="BF41FCAC-27BB-6D4B-D2A1-8B00EB4F6631">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
-<bounds x="49" y="185" width="323" height="169"/>
+<bounds x="15" y="185" width="357" height="174"/>
+<useDefaultColor>false</useDefaultColor>
+<backgroundColor>-52</backgroundColor>
+<foregroundColor>-16777216</foregroundColor>
 <comment>2. Review Submission (CRUD Operations)
 - Users can create, update, and delete their own reviews.
 - Each review must have:
@@ -28,9 +39,48 @@
 - Use AJAX for submitting reviews without refreshing the page.
 </comment>
 </OView>
+<OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="272ECDD7-46E7-B8D7-3B9A-3B6A602BA72A" otype="Entity" vid="32407634-907D-F82E-A431-0FE40C6D5E04">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="701" y="36" width="170" height="110"/>
+</OView>
+<OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="355D32AE-1B8C-01E4-0A4D-2D97DA1D4B02" otype="Entity" vid="E4C237E7-DC48-81B1-964C-A3E22B8895B9">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="699" y="184" width="170" height="110"/>
+</OView>
+<OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="5A47C1DC-5A49-BFDF-9651-EE3189161567" otype="Entity" vid="2123C150-1F92-9319-F8A6-E6E171188CD0">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="698" y="494" width="170" height="110"/>
+</OView>
+<OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="697B54D6-5847-3917-6399-0D92094F889B" otype="Entity" vid="41E8AA04-2E6D-67AF-1BE1-0866045CFDCF">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="696" y="342" width="170" height="110"/>
+</OView>
+<OView class="oracle.dbtools.crest.swingui.TVNote" oid="6AFF9F1B-940D-7BC9-F8A9-4D6A1F43D600" otype="Note" vid="97BCE425-9B79-1D69-2F40-F44532F79F21">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="924" y="204" width="95" height="40"/>
+<comment>Double click to 
+edit the text.</comment>
+</OView>
+<OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="78DD396E-FA62-530D-90B9-825F305D7823" otype="Entity" vid="6A817311-6F76-BDB0-1307-65840BBE1AC9">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="963" y="341" width="170" height="110"/>
+</OView>
+<OView class="oracle.dbtools.crest.swingui.TVNote" oid="8399361F-22F0-D89A-68B3-46654E8EB5F1" otype="Note" vid="751C5F41-CE01-36AD-150D-E8FFC59AC1F8">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="871" y="710" width="95" height="40"/>
+<comment>Double click to 
+edit the text.</comment>
+</OView>
+<OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="904ACA4B-511D-8118-E8EA-EFA0B690724D" otype="Entity" vid="59564DDE-21DA-72AF-1D8A-CC1879C6CB4A">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="960" y="190" width="170" height="110"/>
+</OView>
 <OView class="oracle.dbtools.crest.swingui.TVNote" oid="A0E0F503-0175-341E-B433-823B9E7129E1" otype="Note" vid="7CDB4182-7591-2C2D-3D02-8ADBC191E520">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
-<bounds x="49" y="621" width="327" height="308"/>
+<bounds x="10" y="691" width="362" height="404"/>
+<useDefaultColor>false</useDefaultColor>
+<backgroundColor>-52</backgroundColor>
+<foregroundColor>-16777216</foregroundColor>
 <comment>4. Dashboard with Sentiment Reports
 - An Admin Panel to:
      - View all user reviews.
@@ -52,7 +102,7 @@
 </OView>
 <OView class="oracle.dbtools.crest.swingui.TVNote" oid="B080B3C2-50AD-8630-79BD-A7C05A66CB7B" otype="Note" vid="CCEF1061-CBA4-41F2-32CF-ED2CCE2C5061">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
-<bounds x="48" y="0" width="322" height="171"/>
+<bounds x="18" y="0" width="352" height="171"/>
 <useDefaultColor>false</useDefaultColor>
 <backgroundColor>-52</backgroundColor>
 <foregroundColor>-16777216</foregroundColor>
@@ -68,9 +118,29 @@
 - User can forgot password/change password.
 - Only logged-in users can submit reviews.</comment>
 </OView>
+<OView class="oracle.dbtools.crest.swingui.TVNote" oid="C6A0B66F-E949-CDFC-86F6-CC19B1D22306" otype="Note" vid="7DDA65E6-99D1-44BD-3A97-6A2F6F46B03F">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="387" y="8" width="250" height="184"/>
+<useDefaultColor>false</useDefaultColor>
+<backgroundColor>-3342388</backgroundColor>
+<foregroundColor>-16777216</foregroundColor>
+<comment>Expected Database Tables:
+
+-categories 
+-product
+-users
+-roles
+-product_review_comments
+-product_votes
+-sentiments
+-activity_logs</comment>
+</OView>
 <OView class="oracle.dbtools.crest.swingui.TVNote" oid="D4E38314-83ED-FE03-E5C6-ABB81E8A6C6A" otype="Note" vid="2E671725-D833-53F5-1DC5-BFD1F3F2EC98">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
-<bounds x="49" y="367" width="325" height="241"/>
+<bounds x="14" y="367" width="360" height="308"/>
+<useDefaultColor>false</useDefaultColor>
+<backgroundColor>-52</backgroundColor>
+<foregroundColor>-16777216</foregroundColor>
 <comment>3. Sentiment Analysis (Lexicon-Based)
 - The system must use a text file lexicon (provided) to 
    determine sentiment.
@@ -88,6 +158,26 @@ Percentage= (Total Words Checked  / Count of Sentiment​) × 100
 
 - Save the sentiment result in the database.
 - The lexicon file should be editable so new words can be added.
+</comment>
+</OView>
+<OView class="oracle.dbtools.crest.swingui.TVNote" oid="DF7DE65F-99CB-68DD-3535-6CE8DA54726E" otype="Note" vid="D837DFC2-AD3F-8363-59DB-921AFB554153">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="1870" y="185" width="120" height="54"/>
+<comment>Double click to 
+edit the text.</comment>
+</OView>
+<OView class="oracle.dbtools.crest.swingui.TVNote" oid="F169E2E4-BD92-C95C-925B-E6FEEC5DEC8F" otype="Note" vid="F96E5C81-5E7C-5EE2-7BC3-477662E7EA8B">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="388" y="228" width="275" height="761"/>
+<comment>BUSINESS RULES
+
+USERS
+
+
+
+ROLES
+
+
 </comment>
 </OView>
 </objectViews>
