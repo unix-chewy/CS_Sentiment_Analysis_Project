@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="shopee_erd" id="BFE270C9-5A04-B82C-FAF1-535806380F1E" version="3.5">
+<createdBy>kyle</createdBy>
+<createdTime>2025-04-25 08:29:02 UTC</createdTime>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>BFE270C9-5A04-B82C-FAF1-535806380F1E</designId>
+</OSDM_Design>

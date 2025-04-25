@@ -1,0 +1,94 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Diagram class="oracle.dbtools.crest.swingui.logical.DPVLogical" name="Logical" id="326FD669-F81A-8B53-E2D8-50E3193BAB9E">
+<createdBy>kyle</createdBy>
+<modifiedBy>kyle</modifiedBy>
+<createdTime>2025-04-25 08:33:12 UTC</createdTime>
+<autoRoute>false</autoRoute>
+<boxInbox>true</boxInbox>
+<showLegend>false</showLegend>
+<showLabels>false</showLabels>
+<showRelAttributes>false</showRelAttributes>
+<gridEnabled>false</gridEnabled>
+<showGrid>false</showGrid>
+<diagramColor>-1</diagramColor>
+<display>false</display>
+<notation>1</notation>
+<objectViews>
+<OView class="oracle.dbtools.crest.swingui.TVNote" oid="2369C00B-9D8C-9EAE-0026-B3F3B9CEB3C7" otype="Note" vid="BF41FCAC-27BB-6D4B-D2A1-8B00EB4F6631">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="49" y="185" width="323" height="169"/>
+<comment>2. Review Submission (CRUD Operations)
+- Users can create, update, and delete their own reviews.
+- Each review must have:
+     - Product Name
+     - Review Text
+- Users can rate products (1-5 stars) alongside reviews
+- Automatic Sentiment Analysis Result (Positive, Negative, Neutral)
+- Reviews will be stored in the database with their calculated sentiment.
+- Use AJAX for submitting reviews without refreshing the page.
+</comment>
+</OView>
+<OView class="oracle.dbtools.crest.swingui.TVNote" oid="A0E0F503-0175-341E-B433-823B9E7129E1" otype="Note" vid="7CDB4182-7591-2C2D-3D02-8ADBC191E520">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="49" y="621" width="327" height="308"/>
+<comment>4. Dashboard with Sentiment Reports
+- An Admin Panel to:
+     - View all user reviews.
+     - Admin can add products for the user to see. (Product Name, 
+        Description, Image, etc)
+     - Admin can also add users and administrator (Show also when 
+        is there last login)
+     - See the overall sentiment distribution (charts using Chart.js or any          other javascript library for charts).
+     - Filter reviews by sentiment type (Positive/Negative/Neutral) (You 
+        can use dataTables).
+     - Product Management – Admin can add/edit/delete products for 
+        review.
+     - Search &amp; Filter – Users can search for specific reviews by product 
+        name.
+     - Export Data – Admin can export sentiment data as CSV.
+
+- A Graphical Report must be displayed to show trends.
+</comment>
+</OView>
+<OView class="oracle.dbtools.crest.swingui.TVNote" oid="B080B3C2-50AD-8630-79BD-A7C05A66CB7B" otype="Note" vid="CCEF1061-CBA4-41F2-32CF-ED2CCE2C5061">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="48" y="0" width="322" height="171"/>
+<useDefaultColor>false</useDefaultColor>
+<backgroundColor>-52</backgroundColor>
+<foregroundColor>-16777216</foregroundColor>
+<comment>Product Requirements:
+1. User Authentication (Login &amp; Registration)
+- Users must register with:
+     - First Name
+     - Last Name 
+     - Email (Unique)
+     - Password (With confirmation &amp; hashing)
+     - Confirm Password
+- Users must be able to log in and log out securely.
+- User can forgot password/change password.
+- Only logged-in users can submit reviews.</comment>
+</OView>
+<OView class="oracle.dbtools.crest.swingui.TVNote" oid="D4E38314-83ED-FE03-E5C6-ABB81E8A6C6A" otype="Note" vid="2E671725-D833-53F5-1DC5-BFD1F3F2EC98">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="49" y="367" width="325" height="241"/>
+<comment>3. Sentiment Analysis (Lexicon-Based)
+- The system must use a text file lexicon (provided) to 
+   determine sentiment.
+
+- Steps for sentiment analysis:
+     - Read the lexicon file (list of positive &amp; negative words).
+     - Tokenize (split) the review into words.
+     - Count how many positive and negative words are in the review.
+     - If positive words &gt; negative words → Positive
+        If negative words &gt; positive words → Negative
+        If equal → Neutral
+
+Formula:
+Percentage= (Total Words Checked  / Count of Sentiment​) × 100
+
+- Save the sentiment result in the database.
+- The lexicon file should be editable so new words can be added.
+</comment>
+</OView>
+</objectViews>
+</Diagram>
