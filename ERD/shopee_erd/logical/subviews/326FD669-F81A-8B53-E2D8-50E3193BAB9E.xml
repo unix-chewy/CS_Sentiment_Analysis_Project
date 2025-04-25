@@ -55,21 +55,9 @@
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
 <bounds x="696" y="342" width="170" height="110"/>
 </OView>
-<OView class="oracle.dbtools.crest.swingui.TVNote" oid="6AFF9F1B-940D-7BC9-F8A9-4D6A1F43D600" otype="Note" vid="97BCE425-9B79-1D69-2F40-F44532F79F21">
-<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
-<bounds x="924" y="204" width="95" height="40"/>
-<comment>Double click to 
-edit the text.</comment>
-</OView>
 <OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="78DD396E-FA62-530D-90B9-825F305D7823" otype="Entity" vid="6A817311-6F76-BDB0-1307-65840BBE1AC9">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
 <bounds x="963" y="341" width="170" height="110"/>
-</OView>
-<OView class="oracle.dbtools.crest.swingui.TVNote" oid="8399361F-22F0-D89A-68B3-46654E8EB5F1" otype="Note" vid="751C5F41-CE01-36AD-150D-E8FFC59AC1F8">
-<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
-<bounds x="871" y="710" width="95" height="40"/>
-<comment>Double click to 
-edit the text.</comment>
 </OView>
 <OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="904ACA4B-511D-8118-E8EA-EFA0B690724D" otype="Entity" vid="59564DDE-21DA-72AF-1D8A-CC1879C6CB4A">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
@@ -172,10 +160,37 @@ edit the text.</comment>
 <comment>BUSINESS RULES
 
 USERS
+- E-mail must be unique
+- Password must be encrypted
+- Users can submit one or more reviews
+- admin add users and admin
 
 
+activity_logs
+- 
 
 ROLES
+
+product_review_comments
+- Only logged-in users can submit reviews.
+- revews can be updated or deleted.
+- must contain product name and review text
+
+
+product_votes
+- users can rate products (1-5) stars alongside reviews
+
+sentiments
+- must result in positive, negative, or neutral
+- must contain calculated sentiment score from formula given
+- positive word count
+- negative word count
+
+products
+- can be added, edited, or deleted by admin
+- contains name, description, image, etc...
+
+
 
 
 </comment>
