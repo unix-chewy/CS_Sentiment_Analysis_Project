@@ -1,5 +1,3 @@
-login -> database
-
 CREATE TABLE roles (
     id INT AUTO_INCREMENT PRIMARY KEY,
     role_name VARCHAR(50) NOT NULL UNIQUE
@@ -15,6 +13,49 @@ CREATE TABLE users (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (role_id) REFERENCES roles(id)
 );
+
+CREATE TABLE products (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    photo LONGBLOB NOT NULL,
+    description VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE product_votes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    product_id INT NOT NULL,
+    user_id INT NOT NULL,
+    votes TINYINT CHECK (vote BETWEEN 1 AND 5),
+    FOREIGN KEY (product_id) REFERENCES products(id),
+    FOREIGN KEY (user_id) REFERENCES users(id)
+);
+
+CREATE TABLE product_review_comments (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    product_id INT NOT NULL,
+    review_text TEXT NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES users(id),
+    FOREIGN KEY (product_id) REFERENCES products(id)
+);
+
+CREATE TABLE sentiments (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    review_id INT NOT NULL,
+    product_id INT NOT NULL,
+    sentiment_label VARCHAR(100) NOT NULL,
+    FOREIGN KEY (review_id) REFERENCES product_review_comment(id),
+    FOREIGN KEY (product_id) REFERENCES products(id)
+);
+
+CREATE TABLE activity_logs (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    details VARCHAR(255) NOT NULL,
+    last_login DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id)
+);
+
 INSERT INTO roles (id, role_name) VALUES (2, 'User');
 INSERT INTO roles (id, role_name) VALUES (1, 'Admin');
 INSERT INTO users (first_name, last_name, email, password, role_id) VALUES ('Admin', 'NaSaSu', 'Nasasu@gmail.com', MD5('adminpass'), 1);
