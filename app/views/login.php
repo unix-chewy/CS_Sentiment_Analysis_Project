@@ -11,7 +11,7 @@
     <header class="promo-header">
         <div class="promo-header-links">
             <a href="#" class="shopee-login">
-                <img src="../../public/assets/images/shopee-header.png" alt="icon" class="shopee-header-image">
+                <img src="../../public/assets/images/splash-arts/shopee-header.png" alt="icon" class="shopee-header-image">
                 <span class="shopee-login-text">Log In</span>
             </a>
             <a href="#" class="help-link">Need Help?</a>

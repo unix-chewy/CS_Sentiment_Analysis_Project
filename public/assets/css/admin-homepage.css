@@ -17,6 +17,7 @@ header.sticky-top {
   position: sticky;
   top: 0;
   z-index: 1000;
+  color: white;
 }
 
 /* Container inside header */
@@ -32,64 +33,31 @@ nav.d-flex {
   align-items: center;
 }
 
-/* Left section */
-nav .d-flex.align-items-center.gap-3 .nav-link {
-  color: #fff;
+.nav-link, 
+.text-muted.small,
+.d-flex.gap-2 a i {
+  color: white !important;
   font-size: 12px;
   font-weight: 300;
   text-decoration: none;
   white-space: nowrap;
 }
 
-nav .d-flex.align-items-center.gap-3 .nav-link:hover {
+.nav-link:hover,
+.d-flex.gap-2 a i:hover {
   opacity: 0.8;
-}
-
-.text-muted.small {
-  font-size: 12px;
-  color: #ffff !important;
 }
 
 /* Social media icons */
 .d-flex.gap-2 a i {
   font-size: 16px;
-  color: #fff;
 }
 
-.d-flex.gap-2 a i:hover {
-  opacity: 0.8;
-}
-
-/* Right section */
-ul.nav .nav-link {
-  color: #fff;
-  font-size: 12px;
-  font-weight: 300;
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-ul.nav .nav-link:hover {
-  opacity: 0.8;
-}
-
-/* Logo + search */
-.logo {
-  width: 150px;
-  height: 28px;
-  background-image: url('../images/splash-arts/shopee-header-2.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  cursor: pointer;
-}
-
-/* Search form */
+/* Search area */
 form.d-flex.flex-grow-1 {
   max-width: 840px;
-  display: flex;
-  align-items: center;
   width: 100%;
+  align-items: center;
 }
 
 form.d-flex.flex-grow-1 .form-control {
@@ -115,15 +83,22 @@ form.d-flex.flex-grow-1 .btn:hover {
   filter: brightness(1.2);
 }
 
+/* Logo */
+.logo {
+  width: 150px;
+  height: 28px;
+  background-image: url('../images/splash-arts/shopee-header-2.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
 /* Cart */
 .cart-wrapper {
   width: 120px;
   display: flex;
   justify-content: flex-end;
-}
-
-.cart-icon-container {
-  position: relative;
 }
 
 .cart-icon {
@@ -134,7 +109,75 @@ form.d-flex.flex-grow-1 .btn:hover {
   background-size: 24px;
   background-repeat: no-repeat;
   background-position: center;
-  position: relative;
 }
 
+/* Sidebar Styles */
+.sidebar {
+  background-color: #f8f9fa;
+  height: 100vh;
+  position: fixed;
+  width: 250px;
+  color: black;
+}
 
+.sidebar-header {
+  padding: 20px;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.sidebar-menu {
+  padding: 10px 0;
+}
+
+/* Sidebar links and icons */
+.sidebar .nav-link,
+.sidebar .nav-link i,
+.sidebar .bi-chevron-down,
+.sidebar .nav-link.collapsed,
+.sidebar .nav.flex-column.ps-4 .nav-link {
+  color: black !important;
+}
+
+.sidebar .nav-link {
+  padding: 10px 20px;
+}
+
+.sidebar .nav-link i {
+  margin-right: 10px;
+}
+
+.sidebar .nav-link:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Main Content  */
+.main-content {
+  margin-left: 250px;
+  padding: 20px;
+}
+
+.admin-card {
+  background-color: white;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.admin-profile {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.admin-profile:last-child {
+  border-bottom: none;
+}
+
+.admin-profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 15px;
+}

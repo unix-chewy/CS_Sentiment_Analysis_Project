@@ -6,8 +6,8 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-  <link rel="stylesheet" href="../../../public/assets/css/user-homepage.css">
-  <title>User Homepage </title>
+  <link rel="stylesheet" href="../../../public/assets/css/admin-homepage.css">
+  <title>Admin Homepage </title>
 </head>
 <body>
 
@@ -27,7 +27,6 @@
         </div>
       </div>
       
-
       <!-- Right section -->
       <ul class="nav">
         <li class="nav-item">
@@ -71,6 +70,124 @@
   </div>
 </header>
 
+<div class="sidebar">
+        <div class="sidebar-header">
+          <h4>Admin Placeholder</h4> <!-- insert php logic here for admin name -->
+        </div>
+        <div class="sidebar-menu">
+            <ul class="nav flex-column">
+                <!-- Product Management -->
+                <li class="nav-item">
+                    <a class="nav-link collapsed" data-bs-toggle="collapse" href="#product-management-collapse">
+                        <i class="bi bi-box-seam"></i> Product Management <i class="bi bi-chevron-down ms-auto"></i>
+                    </a>
+                    <div class="collapse" id="product-management-collapse">
+                        <ul class="nav flex-column ps-4">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                  <i class="bi bi-plus-lg"></i></i> Add Item
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                  <i class="bi bi-pencil-square"></i> Edit Item
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                  <i class="bi bi-trash"></i> Remove Item
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <i class="bi-eye"></i> View Item
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <!-- Account Management -->
+                <li class="nav-item">
+                    <a class="nav-link collapsed" data-bs-toggle="collapse" href="#account-management-collapse">
+                        <i class="bi bi-person-gear"></i> Account Management <i class="bi bi-chevron-down ms-auto"></i>
+                    </a>
+                    <div class="collapse" id="account-management-collapse">
+                        <ul class="nav flex-column ps-4">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <i class="bi bi-person-add"></i> Add User
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <i class="bi bi-person-fill-add"></i> Add Administrator
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
 
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="bi bi-bar-chart"></i> View Analytics
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="bi bi-download"></i> Export CSV
+                    </a>
+                </li>
+            </ul>
+        </div>
+      <div class="sidebar-header">
+      </div>
+      <ul class="nav flex-column">
+                <!-- Account  -->
+                <li class="nav-item">
+                    <a class="nav-link collapsed" data-bs-toggle="collapse" href="#account-collapse">
+                        <i class="bi bi-person-circle"></i> Account <i class="bi bi-chevron-down ms-auto"></i>
+                    </a>
+                    <div class="collapse" id="account-collapse">
+                        <ul class="nav flex-column ps-4">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <i class="bi bi-person-gear"></i> Change Password
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <i class="bi bi-box-arrow-right"></i> Sign Out
+                                </a>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <h1 class="mb-4">Welcome Admin Placeholder</h1>
+        
+        <div class="admin-card">
+            <div class="admin-profile">
+                <img src="placeholder" alt="Admin 2">
+                <div>
+                    <h6 class="mb-0">Admin Placeholder</h6>
+                    <small class="text-muted">Last logged</small>
+                </div>
+            </div>
+            <div class="admin-profile">
+                <img src="placeholder" alt="Admin 3">
+                <div>
+                    <h6 class="mb-0">Admin Placeholder</h6>
+                    <small class="text-muted">Last logged</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
