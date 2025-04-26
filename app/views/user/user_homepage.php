@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="../../../public/assets/css/user-homepage.css">
   <title>User Homepage </title>
 </head>
@@ -78,7 +77,7 @@
       <img src="placeholder" alt="Product Name">
     </div>
     <div class="product-info">
-      <div class="product-title">Product Name Here</div>
+      <div class="product-title"> <a href = "review(test).php"> Product Name Here </a> </div>
       <div class="product-price">Price Here</div>
       <div class="product-sold">Sold Items</div>
     </div>

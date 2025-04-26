@@ -61,3 +61,4 @@ CREATE TABLE activity_logs (
 INSERT INTO roles (id, role_name) VALUES (2, 'User');
 INSERT INTO roles (id, role_name) VALUES (1, 'Admin');
 INSERT INTO users (first_name, last_name, email, password, role_id) VALUES ('Admin', 'NaSaSu', 'Nasasu@gmail.com', MD5('adminpass'), 1);
+INSERT INTO products (name, description) VALUES ('TestProduct', 'this is just a test product for checking reviews lol');
