@@ -8,6 +8,6 @@
     <title>Shopee</title>
 </head>
 <body>
-    <img src="assets/images/shopee-splash.png" alt="Splash Screen" id = "splash_screen">
+    <img src="assets/images/splash-arts/shopee-splash.png" alt="Splash Screen" id = "splash_screen">
 </body>
 </html>

@@ -23,7 +23,7 @@
         <div class="login-page">
             <!-- Left -->
             <div class="image-section">
-                <img src="../../public/assets/images/shopee-1.png" alt="Placeholder Image" class="image-left">
+                <img src="../../public/assets/images/splash-arts/shopee-1.png" alt="Placeholder Image" class="image-left">
             </div>
             <!-- Right  -->
             <div class="login-section">
