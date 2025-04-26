@@ -1,3 +1,5 @@
+shopee_db -> database
+
 CREATE TABLE roles (
     id INT AUTO_INCREMENT PRIMARY KEY,
     role_name VARCHAR(50) NOT NULL UNIQUE
@@ -25,7 +27,7 @@ CREATE TABLE product_votes (
     id INT AUTO_INCREMENT PRIMARY KEY,
     product_id INT NOT NULL,
     user_id INT NOT NULL,
-    votes TINYINT CHECK (vote BETWEEN 1 AND 5),
+    votes TINYINT CHECK (votes BETWEEN 1 AND 5),
     FOREIGN KEY (product_id) REFERENCES products(id),
     FOREIGN KEY (user_id) REFERENCES users(id)
 );
@@ -44,7 +46,7 @@ CREATE TABLE sentiments (
     review_id INT NOT NULL,
     product_id INT NOT NULL,
     sentiment_label VARCHAR(100) NOT NULL,
-    FOREIGN KEY (review_id) REFERENCES product_review_comment(id),
+    FOREIGN KEY (review_id) REFERENCES product_review_comments(id),
     FOREIGN KEY (product_id) REFERENCES products(id)
 );
 

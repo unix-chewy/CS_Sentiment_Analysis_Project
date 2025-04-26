@@ -2,7 +2,7 @@
 $host = "localhost";
 $user = "root";
 $pass = ""; 
-$db = "Shopee_db";
+$db = "shopee_db";
 
 $conn = new mysqli($host, $user, $pass, $db);
 
