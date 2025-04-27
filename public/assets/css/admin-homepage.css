@@ -129,7 +129,7 @@ form.d-flex.flex-grow-1 .btn:hover {
   padding: 10px 0;
 }
 
-/* Sidebar links and icons */
+/* Sidebar */
 .sidebar .nav-link,
 .sidebar .nav-link i,
 .sidebar .bi-chevron-down,
@@ -180,4 +180,43 @@ form.d-flex.flex-grow-1 .btn:hover {
   height: 40px;
   border-radius: 50%;
   margin-right: 15px;
+}
+
+/* Modal styles */
+#add-item-modal .modal-content {
+  background: white;
+  border: none;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+#add-item-modal .modal-header {
+  border-bottom: none;
+  padding: 1.5rem;
+}
+
+#add-item-modal .modal-footer {
+  border-top: none;
+  padding: 1rem 1.5rem;
+}
+
+#add-item-modal .btn-primary {
+  background-color: #ff6633;
+  border-color: #ff6633;
+}
+
+#add-item-modal .btn-primary:hover {
+  background-color: #f53d2d;
+  border-color: #f53d2d;
+}
+
+#add-item-modal .btn-secondary {
+  background-color: transparent;
+  border-color: #ccc;
+  color: #666;
+}
+
+#add-item-modal .form-control {
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  padding: 10px 15px;
 }
