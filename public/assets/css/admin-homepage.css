@@ -189,6 +189,7 @@ form.d-flex.flex-grow-1 .btn:hover {
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
+
 #add-item-modal .modal-header {
   border-bottom: none;
   padding: 1.5rem;
@@ -219,4 +220,70 @@ form.d-flex.flex-grow-1 .btn:hover {
   border-radius: 4px;
   border: 1px solid #ddd;
   padding: 10px 15px;
+}
+
+/* Edit Modal Styles - Matching Shopee Color Scheme */
+#edit-item-modal .modal-content {
+  background: white;
+  border: none;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+#edit-item-modal .modal-header {
+  background-color: #ff6633;
+  color: white;
+  border-bottom: none;
+  padding: 1.5rem;
+}
+
+#edit-item-modal .modal-footer {
+  border-top: none;
+  padding: 1rem 1.5rem;
+}
+
+#edit-item-modal .btn-primary {
+  background-color: #ff6633;
+  border-color: #ff6633;
+}
+
+#edit-item-modal .btn-primary:hover {
+  background-color: #f53d2d;
+  border-color: #f53d2d;
+}
+
+#edit-item-modal .btn-secondary {
+  background-color: transparent;
+  border-color: #ccc;
+  color: #666;
+}
+
+#edit-item-modal .form-control {
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  padding: 10px 15px;
+}
+
+/* Search button specific styling */
+#edit-item-modal .input-group .btn-primary {
+  background-color: #ff6633;
+  border-color: #ff6633;
+}
+
+#edit-item-modal .input-group .btn-primary:hover {
+  background-color: #f53d2d;
+  border-color: #f53d2d;
+}
+
+/* Table styling to match Shopee's aesthetic */
+#edit-item-modal .table {
+  border-color: #eee;
+}
+
+#edit-item-modal .table thead th {
+  border-bottom: 2px solid #ff6633;
+  color: #333;
+}
+
+#edit-item-modal .table-hover tbody tr:hover {
+  background-color: rgba(255, 102, 51, 0.05);
 }

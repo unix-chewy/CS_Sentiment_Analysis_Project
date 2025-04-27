@@ -82,7 +82,7 @@
                            </a>
                         </li>
                         <li class="nav-item">
-                           <a class="nav-link" href="#">
+                           <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#edit-item-modal">
                            <i class="bi bi-pencil-square"></i> Edit Item
                            </a>
                         </li>
@@ -156,6 +156,7 @@
          </ul>
       </div>
       </div>
+      <!-- Main Content  -->
       <div class="main-content">
          <h1 class="mb-4">Welcome Admin Placeholder</h1>
          <div class="admin-card">
@@ -178,7 +179,8 @@
       <div class="main-content">
          <h1 class="mb-4">Statistics Page</h1>
       </div>
-      <!-- The Modal -->
+      <!-- The Modals -->
+      <!-- Add Item -->
       <div class="modal fade" id="add-item-modal" tabindex="-1" aria-labelledby="add-item-modal-label" aria-hidden="true">
          <div class="modal-dialog">
             <div class="modal-content">
@@ -205,6 +207,56 @@
                   <div class="modal-footer">
                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
                      <button type="submit" class="btn btn-primary">Add Item</button>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+      <!-- Edit Item -->
+      <div class="modal fade" id="edit-item-modal" tabindex="-1" aria-labelledby="edit-item-modal-label" aria-hidden="true">
+         <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+               <form action="#" method="post">
+                  <div class="modal-header">
+                     <h5 class="modal-title" id="edit-item-modal-label">Search Products</h5>
+                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                     <!-- Search Bar -->
+                     <div class="mb-4">
+                        <div class="input-group">
+                           <input type="text" class="form-control" id="product-search" name="product-search" 
+                              placeholder="Search products..." aria-label="Search products">
+                           <button class="btn btn-primary" type="button">
+                           <i class="bi bi-search"></i> Search
+                           </button>
+                        </div>
+                     </div>
+                     <!-- Product List -->
+                     <div class="product-list-container" style="max-height: 400px; overflow-y: auto;">
+                        <table class="table table-hover">
+                           <thead>
+                              <tr>
+                                 <th>ID</th>
+                                 <th>Name</th>
+                                 <th>Price</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <!-- Insert php logic here -->
+                              <tr>
+                                 <td>Place Holder ID</td>
+                                 <td>Place Holder Product</td>
+                                 <td>placeholder price</td>
+                              </tr>
+                              <!-- More products here after database integration-->
+                           </tbody>
+                        </table>
+                     </div>
+                  </div>
+                  <div class="modal-footer">
+                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                     <button type="submit" class="btn btn-primary">Edit Item</button>
                   </div>
                </form>
             </div>
