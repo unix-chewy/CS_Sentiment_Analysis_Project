@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="697B54D6-5847-3917-6399-0D92094F889B" name="users">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="697B54D6-5847-3917-6399-0D92094F889B" name="USER">
 <createdBy>kyle</createdBy>
 <createdTime>2025-04-25 09:04:07 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>
@@ -14,4 +14,120 @@
 <maxVolumes>9999999</maxVolumes>
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
+<shortName>USR</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID" id="D9D30F5C-FCB3-2CEB-1326-B984B40DBE1E">
+<createdBy>kyle</createdBy>
+<createdTime>2025-04-27 08:00:17 UTC</createdTime>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<engineerTo>
+<item key="DE7E3573-1F5A-78A7-FDEB-388079DE0C13" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="first_name" id="A4AD6BAF-1761-3124-0F85-39DD03079F78">
+<createdBy>kyle</createdBy>
+<createdTime>2025-04-27 08:00:26 UTC</createdTime>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<engineerTo>
+<item key="DE7E3573-1F5A-78A7-FDEB-388079DE0C13" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="last_name" id="3BC0D235-2976-2491-5B96-5A2CBAD2B8E2">
+<createdBy>kyle</createdBy>
+<createdTime>2025-04-27 08:01:24 UTC</createdTime>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<engineerTo>
+<item key="DE7E3573-1F5A-78A7-FDEB-388079DE0C13" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="email" id="51D5E8F0-093B-B901-A0D5-998A77D43FA1">
+<createdBy>kyle</createdBy>
+<createdTime>2025-04-27 08:01:24 UTC</createdTime>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<engineerTo>
+<item key="DE7E3573-1F5A-78A7-FDEB-388079DE0C13" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="password" id="5227C256-6E61-482A-5A36-DF4D9F5ABD14">
+<createdBy>kyle</createdBy>
+<createdTime>2025-04-27 08:01:24 UTC</createdTime>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<engineerTo>
+<item key="DE7E3573-1F5A-78A7-FDEB-388079DE0C13" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="role_id" id="F8DCB40E-BD2A-0AD1-B5CE-2006DA30EA3A">
+<createdBy>kyle</createdBy>
+<createdTime>2025-04-27 08:01:24 UTC</createdTime>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<engineerTo>
+<item key="DE7E3573-1F5A-78A7-FDEB-388079DE0C13" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="created_at" id="B0B0FCA0-F624-D8B9-3626-3C0B7982951F">
+<createdBy>kyle</createdBy>
+<createdTime>2025-04-27 08:01:24 UTC</createdTime>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<engineerTo>
+<item key="DE7E3573-1F5A-78A7-FDEB-388079DE0C13" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<dataTypePrecision>0</dataTypePrecision>
+<ownDataTypeParameters>,0,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="A5404322-DF05-28AF-8AB9-58B567BDAAC8" name="USER PK">
+<createdBy>kyle</createdBy>
+<createdTime>2025-04-27 08:00:35 UTC</createdTime>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<engineerTo>
+<item key="DE7E3573-1F5A-78A7-FDEB-388079DE0C13" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>D9D30F5C-FCB3-2CEB-1326-B984B40DBE1E</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="CB53A5C0-447D-2003-96B0-0BB1D3EAD151" name="email_uk">
+<createdBy>kyle</createdBy>
+<createdTime>2025-04-27 08:02:03 UTC</createdTime>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<engineerTo>
+<item key="DE7E3573-1F5A-78A7-FDEB-388079DE0C13" value="true"/>
+</engineerTo>
+<newElementsIDs>51D5E8F0-093B-B901-A0D5-998A77D43FA1</newElementsIDs>
+</identifier>
+</identifiers>
 </Entity>

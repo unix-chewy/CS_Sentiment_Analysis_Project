@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="355D32AE-1B8C-01E4-0A4D-2D97DA1D4B02" name="PRODUCT">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="0019F5E7-4808-02D7-5682-650D17CE3F28" name="ROLE">
 <createdBy>kyle</createdBy>
-<createdTime>2025-04-25 09:03:36 UTC</createdTime>
+<createdTime>2025-04-27 07:53:12 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>
 <engineerTo>
 <item key="DE7E3573-1F5A-78A7-FDEB-388079DE0C13" value="true"/>
@@ -14,24 +14,23 @@
 <maxVolumes>9999999</maxVolumes>
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
-<shortName>PRD</shortName>
+<shortName>ROL</shortName>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="ID" id="68AEA4A1-FF54-59BD-5BA5-D88A4BEC34BC">
+<Attribute name="ID" id="D4A76D97-D7C0-897B-5678-EE45C37E174A">
 <createdBy>kyle</createdBy>
-<createdTime>2025-04-27 08:06:13 UTC</createdTime>
+<createdTime>2025-04-27 07:53:24 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>
 <engineerTo>
 <item key="DE7E3573-1F5A-78A7-FDEB-388079DE0C13" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="name" id="3AF80798-B51E-0AA0-9528-FFB4C6483AF7">
+<Attribute name="role_name" id="DC4A61DB-F5AA-6732-F697-811973395A05">
 <createdBy>kyle</createdBy>
-<createdTime>2025-04-27 08:06:13 UTC</createdTime>
+<createdTime>2025-04-27 07:53:37 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>
 <engineerTo>
 <item key="DE7E3573-1F5A-78A7-FDEB-388079DE0C13" value="true"/>
@@ -39,33 +38,34 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>100</dataTypeSize>
-<ownDataTypeParameters>100,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="photo" id="63888181-AB70-5E75-A092-9A17BAE7E6B8">
-<createdBy>kyle</createdBy>
-<createdTime>2025-04-27 08:06:14 UTC</createdTime>
-<ownerDesignName>shopee_erd</ownerDesignName>
-<engineerTo>
-<item key="DE7E3573-1F5A-78A7-FDEB-388079DE0C13" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT029</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="description" id="4FF5CCCF-165C-53AF-9F3A-BE99FAA6271E">
-<createdBy>kyle</createdBy>
-<createdTime>2025-04-27 08:06:14 UTC</createdTime>
-<ownerDesignName>shopee_erd</ownerDesignName>
-<engineerTo>
-<item key="DE7E3573-1F5A-78A7-FDEB-388079DE0C13" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>255</dataTypeSize>
-<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="E38CBE42-3F00-4AD5-DC4F-4D905E2D76B6" name="ROLE PK">
+<createdBy>kyle</createdBy>
+<createdTime>2025-04-27 07:53:32 UTC</createdTime>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<engineerTo>
+<item key="DE7E3573-1F5A-78A7-FDEB-388079DE0C13" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>D4A76D97-D7C0-897B-5678-EE45C37E174A</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="207B7914-A75B-7176-CE22-3D29C1CCDC8C" name="role_name_uk">
+<createdBy>kyle</createdBy>
+<createdTime>2025-04-27 07:54:31 UTC</createdTime>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<engineerTo>
+<item key="DE7E3573-1F5A-78A7-FDEB-388079DE0C13" value="true"/>
+</engineerTo>
+<newElementsIDs>DC4A61DB-F5AA-6732-F697-811973395A05</newElementsIDs>
+<usedAttributes>
+<attributeRef>DC4A61DB-F5AA-6732-F697-811973395A05</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
 </Entity>
