@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="904ACA4B-511D-8118-E8EA-EFA0B690724D" name="product_votes">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="904ACA4B-511D-8118-E8EA-EFA0B690724D" name="PRODUCT VOTE">
 <createdBy>kyle</createdBy>
 <createdTime>2025-04-25 09:04:51 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>
@@ -14,4 +14,70 @@
 <maxVolumes>9999999</maxVolumes>
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
+<shortName>PVT</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID" id="F627747F-E0DD-F75C-E8C6-A4428CA0EC8A">
+<createdBy>kyle</createdBy>
+<createdTime>2025-04-27 08:07:19 UTC</createdTime>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<engineerTo>
+<item key="DE7E3573-1F5A-78A7-FDEB-388079DE0C13" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="product_id" id="0A27F5C8-484E-B638-CFB9-33513367B68C">
+<createdBy>kyle</createdBy>
+<createdTime>2025-04-27 08:07:19 UTC</createdTime>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<engineerTo>
+<item key="DE7E3573-1F5A-78A7-FDEB-388079DE0C13" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="user_id" id="86BEE01E-882F-3704-FF8B-301BEB2B309B">
+<createdBy>kyle</createdBy>
+<createdTime>2025-04-27 08:07:23 UTC</createdTime>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<engineerTo>
+<item key="DE7E3573-1F5A-78A7-FDEB-388079DE0C13" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="votes" id="8C143789-A87C-6E79-DD4A-E2762BD6D355">
+<createdBy>kyle</createdBy>
+<createdTime>2025-04-27 08:07:23 UTC</createdTime>
+<commentInRDBMS><![CDATA[CHECK (votes BETWEEN 1 AND 5)]]></commentInRDBMS>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<engineerTo>
+<item key="DE7E3573-1F5A-78A7-FDEB-388079DE0C13" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT042</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="FF3F3655-43F9-99DB-6EA0-D04E2F83C6E6" name="PRODUCT VOTE PK">
+<createdBy>kyle</createdBy>
+<createdTime>2025-04-27 08:07:39 UTC</createdTime>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<engineerTo>
+<item key="DE7E3573-1F5A-78A7-FDEB-388079DE0C13" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>F627747F-E0DD-F75C-E8C6-A4428CA0EC8A</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
 </Entity>
