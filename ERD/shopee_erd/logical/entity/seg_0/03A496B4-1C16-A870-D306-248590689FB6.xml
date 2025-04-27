@@ -14,4 +14,75 @@
 <maxVolumes>9999999</maxVolumes>
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
+<shortName>PRC</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID" id="50782E77-F754-F5E2-CBC8-9DF5B6245B93">
+<createdBy>kyle</createdBy>
+<createdTime>2025-04-27 13:30:21 UTC</createdTime>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<engineerTo>
+<item key="DE7E3573-1F5A-78A7-FDEB-388079DE0C13" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Review Text" id="CC2F07BB-3ADA-94DD-AEA3-D761BFC973FC">
+<createdBy>kyle</createdBy>
+<createdTime>2025-04-27 13:30:21 UTC</createdTime>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<engineerTo>
+<item key="DE7E3573-1F5A-78A7-FDEB-388079DE0C13" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID1" id="2ACA918F-8651-1A78-C0C4-2C3B10A60DC9">
+<createdBy>kyle</createdBy>
+<createdTime>2025-04-27 15:50:27 UTC</createdTime>
+<generatorID>F7E58848-DBE1-DD33-EFB0-F204CF994BA0</generatorID>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<engineerTo>
+<item key="DE7E3573-1F5A-78A7-FDEB-388079DE0C13" value="true"/>
+</engineerTo>
+<referedAttribute>68AEA4A1-FF54-59BD-5BA5-D88A4BEC34BC</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID2" id="88241992-3AC9-7250-F7F5-26320A4BB609">
+<createdBy>kyle</createdBy>
+<createdTime>2025-04-27 15:51:43 UTC</createdTime>
+<generatorID>9B624DA1-8DC0-4FDA-8E2C-2AB2A29C4FC4</generatorID>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<engineerTo>
+<item key="DE7E3573-1F5A-78A7-FDEB-388079DE0C13" value="true"/>
+</engineerTo>
+<referedAttribute>D9D30F5C-FCB3-2CEB-1326-B984B40DBE1E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="7CF7417E-A644-B27B-B51F-980E0BED25A0" name="PRODUCT REVIEW COMMENT PK">
+<createdBy>kyle</createdBy>
+<createdTime>2025-04-27 13:30:35 UTC</createdTime>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<engineerTo>
+<item key="DE7E3573-1F5A-78A7-FDEB-388079DE0C13" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>50782E77-F754-F5E2-CBC8-9DF5B6245B93</attributeRef>
+<attributeRef>2ACA918F-8651-1A78-C0C4-2C3B10A60DC9</attributeRef>
+<attributeRef>88241992-3AC9-7250-F7F5-26320A4BB609</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
 </Entity>

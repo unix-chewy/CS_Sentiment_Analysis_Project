@@ -28,7 +28,20 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="first_name" id="A4AD6BAF-1761-3124-0F85-39DD03079F78">
+<Attribute name="Email" id="51D5E8F0-093B-B901-A0D5-998A77D43FA1">
+<createdBy>kyle</createdBy>
+<createdTime>2025-04-27 08:01:24 UTC</createdTime>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<engineerTo>
+<item key="DE7E3573-1F5A-78A7-FDEB-388079DE0C13" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="First Name" id="A4AD6BAF-1761-3124-0F85-39DD03079F78">
 <createdBy>kyle</createdBy>
 <createdTime>2025-04-27 08:00:26 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>
@@ -41,7 +54,7 @@
 <dataTypeSize>100</dataTypeSize>
 <ownDataTypeParameters>100,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="last_name" id="3BC0D235-2976-2491-5B96-5A2CBAD2B8E2">
+<Attribute name="Last Name" id="3BC0D235-2976-2491-5B96-5A2CBAD2B8E2">
 <createdBy>kyle</createdBy>
 <createdTime>2025-04-27 08:01:24 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>
@@ -54,7 +67,7 @@
 <dataTypeSize>100</dataTypeSize>
 <ownDataTypeParameters>100,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="email" id="51D5E8F0-093B-B901-A0D5-998A77D43FA1">
+<Attribute name="Password" id="5227C256-6E61-482A-5A36-DF4D9F5ABD14">
 <createdBy>kyle</createdBy>
 <createdTime>2025-04-27 08:01:24 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>
@@ -67,32 +80,7 @@
 <dataTypeSize>255</dataTypeSize>
 <ownDataTypeParameters>255,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="password" id="5227C256-6E61-482A-5A36-DF4D9F5ABD14">
-<createdBy>kyle</createdBy>
-<createdTime>2025-04-27 08:01:24 UTC</createdTime>
-<ownerDesignName>shopee_erd</ownerDesignName>
-<engineerTo>
-<item key="DE7E3573-1F5A-78A7-FDEB-388079DE0C13" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>255</dataTypeSize>
-<ownDataTypeParameters>255,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="role_id" id="F8DCB40E-BD2A-0AD1-B5CE-2006DA30EA3A">
-<createdBy>kyle</createdBy>
-<createdTime>2025-04-27 08:01:24 UTC</createdTime>
-<ownerDesignName>shopee_erd</ownerDesignName>
-<engineerTo>
-<item key="DE7E3573-1F5A-78A7-FDEB-388079DE0C13" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="created_at" id="B0B0FCA0-F624-D8B9-3626-3C0B7982951F">
+<Attribute name="Created At" id="B0B0FCA0-F624-D8B9-3626-3C0B7982951F">
 <createdBy>kyle</createdBy>
 <createdTime>2025-04-27 08:01:24 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>
@@ -106,6 +94,20 @@
 <dataTypePrecision>0</dataTypePrecision>
 <ownDataTypeParameters>,0,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="ID1" id="E63CCD3B-9447-ACD7-DD12-5E92C9D6B923">
+<createdBy>kyle</createdBy>
+<createdTime>2025-04-27 15:36:33 UTC</createdTime>
+<generatorID>FAE1E9C6-D5C0-C0E5-2AFD-0EAFFFD43B53</generatorID>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<engineerTo>
+<item key="DE7E3573-1F5A-78A7-FDEB-388079DE0C13" value="true"/>
+</engineerTo>
+<referedAttribute>D4A76D97-D7C0-897B-5678-EE45C37E174A</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="A5404322-DF05-28AF-8AB9-58B567BDAAC8" name="USER PK">
@@ -116,6 +118,7 @@
 <item key="DE7E3573-1F5A-78A7-FDEB-388079DE0C13" value="true"/>
 </engineerTo>
 <pk>true</pk>
+<newElementsIDs>D9D30F5C-FCB3-2CEB-1326-B984B40DBE1E</newElementsIDs>
 <usedAttributes>
 <attributeRef>D9D30F5C-FCB3-2CEB-1326-B984B40DBE1E</attributeRef>
 </usedAttributes>
@@ -128,6 +131,9 @@
 <item key="DE7E3573-1F5A-78A7-FDEB-388079DE0C13" value="true"/>
 </engineerTo>
 <newElementsIDs>51D5E8F0-093B-B901-A0D5-998A77D43FA1</newElementsIDs>
+<usedAttributes>
+<attributeRef>51D5E8F0-093B-B901-A0D5-998A77D43FA1</attributeRef>
+</usedAttributes>
 </identifier>
 </identifiers>
 </Entity>

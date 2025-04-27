@@ -28,31 +28,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="product_id" id="0A27F5C8-484E-B638-CFB9-33513367B68C">
-<createdBy>kyle</createdBy>
-<createdTime>2025-04-27 08:07:19 UTC</createdTime>
-<ownerDesignName>shopee_erd</ownerDesignName>
-<engineerTo>
-<item key="DE7E3573-1F5A-78A7-FDEB-388079DE0C13" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="user_id" id="86BEE01E-882F-3704-FF8B-301BEB2B309B">
-<createdBy>kyle</createdBy>
-<createdTime>2025-04-27 08:07:23 UTC</createdTime>
-<ownerDesignName>shopee_erd</ownerDesignName>
-<engineerTo>
-<item key="DE7E3573-1F5A-78A7-FDEB-388079DE0C13" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="votes" id="8C143789-A87C-6E79-DD4A-E2762BD6D355">
+<Attribute name="Votes" id="8C143789-A87C-6E79-DD4A-E2762BD6D355">
 <createdBy>kyle</createdBy>
 <createdTime>2025-04-27 08:07:23 UTC</createdTime>
 <commentInRDBMS><![CDATA[CHECK (votes BETWEEN 1 AND 5)]]></commentInRDBMS>
@@ -63,6 +39,34 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT042</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID1" id="367CBC80-7638-9A5E-687A-EC57A059D37E">
+<createdBy>kyle</createdBy>
+<createdTime>2025-04-27 15:48:26 UTC</createdTime>
+<generatorID>4D1E79B4-D993-DE4C-53D5-A5288E48987C</generatorID>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<engineerTo>
+<item key="DE7E3573-1F5A-78A7-FDEB-388079DE0C13" value="true"/>
+</engineerTo>
+<referedAttribute>68AEA4A1-FF54-59BD-5BA5-D88A4BEC34BC</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID2" id="0352E049-58A9-BDC2-A05A-A5927C9C880D">
+<createdBy>kyle</createdBy>
+<createdTime>2025-04-27 16:13:58 UTC</createdTime>
+<generatorID>B14C02AE-EC98-C93D-557C-9575CBBBEBC0</generatorID>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<engineerTo>
+<item key="DE7E3573-1F5A-78A7-FDEB-388079DE0C13" value="true"/>
+</engineerTo>
+<referedAttribute>D9D30F5C-FCB3-2CEB-1326-B984B40DBE1E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
@@ -77,6 +81,7 @@
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>F627747F-E0DD-F75C-E8C6-A4428CA0EC8A</attributeRef>
+<attributeRef>367CBC80-7638-9A5E-687A-EC57A059D37E</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

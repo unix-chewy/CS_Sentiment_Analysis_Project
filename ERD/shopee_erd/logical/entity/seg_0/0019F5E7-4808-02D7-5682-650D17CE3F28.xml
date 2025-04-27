@@ -28,7 +28,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="role_name" id="DC4A61DB-F5AA-6732-F697-811973395A05">
+<Attribute name="Role Name" id="DC4A61DB-F5AA-6732-F697-811973395A05">
 <createdBy>kyle</createdBy>
 <createdTime>2025-04-27 07:53:37 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>

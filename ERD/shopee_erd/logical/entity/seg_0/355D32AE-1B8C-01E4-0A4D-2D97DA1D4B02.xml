@@ -23,13 +23,12 @@
 <engineerTo>
 <item key="DE7E3573-1F5A-78A7-FDEB-388079DE0C13" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="name" id="3AF80798-B51E-0AA0-9528-FFB4C6483AF7">
+<Attribute name="Name" id="3AF80798-B51E-0AA0-9528-FFB4C6483AF7">
 <createdBy>kyle</createdBy>
 <createdTime>2025-04-27 08:06:13 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>
@@ -42,7 +41,7 @@
 <dataTypeSize>100</dataTypeSize>
 <ownDataTypeParameters>100,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="photo" id="63888181-AB70-5E75-A092-9A17BAE7E6B8">
+<Attribute name="Photo" id="63888181-AB70-5E75-A092-9A17BAE7E6B8">
 <createdBy>kyle</createdBy>
 <createdTime>2025-04-27 08:06:14 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>
@@ -54,7 +53,7 @@
 <logicalDatatype>LOGDT029</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="description" id="4FF5CCCF-165C-53AF-9F3A-BE99FAA6271E">
+<Attribute name="Description" id="4FF5CCCF-165C-53AF-9F3A-BE99FAA6271E">
 <createdBy>kyle</createdBy>
 <createdTime>2025-04-27 08:06:14 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>
@@ -67,5 +66,47 @@
 <dataTypeSize>255</dataTypeSize>
 <ownDataTypeParameters>255,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="Price" id="87AD409B-5101-3478-5F8F-FA52A9985FC5">
+<createdBy>kyle</createdBy>
+<createdTime>2025-04-27 15:19:10 UTC</createdTime>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<engineerTo>
+<item key="DE7E3573-1F5A-78A7-FDEB-388079DE0C13" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID1" id="9752D897-AA7E-F24B-B8AB-C6CACFF638E7">
+<createdBy>kyle</createdBy>
+<createdTime>2025-04-27 15:30:58 UTC</createdTime>
+<generatorID>BA0204DA-DD6C-30BE-7E81-1D81C609D3DA</generatorID>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<engineerTo>
+<item key="DE7E3573-1F5A-78A7-FDEB-388079DE0C13" value="true"/>
+</engineerTo>
+<referedAttribute>95EF3C67-3B82-B578-6F7C-7B0FF595884A</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="D0A9EBB6-F563-41EA-53DB-E939F8BC2C63" name="PRODUCT PK">
+<createdBy>kyle</createdBy>
+<createdTime>2025-04-27 15:18:31 UTC</createdTime>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<engineerTo>
+<item key="DE7E3573-1F5A-78A7-FDEB-388079DE0C13" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>68AEA4A1-FF54-59BD-5BA5-D88A4BEC34BC</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
 </Entity>
