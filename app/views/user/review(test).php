@@ -7,14 +7,12 @@ $user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : null;
 
 // To get the product ID ***** THIS IS TO BE REPLACED ONCE THERE IS FRONT END FOR DIFFERENT PRODUCTS. 
 // DIFFERENT PAGES WILL GET DIFFERENT PRODUCT IDS. PROCESS BELOW MAY CHANGE!!!
-$product_id = 1;
-$sql_product = "SELECT * FROM products WHERE id = ?";
+$sql_product = "SELECT * FROM products ORDER by id";
 $stmt_product = $conn->prepare($sql_product);
-$stmt_product->bind_param("i", $product_id);
 $stmt_product->execute();
 $result_product = $stmt_product->get_result();
-
 $product = $result_product->fetch_assoc();
+$product_id = $product['id'];
 ?>
 
 
@@ -35,6 +33,7 @@ $product = $result_product->fetch_assoc();
 	<div class="wrapper">
     <h3><?php echo htmlspecialchars($product['name']); ?></h3>
     <p>Description: <?php echo htmlspecialchars($product['description']); ?></p>
+	<p>Price: <?php echo htmlspecialchars($product['price']); ?></p>
 		<form action= "../../controllers/product-getreview.php" method = "POST" id = "ReviewForm" >
         <input type="hidden" name="user_id" value="<?php echo htmlspecialchars($user_id); ?>">
         <input type="hidden" name="product_id" value="<?php echo htmlspecialchars($product_id); ?>">

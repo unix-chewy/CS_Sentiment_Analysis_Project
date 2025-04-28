@@ -1,3 +1,12 @@
+<?php  include '../../config/login-config.php';
+
+
+$sql_category = "SELECT id, product_category FROM categories";
+$stmt_category = $conn->prepare($sql_category);
+$stmt_category->execute();
+$result_category = $stmt_category->get_result();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -184,7 +193,7 @@
       <div class="modal fade" id="add-item-modal" tabindex="-1" aria-labelledby="add-item-modal-label" aria-hidden="true">
          <div class="modal-dialog">
             <div class="modal-content">
-               <form action="#" method="post" enctype="multipart/form-data">
+               <form action="../../controllers/add-item-controller.php" method="post" enctype="multipart/form-data">
                   <!-- Connect PHP here -->
                   <div class="modal-header">
                      <h5 class="modal-title" id="add-item-modal-label">Add New Item</h5>
@@ -202,6 +211,20 @@
                      <div class="mb-3">
                         <label for="item-image" class="form-label">Item Image</label>
                         <input class="form-control" type="file" id="item-image" name="item-image" accept="image/*">
+                     </div>
+                     <div class="mb-3">
+                        <label for="item-price" class="form-label">Item Price</label>
+                        <input class="form-control" type="number" id="item-price" name="item-price" required>
+                     </div>
+                     <div class="mb-3">
+                        <label for="item-category" class="form-label">Item Category</label>
+                        <select class="form-select" id="item-category" name="item-category">
+                           <?php foreach ($result_category as $row): ?>
+                                 <option value="<?php echo ($row['id']) ?>">
+                                    <?php echo ($row['product_category']) ?>
+                                 </option>
+                           <?php endforeach; ?>
+                        </select>
                      </div>
                   </div>
                   <div class="modal-footer">
