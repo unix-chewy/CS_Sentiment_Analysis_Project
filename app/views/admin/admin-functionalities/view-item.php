@@ -1,12 +1,3 @@
-<?php  include '../../config/login-config.php';
-
-
-$sql_category = "SELECT id, product_category FROM categories";
-$stmt_category = $conn->prepare($sql_category);
-$stmt_category->execute();
-$result_category = $stmt_category->get_result();
-?>
-
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -15,7 +6,7 @@ $result_category = $stmt_category->get_result();
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
       <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-      <link rel="stylesheet" href="../../../public/assets/css/admin-homepage.css">
+      <link rel="stylesheet" href="../../../../public/assets/css/admin-homepage.css">
       <title>Admin Homepage </title>
    </head>
    <body>
@@ -54,8 +45,8 @@ $result_category = $stmt_category->get_result();
             </nav>
             <!-- Logo + Search -->
             <div class="d-flex align-items-center justify-content-between mt-3">
-               <div class="logo">
-               </div>
+               <a class="logo" href="../admin_homepage.php">
+               </a>
                <div class="cart-wrapper">
                   <div class="cart-icon-container">
                      <a href="#" class="cart-icon"></a>
@@ -85,7 +76,7 @@ $result_category = $stmt_category->get_result();
                            </a>
                         </li>
                         <li class="nav-item">
-                           <a class="nav-link" href="admin-functionalities/view-item.php">
+                           <a class="nav-link" href="#">
                            <i class="bi-eye"></i> View Item
                            </a>
                         </li>
@@ -151,33 +142,43 @@ $result_category = $stmt_category->get_result();
       </div>
       <!-- Main Content  -->
       <div class="main-content">
-         <h1 class="mb-4">Welcome Admin Placeholder</h1>
+         <h1 class="mb-4">Product</h1>
+      <form class="d-flex flex-grow-1 mx-3">
+            <input class="form-control" type="search" placeholder="Search..." aria-label="Search">
+            <button class="btn btn-outline-primary" type="submit">
+            <i class="bi bi-search"></i>
+            </button>
+        </form>
+
+        <div class="main-content">
          <div class="admin-card">
             <div class="admin-profile">
-               <img src="placeholder" alt="Admin 2">
+               <img src="placeholder" alt="Product 1">
                <div>
-                  <h6 class="mb-0">Admin Placeholder</h6>
-                  <small class="text-muted">Last logged</small>
+                  <h6 class="mb-0">Product Placeholder</h6>
                </div>
             </div>
             <div class="admin-profile">
-               <img src="placeholder" alt="Admin 3">
+               <img src="placeholder" alt="Product 2">
                <div>
-                  <h6 class="mb-0">Admin Placeholder</h6>
-                  <small class="text-muted">Last logged</small>
+                  <h6 class="mb-0">Product Placeholder</h6>
                </div>
             </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Edit</button>
+                <button type="submit" class="btn btn-primary">Delete</button>
+            </div>
          </div>
+        </div>
       </div>
-      <div class="main-content">
-         <h1 class="mb-4">Statistics Page</h1>
-      </div>
+
+
       <!-- The Modals -->
       <!-- Add Item -->
       <div class="modal fade" id="add-item-modal" tabindex="-1" aria-labelledby="add-item-modal-label" aria-hidden="true">
          <div class="modal-dialog">
             <div class="modal-content">
-               <form action="../../controllers/add-item-controller.php" method="post" enctype="multipart/form-data">
+               <form action="#" method="post" enctype="multipart/form-data">
                   <!-- Connect PHP here -->
                   <div class="modal-header">
                      <h5 class="modal-title" id="add-item-modal-label">Add New Item</h5>
@@ -195,20 +196,6 @@ $result_category = $stmt_category->get_result();
                      <div class="mb-3">
                         <label for="item-image" class="form-label">Item Image</label>
                         <input class="form-control" type="file" id="item-image" name="item-image" accept="image/*">
-                     </div>
-                     <div class="mb-3">
-                        <label for="item-price" class="form-label">Item Price</label>
-                        <input class="form-control" type="number" id="item-price" name="item-price" required>
-                     </div>
-                     <div class="mb-3">
-                        <label for="item-category" class="form-label">Item Category</label>
-                        <select class="form-select" id="item-category" name="item-category">
-                           <?php foreach ($result_category as $row): ?>
-                                 <option value="<?php echo ($row['id']) ?>">
-                                    <?php echo ($row['product_category']) ?>
-                                 </option>
-                           <?php endforeach; ?>
-                        </select>
                      </div>
                   </div>
                   <div class="modal-footer">

@@ -1,0 +1,104 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CD2784A8-409D-76C6-53A1-BE14B9993012" name="PRODUCT_VOTES">
+<createdBy>kyle</createdBy>
+<createdTime>2025-04-28 03:24:57 UTC</createdTime>
+<generatorID>904ACA4B-511D-8118-E8EA-EFA0B690724D</generatorID>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<ordsAlias>product_vote</ordsAlias>
+<abbreviation>PVT</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="FE5778AC-800D-B9AE-940C-342B70501C22">
+<createdBy>kyle</createdBy>
+<createdTime>2025-04-28 03:24:57 UTC</createdTime>
+<generatorID>F627747F-E0DD-F75C-E8C6-A4428CA0EC8A</generatorID>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Votes" id="1FCC513F-3CA0-A332-9E47-9061E7400E85">
+<createdBy>kyle</createdBy>
+<createdTime>2025-04-28 03:24:57 UTC</createdTime>
+<commentInRDBMS><![CDATA[CHECK (votes BETWEEN 1 AND 5)]]></commentInRDBMS>
+<generatorID>8C143789-A87C-6E79-DD4A-E2762BD6D355</generatorID>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT042</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PRODUCT_ID" id="C9B9FD8E-33C8-4561-8030-9E8D87E02605">
+<createdBy>kyle</createdBy>
+<createdTime>2025-04-28 03:24:57 UTC</createdTime>
+<generatorID>367CBC80-7638-9A5E-687A-EC57A059D37E</generatorID>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="23E87A3F-460D-046E-B9B0-E14D442F03D4" referredColumn="1BC5A180-5BE2-E077-B860-E564FE866C81"/>
+</associations>
+</Column>
+<Column name="USER_ID" id="F9945D05-39C9-D024-5685-9136B4B43A2F">
+<createdBy>kyle</createdBy>
+<createdTime>2025-04-28 03:24:57 UTC</createdTime>
+<generatorID>0352E049-58A9-BDC2-A05A-A5927C9C880D</generatorID>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9B2D6150-8BF1-163B-8FE4-CCFCE3C21474" referredColumn="0C157430-2AE4-6C57-85DF-24CEF328E6BA"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D57B582A-68D3-8393-11EA-E5EAE0A70EF5" name="PVT_PK">
+<createdBy>kyle</createdBy>
+<createdTime>2025-04-28 03:24:57 UTC</createdTime>
+<generatorID>FF3F3655-43F9-99DB-6EA0-D04E2F83C6E6</generatorID>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FE5778AC-800D-B9AE-940C-342B70501C22"/>
+<colUsage columnID="C9B9FD8E-33C8-4561-8030-9E8D87E02605"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="56212E21-4A16-B191-C964-B4D7D09EF320" name="PVT_USR_FK">
+<createdBy>kyle</createdBy>
+<createdTime>2025-04-28 03:24:57 UTC</createdTime>
+<generatorID>B14C02AE-EC98-C93D-557C-9575CBBBEBC0</generatorID>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F9945D05-39C9-D024-5685-9136B4B43A2F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EB32D857-53E7-2158-EF91-37EDDC8AD21B" name="PVT_PRO_FK">
+<createdBy>kyle</createdBy>
+<createdTime>2025-04-28 03:24:57 UTC</createdTime>
+<generatorID>4D1E79B4-D993-DE4C-53D5-A5288E48987C</generatorID>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C9B9FD8E-33C8-4561-8030-9E8D87E02605"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

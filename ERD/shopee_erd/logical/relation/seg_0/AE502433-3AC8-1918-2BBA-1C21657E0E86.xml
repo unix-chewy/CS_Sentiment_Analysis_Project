@@ -4,10 +4,10 @@
 <createdTime>2025-04-27 15:46:43 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>
 <engineerTo>
-<item key="DE7E3573-1F5A-78A7-FDEB-388079DE0C13" value="true"/>
+<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
 </engineerTo>
 <sourcePk>A5404322-DF05-28AF-8AB9-58B567BDAAC8</sourcePk>
-<identifying>true</identifying>
+<identifying>false</identifying>
 <nameOnSource>store</nameOnSource>
 <nameOnTarget>reference</nameOnTarget>
 <optionalSource>true</optionalSource>
