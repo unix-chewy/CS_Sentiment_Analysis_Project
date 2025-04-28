@@ -4,7 +4,7 @@
 <createdTime>2025-04-25 09:04:23 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>
 <engineerTo>
-<item key="DE7E3573-1F5A-78A7-FDEB-388079DE0C13" value="true"/>
+<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
 </engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
@@ -21,7 +21,7 @@
 <createdTime>2025-04-27 13:30:21 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>
 <engineerTo>
-<item key="DE7E3573-1F5A-78A7-FDEB-388079DE0C13" value="true"/>
+<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -33,25 +33,11 @@
 <createdTime>2025-04-27 13:30:21 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>
 <engineerTo>
-<item key="DE7E3573-1F5A-78A7-FDEB-388079DE0C13" value="true"/>
+<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT040</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="ID1" id="2ACA918F-8651-1A78-C0C4-2C3B10A60DC9">
-<createdBy>kyle</createdBy>
-<createdTime>2025-04-27 15:50:27 UTC</createdTime>
-<generatorID>F7E58848-DBE1-DD33-EFB0-F204CF994BA0</generatorID>
-<ownerDesignName>shopee_erd</ownerDesignName>
-<engineerTo>
-<item key="DE7E3573-1F5A-78A7-FDEB-388079DE0C13" value="true"/>
-</engineerTo>
-<referedAttribute>68AEA4A1-FF54-59BD-5BA5-D88A4BEC34BC</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="ID2" id="88241992-3AC9-7250-F7F5-26320A4BB609">
@@ -60,9 +46,23 @@
 <generatorID>9B624DA1-8DC0-4FDA-8E2C-2AB2A29C4FC4</generatorID>
 <ownerDesignName>shopee_erd</ownerDesignName>
 <engineerTo>
-<item key="DE7E3573-1F5A-78A7-FDEB-388079DE0C13" value="true"/>
+<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
 </engineerTo>
 <referedAttribute>D9D30F5C-FCB3-2CEB-1326-B984B40DBE1E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID1" id="98A3FF6C-16CD-5024-B353-B868FF8397DA">
+<createdBy>kyle</createdBy>
+<createdTime>2025-04-28 03:23:19 UTC</createdTime>
+<generatorID>FBA50BBC-460F-4790-803B-A96853D98131</generatorID>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<engineerTo>
+<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
+</engineerTo>
+<referedAttribute>68AEA4A1-FF54-59BD-5BA5-D88A4BEC34BC</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
@@ -74,13 +74,13 @@
 <createdBy>kyle</createdBy>
 <createdTime>2025-04-27 13:30:35 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="DE7E3573-1F5A-78A7-FDEB-388079DE0C13" value="true"/>
+<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>50782E77-F754-F5E2-CBC8-9DF5B6245B93</attributeRef>
-<attributeRef>2ACA918F-8651-1A78-C0C4-2C3B10A60DC9</attributeRef>
 <attributeRef>88241992-3AC9-7250-F7F5-26320A4BB609</attributeRef>
 </usedAttributes>
 </identifier>

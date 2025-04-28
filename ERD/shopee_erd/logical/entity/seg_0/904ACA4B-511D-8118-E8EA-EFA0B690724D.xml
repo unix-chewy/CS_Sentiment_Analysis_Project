@@ -4,7 +4,7 @@
 <createdTime>2025-04-25 09:04:51 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>
 <engineerTo>
-<item key="DE7E3573-1F5A-78A7-FDEB-388079DE0C13" value="true"/>
+<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
 </engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
@@ -21,7 +21,7 @@
 <createdTime>2025-04-27 08:07:19 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>
 <engineerTo>
-<item key="DE7E3573-1F5A-78A7-FDEB-388079DE0C13" value="true"/>
+<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -34,7 +34,7 @@
 <commentInRDBMS><![CDATA[CHECK (votes BETWEEN 1 AND 5)]]></commentInRDBMS>
 <ownerDesignName>shopee_erd</ownerDesignName>
 <engineerTo>
-<item key="DE7E3573-1F5A-78A7-FDEB-388079DE0C13" value="true"/>
+<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -47,7 +47,7 @@
 <generatorID>4D1E79B4-D993-DE4C-53D5-A5288E48987C</generatorID>
 <ownerDesignName>shopee_erd</ownerDesignName>
 <engineerTo>
-<item key="DE7E3573-1F5A-78A7-FDEB-388079DE0C13" value="true"/>
+<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
 </engineerTo>
 <referedAttribute>68AEA4A1-FF54-59BD-5BA5-D88A4BEC34BC</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
@@ -61,7 +61,7 @@
 <generatorID>B14C02AE-EC98-C93D-557C-9575CBBBEBC0</generatorID>
 <ownerDesignName>shopee_erd</ownerDesignName>
 <engineerTo>
-<item key="DE7E3573-1F5A-78A7-FDEB-388079DE0C13" value="true"/>
+<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
 </engineerTo>
 <referedAttribute>D9D30F5C-FCB3-2CEB-1326-B984B40DBE1E</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
@@ -75,8 +75,9 @@
 <createdBy>kyle</createdBy>
 <createdTime>2025-04-27 08:07:39 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="DE7E3573-1F5A-78A7-FDEB-388079DE0C13" value="true"/>
+<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

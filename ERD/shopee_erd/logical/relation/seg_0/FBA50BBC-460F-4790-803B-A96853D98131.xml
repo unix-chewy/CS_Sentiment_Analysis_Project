@@ -1,13 +1,13 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_6" directorySegmentName="seg_0" id="F7E58848-DBE1-DD33-EFB0-F204CF994BA0">
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_14" directorySegmentName="seg_0" id="FBA50BBC-460F-4790-803B-A96853D98131">
 <createdBy>kyle</createdBy>
-<createdTime>2025-04-27 15:50:27 UTC</createdTime>
+<createdTime>2025-04-28 03:23:19 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>
 <engineerTo>
-<item key="DE7E3573-1F5A-78A7-FDEB-388079DE0C13" value="true"/>
+<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
 </engineerTo>
 <sourcePk>D0A9EBB6-F563-41EA-53DB-E939F8BC2C63</sourcePk>
-<identifying>true</identifying>
+<identifying>false</identifying>
 <nameOnSource>contain</nameOnSource>
 <nameOnTarget>describe</nameOnTarget>
 <optionalSource>true</optionalSource>

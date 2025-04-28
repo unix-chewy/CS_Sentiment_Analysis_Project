@@ -1,13 +1,13 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_8" directorySegmentName="seg_0" id="7AF3FA7B-F73B-A8AC-C979-E60C0B423DE0">
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_13" directorySegmentName="seg_0" id="11002D7F-5071-1D8D-345C-4E678C674E09">
 <createdBy>kyle</createdBy>
-<createdTime>2025-04-27 15:53:10 UTC</createdTime>
+<createdTime>2025-04-28 03:19:36 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>
 <engineerTo>
-<item key="DE7E3573-1F5A-78A7-FDEB-388079DE0C13" value="true"/>
+<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
 </engineerTo>
 <sourcePk>D0A9EBB6-F563-41EA-53DB-E939F8BC2C63</sourcePk>
-<identifying>true</identifying>
+<identifying>false</identifying>
 <nameOnSource>contain</nameOnSource>
 <nameOnTarget>describe</nameOnTarget>
 <optionalSource>true</optionalSource>
@@ -15,7 +15,7 @@
 <sourceCardinality>1</sourceCardinality>
 <sourceEntity>355D32AE-1B8C-01E4-0A4D-2D97DA1D4B02</sourceEntity>
 <targetCardinalityString>*</targetCardinalityString>
-<targetEntity>78DD396E-FA62-530D-90B9-825F305D7823</targetEntity>
+<targetEntity>EBFADD26-9ED9-BD25-C7DC-0D55CCA8341B</targetEntity>
 <transferable>true</transferable>
 <deleteRule>NO ACTION</deleteRule>
 </Relation>
