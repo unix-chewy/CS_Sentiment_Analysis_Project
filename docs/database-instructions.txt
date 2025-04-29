@@ -74,8 +74,5 @@ ADD sentiment_score INT NOT NULL;
 INSERT INTO roles (id, role_name) VALUES (2, 'User');
 INSERT INTO roles (id, role_name) VALUES (1, 'Admin');
 INSERT INTO users (first_name, last_name, email, password, role_id) VALUES ('Admin', 'NaSaSu', 'Nasasu@gmail.com', MD5('adminpass'), 1);
-INSERT INTO users (first_name, last_name, email, password, role_id) VALUES ('User', 'Test', 'Test@gmail.com', 'MD5('pass'), 2);
-INSERT INTO categories (product_category) VALUES ('Men's Apparel');
-INSERT INTO products (name, description, price, category_id) VALUES ('Uniqlo Shirt', 'BLA BLA BLA BLA BLA', 100.00, 1);
-INSERT INTO products (name, description, price, category_id) VALUES ('Di Na Ako Mahal Shirt', 'meowmeowmeowmeow', 230.00, 1);
-
+INSERT INTO users (first_name, last_name, email, password, role_id) VALUES ('User', 'Test', 'Test@gmail.com', MD5('pass'), 2);
+INSERT INTO categories (product_category) VALUES ('Men\'s Apparel');

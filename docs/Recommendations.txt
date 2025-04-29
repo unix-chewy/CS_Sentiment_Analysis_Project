@@ -1,0 +1,7 @@
+Recommendations
+
+1. Utilize sessions (If trying to access admin_homepage, verify if account in session
+    is admin to prevent users from reaching this page)
+    a. admin_homepage.php
+    b. user_homepage.php
+    c. index.php
