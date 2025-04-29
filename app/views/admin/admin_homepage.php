@@ -14,6 +14,7 @@ $result_category = $stmt_category->get_result();
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
       <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
       <link rel="stylesheet" href="../../../public/assets/css/admin-homepage.css">
       <title>Admin Homepage </title>
@@ -208,7 +209,12 @@ $result_category = $stmt_category->get_result();
                                     <?php echo ($row['product_category']) ?>
                                  </option>
                            <?php endforeach; ?>
+                           <option value="-1">Enter New Category</option>
                         </select>
+                     </div>
+                     <div class="mb-3" id="new-cat-div" style="display:none;">
+                        <label for="new-category" class="form-label">New Category</label>
+                        <input type="text" class="form-control" id="new-category" name="new-category" placeholder="Other Category">
                      </div>
                   </div>
                   <div class="modal-footer">
@@ -219,5 +225,6 @@ $result_category = $stmt_category->get_result();
             </div>
          </div>
       </div>
+    <script src="../../../public/assets/js/add_item.js"> </script>
    </body>
 </html>
