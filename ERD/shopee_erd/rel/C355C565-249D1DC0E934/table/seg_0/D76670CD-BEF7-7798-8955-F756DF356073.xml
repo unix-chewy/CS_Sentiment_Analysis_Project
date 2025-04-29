@@ -82,7 +82,7 @@
 <ownDataTypeParameters>,0,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="ROLE_ID" id="91271832-5CBD-6F96-F824-BAC5AC2265D0">
+<Column name="ROL_ID" id="91271832-5CBD-6F96-F824-BAC5AC2265D0">
 <createdBy>kyle</createdBy>
 <createdTime>2025-04-28 03:24:57 UTC</createdTime>
 <generatorID>E63CCD3B-9447-ACD7-DD12-5E92C9D6B923</generatorID>

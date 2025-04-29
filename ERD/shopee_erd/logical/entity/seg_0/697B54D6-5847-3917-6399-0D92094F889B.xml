@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="697B54D6-5847-3917-6399-0D92094F889B" name="USER">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="697B54D6-5847-3917-6399-0D92094F889B" name="USERS">
 <createdBy>kyle</createdBy>
 <createdTime>2025-04-25 09:04:07 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>
@@ -94,7 +94,7 @@
 <dataTypePrecision>0</dataTypePrecision>
 <ownDataTypeParameters>,0,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ID1" id="E63CCD3B-9447-ACD7-DD12-5E92C9D6B923">
+<Attribute name="ROL ID" id="E63CCD3B-9447-ACD7-DD12-5E92C9D6B923">
 <createdBy>kyle</createdBy>
 <createdTime>2025-04-27 15:36:33 UTC</createdTime>
 <generatorID>FAE1E9C6-D5C0-C0E5-2AFD-0EAFFFD43B53</generatorID>
@@ -110,7 +110,7 @@
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="A5404322-DF05-28AF-8AB9-58B567BDAAC8" name="USER PK">
+<identifier id="A5404322-DF05-28AF-8AB9-58B567BDAAC8" name="USR_PK">
 <createdBy>kyle</createdBy>
 <createdTime>2025-04-27 08:00:35 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>
@@ -124,7 +124,7 @@
 <attributeRef>D9D30F5C-FCB3-2CEB-1326-B984B40DBE1E</attributeRef>
 </usedAttributes>
 </identifier>
-<identifier id="CB53A5C0-447D-2003-96B0-0BB1D3EAD151" name="email_uk">
+<identifier id="CB53A5C0-447D-2003-96B0-0BB1D3EAD151" name="USR_Email_UN">
 <createdBy>kyle</createdBy>
 <createdTime>2025-04-27 08:02:03 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>

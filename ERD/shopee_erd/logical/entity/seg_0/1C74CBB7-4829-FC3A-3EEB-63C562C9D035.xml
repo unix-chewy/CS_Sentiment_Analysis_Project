@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="1C74CBB7-4829-FC3A-3EEB-63C562C9D035" name="ACTIVITY LOG">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="1C74CBB7-4829-FC3A-3EEB-63C562C9D035" name="ACTIVITY LOGS">
 <createdBy>kyle</createdBy>
 <createdTime>2025-04-25 09:05:01 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>
@@ -53,7 +53,7 @@
 <logicalDatatype>LOGDT008</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ID1" id="3C6F734B-ECDE-0788-F60A-556F1A5C6A2D">
+<Attribute name="USR ID" id="3C6F734B-ECDE-0788-F60A-556F1A5C6A2D">
 <createdBy>kyle</createdBy>
 <createdTime>2025-04-27 15:46:43 UTC</createdTime>
 <generatorID>AE502433-3AC8-1918-2BBA-1C21657E0E86</generatorID>
@@ -69,7 +69,7 @@
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="466EE93B-EE23-E97D-D15C-025013118679" name="ACTIVITY LOG PK">
+<identifier id="466EE93B-EE23-E97D-D15C-025013118679" name="ACT_PK">
 <createdBy>kyle</createdBy>
 <createdTime>2025-04-27 14:08:42 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>

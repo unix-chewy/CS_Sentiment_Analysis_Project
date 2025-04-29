@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_14" directorySegmentName="seg_0" id="FBA50BBC-460F-4790-803B-A96853D98131">
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="PRC PRO FK" directorySegmentName="seg_0" id="FBA50BBC-460F-4790-803B-A96853D98131">
 <createdBy>kyle</createdBy>
 <createdTime>2025-04-28 03:23:19 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>

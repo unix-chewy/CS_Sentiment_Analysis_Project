@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="904ACA4B-511D-8118-E8EA-EFA0B690724D" name="PRODUCT VOTE">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="904ACA4B-511D-8118-E8EA-EFA0B690724D" name="PRODUCT VOTES">
 <createdBy>kyle</createdBy>
 <createdTime>2025-04-25 09:04:51 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>
@@ -41,7 +41,7 @@
 <logicalDatatype>LOGDT042</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ID1" id="367CBC80-7638-9A5E-687A-EC57A059D37E">
+<Attribute name="PRO ID" id="367CBC80-7638-9A5E-687A-EC57A059D37E">
 <createdBy>kyle</createdBy>
 <createdTime>2025-04-27 15:48:26 UTC</createdTime>
 <generatorID>4D1E79B4-D993-DE4C-53D5-A5288E48987C</generatorID>
@@ -55,7 +55,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ID2" id="0352E049-58A9-BDC2-A05A-A5927C9C880D">
+<Attribute name="USR ID" id="0352E049-58A9-BDC2-A05A-A5927C9C880D">
 <createdBy>kyle</createdBy>
 <createdTime>2025-04-27 16:13:58 UTC</createdTime>
 <generatorID>B14C02AE-EC98-C93D-557C-9575CBBBEBC0</generatorID>
@@ -71,7 +71,7 @@
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="FF3F3655-43F9-99DB-6EA0-D04E2F83C6E6" name="PRODUCT VOTE PK">
+<identifier id="FF3F3655-43F9-99DB-6EA0-D04E2F83C6E6" name="PVT_PK">
 <createdBy>kyle</createdBy>
 <createdTime>2025-04-27 08:07:39 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>

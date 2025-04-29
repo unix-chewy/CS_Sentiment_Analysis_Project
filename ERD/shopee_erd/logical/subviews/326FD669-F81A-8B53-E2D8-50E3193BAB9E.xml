@@ -16,41 +16,35 @@
 <objectViews>
 <OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="0019F5E7-4808-02D7-5682-650D17CE3F28" otype="Entity" vid="4BE1E6BE-64F3-20AD-36C6-83F162297E83">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
-<bounds x="458" y="15" width="170" height="110"/>
+<bounds x="414" y="105" width="143" height="74"/>
 </OView>
 <OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="03A496B4-1C16-A870-D306-248590689FB6" otype="Entity" vid="A5BA86B8-363E-020C-B352-6B72F9D3C1C1">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
-<bounds x="114" y="470" width="196" height="110"/>
+<bounds x="93" y="439" width="193" height="73"/>
 </OView>
 <OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="1C74CBB7-4829-FC3A-3EEB-63C562C9D035" otype="Entity" vid="311D307A-CF9B-B9F5-B1BC-F0CDF951C88E">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
-<bounds x="124" y="10" width="170" height="110"/>
+<bounds x="96" y="43" width="148" height="91"/>
 </OView>
 <OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="272ECDD7-46E7-B8D7-3B9A-3B6A602BA72A" otype="Entity" vid="32407634-907D-F82E-A431-0FE40C6D5E04">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
-<bounds x="777" y="698" width="170" height="110"/>
+<bounds x="757" y="614" width="139" height="81"/>
 </OView>
 <OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="355D32AE-1B8C-01E4-0A4D-2D97DA1D4B02" otype="Entity" vid="E4C237E7-DC48-81B1-964C-A3E22B8895B9">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
-<bounds x="485" y="697" width="170" height="110"/>
+<bounds x="449" y="604" width="163" height="96"/>
 </OView>
 <OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="697B54D6-5847-3917-6399-0D92094F889B" otype="Entity" vid="41E8AA04-2E6D-67AF-1BE1-0866045CFDCF">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
-<bounds x="129" y="221" width="170" height="110"/>
+<bounds x="93" y="220" width="142" height="120"/>
 </OView>
 <OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="904ACA4B-511D-8118-E8EA-EFA0B690724D" otype="Entity" vid="59564DDE-21DA-72AF-1D8A-CC1879C6CB4A">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
-<bounds x="488" y="343" width="170" height="110"/>
-</OView>
-<OView class="oracle.dbtools.crest.swingui.TVNote" oid="DF7DE65F-99CB-68DD-3535-6CE8DA54726E" otype="Note" vid="D837DFC2-AD3F-8363-59DB-921AFB554153">
-<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
-<bounds x="1870" y="185" width="120" height="54"/>
-<comment>Double click to 
-edit the text.</comment>
+<bounds x="414" y="287" width="145" height="88"/>
 </OView>
 <OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="EBFADD26-9ED9-BD25-C7DC-0D55CCA8341B" otype="Entity" vid="26483C3A-E9AB-3EE0-2574-0E9996E6B4AF">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
-<bounds x="106" y="697" width="228" height="133"/>
+<bounds x="100" y="591" width="144" height="94"/>
 </OView>
 </objectViews>
 <connectors>
@@ -60,19 +54,19 @@ edit the text.</comment>
 <lineWidth>1</lineWidth>
 <sourceLabel class="oracle.dbtools.crest.model.design.Label">
 <site>0</site>
-<labelBounds x="429" y="722" width="50" height="30"/>
+<labelBounds x="393" y="614" width="50" height="30"/>
 <noBackgroundColor>true</noBackgroundColor>
 <noForegroundColor>true</noForegroundColor>
 </sourceLabel>
 <targetLabel class="oracle.dbtools.crest.model.design.Label">
 <site>2</site>
-<labelBounds x="344" y="755" width="51" height="30"/>
+<labelBounds x="254" y="647" width="51" height="30"/>
 <noBackgroundColor>true</noBackgroundColor>
 <noForegroundColor>true</noForegroundColor>
 </targetLabel>
 <points>
-<point x="485" y="752"/>
-<point x="334" y="752"/>
+<point x="449" y="644"/>
+<point x="244" y="644"/>
 </points>
 </Connector>
 <Connector class="oracle.dbtools.crest.swingui.logical.TVRelation" oid="4D1E79B4-D993-DE4C-53D5-A5288E48987C" otype="Relation" vid_source="E4C237E7-DC48-81B1-964C-A3E22B8895B9" vid_target="59564DDE-21DA-72AF-1D8A-CC1879C6CB4A">
@@ -81,19 +75,19 @@ edit the text.</comment>
 <lineWidth>1</lineWidth>
 <sourceLabel class="oracle.dbtools.crest.model.design.Label">
 <site>0</site>
-<labelBounds x="571" y="653" width="51" height="30"/>
+<labelBounds x="504" y="512" width="51" height="30"/>
 <noBackgroundColor>true</noBackgroundColor>
 <noForegroundColor>true</noForegroundColor>
 </sourceLabel>
 <targetLabel class="oracle.dbtools.crest.model.design.Label">
 <site>2</site>
-<labelBounds x="571" y="489" width="65" height="30"/>
+<labelBounds x="504" y="435" width="65" height="30"/>
 <noBackgroundColor>true</noBackgroundColor>
 <noForegroundColor>true</noForegroundColor>
 </targetLabel>
 <points>
-<point x="571" y="697"/>
-<point x="571" y="453"/>
+<point x="504" y="604"/>
+<point x="504" y="375"/>
 </points>
 </Connector>
 <Connector class="oracle.dbtools.crest.swingui.logical.TVRelation" oid="70E1AC6D-BF19-9E50-9E5C-297D70118FFE" otype="Relation" vid_source="A5BA86B8-363E-020C-B352-6B72F9D3C1C1" vid_target="26483C3A-E9AB-3EE0-2574-0E9996E6B4AF">
@@ -102,19 +96,19 @@ edit the text.</comment>
 <lineWidth>1</lineWidth>
 <sourceLabel class="oracle.dbtools.crest.model.design.Label">
 <site>0</site>
-<labelBounds x="212" y="624" width="56" height="30"/>
+<labelBounds x="153" y="525" width="108" height="27"/>
 <noBackgroundColor>true</noBackgroundColor>
 <noForegroundColor>true</noForegroundColor>
 </sourceLabel>
 <targetLabel class="oracle.dbtools.crest.model.design.Label">
 <site>2</site>
-<labelBounds x="212" y="653" width="66" height="30"/>
+<labelBounds x="172" y="564" width="58" height="21"/>
 <noBackgroundColor>true</noBackgroundColor>
 <noForegroundColor>true</noForegroundColor>
 </targetLabel>
 <points>
-<point x="212" y="580"/>
-<point x="212" y="697"/>
+<point x="172" y="512"/>
+<point x="172" y="591"/>
 </points>
 </Connector>
 <Connector class="oracle.dbtools.crest.swingui.logical.TVRelation" oid="9B624DA1-8DC0-4FDA-8E2C-2AB2A29C4FC4" otype="Relation" vid_source="41E8AA04-2E6D-67AF-1BE1-0866045CFDCF" vid_target="A5BA86B8-363E-020C-B352-6B72F9D3C1C1">
@@ -123,19 +117,19 @@ edit the text.</comment>
 <lineWidth>1</lineWidth>
 <sourceLabel class="oracle.dbtools.crest.model.design.Label">
 <site>0</site>
-<labelBounds x="214" y="391" width="51" height="30"/>
+<labelBounds x="164" y="419" width="70" height="25"/>
 <noBackgroundColor>true</noBackgroundColor>
 <noForegroundColor>true</noForegroundColor>
 </sourceLabel>
 <targetLabel class="oracle.dbtools.crest.model.design.Label">
 <site>2</site>
-<labelBounds x="214" y="418" width="66" height="30"/>
+<labelBounds x="164" y="360" width="61" height="33"/>
 <noBackgroundColor>true</noBackgroundColor>
 <noForegroundColor>true</noForegroundColor>
 </targetLabel>
 <points>
-<point x="214" y="331"/>
-<point x="214" y="470"/>
+<point x="164" y="340"/>
+<point x="164" y="439"/>
 </points>
 </Connector>
 <Connector class="oracle.dbtools.crest.swingui.logical.TVRelation" oid="AE502433-3AC8-1918-2BBA-1C21657E0E86" otype="Relation" vid_source="41E8AA04-2E6D-67AF-1BE1-0866045CFDCF" vid_target="311D307A-CF9B-B9F5-B1BC-F0CDF951C88E">
@@ -144,19 +138,19 @@ edit the text.</comment>
 <lineWidth>1</lineWidth>
 <sourceLabel class="oracle.dbtools.crest.model.design.Label">
 <site>0</site>
-<labelBounds x="211" y="169" width="51" height="30"/>
+<labelBounds x="165" y="184" width="51" height="30"/>
 <noBackgroundColor>true</noBackgroundColor>
 <noForegroundColor>true</noForegroundColor>
 </sourceLabel>
 <targetLabel class="oracle.dbtools.crest.model.design.Label">
 <site>2</site>
-<labelBounds x="211" y="156" width="64" height="30"/>
+<labelBounds x="170" y="149" width="64" height="30"/>
 <noBackgroundColor>true</noBackgroundColor>
 <noForegroundColor>true</noForegroundColor>
 </targetLabel>
 <points>
-<point x="211" y="221"/>
-<point x="211" y="120"/>
+<point x="165" y="220"/>
+<point x="165" y="134"/>
 </points>
 </Connector>
 <Connector class="oracle.dbtools.crest.swingui.logical.TVRelation" oid="B14C02AE-EC98-C93D-557C-9575CBBBEBC0" otype="Relation" vid_source="41E8AA04-2E6D-67AF-1BE1-0866045CFDCF" vid_target="59564DDE-21DA-72AF-1D8A-CC1879C6CB4A">
@@ -165,20 +159,19 @@ edit the text.</comment>
 <lineWidth>1</lineWidth>
 <sourceLabel class="oracle.dbtools.crest.model.design.Label">
 <site>0</site>
-<labelBounds x="309" y="265" width="51" height="30"/>
+<labelBounds x="245" y="313" width="51" height="30"/>
 <noBackgroundColor>true</noBackgroundColor>
 <noForegroundColor>true</noForegroundColor>
 </sourceLabel>
 <targetLabel class="oracle.dbtools.crest.model.design.Label">
 <site>2</site>
-<labelBounds x="506" y="299" width="66" height="30"/>
+<labelBounds x="477" y="331" width="66" height="30"/>
 <noBackgroundColor>true</noBackgroundColor>
 <noForegroundColor>true</noForegroundColor>
 </targetLabel>
 <points>
-<point x="299" y="295"/>
-<point x="506" y="295"/>
-<point x="506" y="343"/>
+<point x="235" y="313"/>
+<point x="414" y="313"/>
 </points>
 </Connector>
 <Connector class="oracle.dbtools.crest.swingui.logical.TVRelation" oid="BA0204DA-DD6C-30BE-7E81-1D81C609D3DA" otype="Relation" vid_source="32407634-907D-F82E-A431-0FE40C6D5E04" vid_target="E4C237E7-DC48-81B1-964C-A3E22B8895B9">
@@ -187,19 +180,19 @@ edit the text.</comment>
 <lineWidth>1</lineWidth>
 <sourceLabel class="oracle.dbtools.crest.model.design.Label">
 <site>0</site>
-<labelBounds x="713" y="719" width="58" height="33"/>
+<labelBounds x="693" y="621" width="58" height="33"/>
 <noBackgroundColor>true</noBackgroundColor>
 <noForegroundColor>true</noForegroundColor>
 </sourceLabel>
 <targetLabel class="oracle.dbtools.crest.model.design.Label">
 <site>2</site>
-<labelBounds x="665" y="755" width="66" height="31"/>
+<labelBounds x="622" y="657" width="66" height="31"/>
 <noBackgroundColor>true</noBackgroundColor>
 <noForegroundColor>true</noForegroundColor>
 </targetLabel>
 <points>
-<point x="777" y="752"/>
-<point x="655" y="752"/>
+<point x="757" y="654"/>
+<point x="612" y="654"/>
 </points>
 </Connector>
 <Connector class="oracle.dbtools.crest.swingui.logical.TVRelation" oid="FAE1E9C6-D5C0-C0E5-2AFD-0EAFFFD43B53" otype="Relation" vid_source="4BE1E6BE-64F3-20AD-36C6-83F162297E83" vid_target="41E8AA04-2E6D-67AF-1BE1-0866045CFDCF">
@@ -208,20 +201,20 @@ edit the text.</comment>
 <lineWidth>1</lineWidth>
 <sourceLabel class="oracle.dbtools.crest.model.design.Label">
 <site>0</site>
-<labelBounds x="507" y="161" width="71" height="30"/>
+<labelBounds x="487" y="223" width="71" height="30"/>
 <noBackgroundColor>true</noBackgroundColor>
 <noForegroundColor>true</noForegroundColor>
 </sourceLabel>
 <targetLabel class="oracle.dbtools.crest.model.design.Label">
 <site>2</site>
-<labelBounds x="309" y="239" width="58" height="30"/>
+<labelBounds x="245" y="242" width="58" height="30"/>
 <noBackgroundColor>true</noBackgroundColor>
 <noForegroundColor>true</noForegroundColor>
 </targetLabel>
 <points>
-<point x="507" y="125"/>
-<point x="507" y="236"/>
-<point x="299" y="236"/>
+<point x="487" y="179"/>
+<point x="487" y="239"/>
+<point x="235" y="239"/>
 </points>
 </Connector>
 <Connector class="oracle.dbtools.crest.swingui.logical.TVRelation" oid="FBA50BBC-460F-4790-803B-A96853D98131" otype="Relation" vid_source="E4C237E7-DC48-81B1-964C-A3E22B8895B9" vid_target="A5BA86B8-363E-020C-B352-6B72F9D3C1C1">
@@ -230,20 +223,20 @@ edit the text.</comment>
 <lineWidth>1</lineWidth>
 <sourceLabel class="oracle.dbtools.crest.model.design.Label">
 <site>0</site>
-<labelBounds x="521" y="661" width="56" height="30"/>
+<labelBounds x="473" y="520" width="56" height="30"/>
 <noBackgroundColor>true</noBackgroundColor>
 <noForegroundColor>true</noForegroundColor>
 </sourceLabel>
 <targetLabel class="oracle.dbtools.crest.model.design.Label">
 <site>2</site>
-<labelBounds x="320" y="563" width="51" height="30"/>
+<labelBounds x="296" y="489" width="51" height="30"/>
 <noBackgroundColor>true</noBackgroundColor>
 <noForegroundColor>true</noForegroundColor>
 </targetLabel>
 <points>
-<point x="521" y="697"/>
-<point x="521" y="560"/>
-<point x="310" y="560"/>
+<point x="473" y="604"/>
+<point x="473" y="486"/>
+<point x="286" y="486"/>
 </points>
 </Connector>
 </connectors>

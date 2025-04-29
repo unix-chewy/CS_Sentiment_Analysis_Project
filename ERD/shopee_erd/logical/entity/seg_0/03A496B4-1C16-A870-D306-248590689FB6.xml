@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="03A496B4-1C16-A870-D306-248590689FB6" name="PRODUCT REVIEW COMMENT">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="03A496B4-1C16-A870-D306-248590689FB6" name="PRODUCT REVIEW COMMENTS">
 <createdBy>kyle</createdBy>
 <createdTime>2025-04-25 09:04:23 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>
@@ -40,7 +40,7 @@
 <logicalDatatype>LOGDT040</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ID2" id="88241992-3AC9-7250-F7F5-26320A4BB609">
+<Attribute name="USR ID" id="88241992-3AC9-7250-F7F5-26320A4BB609">
 <createdBy>kyle</createdBy>
 <createdTime>2025-04-27 15:51:43 UTC</createdTime>
 <generatorID>9B624DA1-8DC0-4FDA-8E2C-2AB2A29C4FC4</generatorID>
@@ -54,7 +54,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ID1" id="98A3FF6C-16CD-5024-B353-B868FF8397DA">
+<Attribute name="PRO ID" id="98A3FF6C-16CD-5024-B353-B868FF8397DA">
 <createdBy>kyle</createdBy>
 <createdTime>2025-04-28 03:23:19 UTC</createdTime>
 <generatorID>FBA50BBC-460F-4790-803B-A96853D98131</generatorID>
@@ -70,7 +70,7 @@
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="7CF7417E-A644-B27B-B51F-980E0BED25A0" name="PRODUCT REVIEW COMMENT PK">
+<identifier id="7CF7417E-A644-B27B-B51F-980E0BED25A0" name="PRC_PK">
 <createdBy>kyle</createdBy>
 <createdTime>2025-04-27 13:30:35 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>

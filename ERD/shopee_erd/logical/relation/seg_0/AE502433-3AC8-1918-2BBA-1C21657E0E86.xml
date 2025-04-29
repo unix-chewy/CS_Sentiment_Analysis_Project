@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_3" directorySegmentName="seg_0" id="AE502433-3AC8-1918-2BBA-1C21657E0E86">
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="ACT USR FK" directorySegmentName="seg_0" id="AE502433-3AC8-1918-2BBA-1C21657E0E86">
 <createdBy>kyle</createdBy>
 <createdTime>2025-04-27 15:46:43 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>
@@ -7,7 +7,7 @@
 <item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
 </engineerTo>
 <sourcePk>A5404322-DF05-28AF-8AB9-58B567BDAAC8</sourcePk>
-<identifying>false</identifying>
+<identifying>true</identifying>
 <nameOnSource>store</nameOnSource>
 <nameOnTarget>reference</nameOnTarget>
 <optionalSource>true</optionalSource>

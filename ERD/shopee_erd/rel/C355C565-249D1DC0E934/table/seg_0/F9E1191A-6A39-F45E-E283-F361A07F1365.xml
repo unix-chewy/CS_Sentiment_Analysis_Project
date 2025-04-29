@@ -69,7 +69,7 @@
 <ownDataTypeParameters>,10,2</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="CATEGORY_ID" id="2B7D09BC-3C9E-DE93-83B1-5244739E0A94">
+<Column name="CAT_ID" id="2B7D09BC-3C9E-DE93-83B1-5244739E0A94">
 <createdBy>kyle</createdBy>
 <createdTime>2025-04-28 03:24:57 UTC</createdTime>
 <generatorID>9752D897-AA7E-F24B-B8AB-C6CACFF638E7</generatorID>

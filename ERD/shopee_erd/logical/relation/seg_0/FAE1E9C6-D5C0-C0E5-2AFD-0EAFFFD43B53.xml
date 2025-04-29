@@ -1,10 +1,10 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="User_Role" directorySegmentName="seg_0" id="FAE1E9C6-D5C0-C0E5-2AFD-0EAFFFD43B53">
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="USR ROL FK" directorySegmentName="seg_0" id="FAE1E9C6-D5C0-C0E5-2AFD-0EAFFFD43B53">
 <createdBy>kyle</createdBy>
 <createdTime>2025-04-27 15:36:33 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>
 <engineerTo>
-<item key="DE7E3573-1F5A-78A7-FDEB-388079DE0C13" value="true"/>
+<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
 </engineerTo>
 <sourcePk>E38CBE42-3F00-4AD5-DC4F-4D905E2D76B6</sourcePk>
 <identifying>false</identifying>

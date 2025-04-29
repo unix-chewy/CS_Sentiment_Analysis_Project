@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="EBFADD26-9ED9-BD25-C7DC-0D55CCA8341B" name="SENTIMENT">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="EBFADD26-9ED9-BD25-C7DC-0D55CCA8341B" name="SENTIMENTS">
 <createdBy>kyle</createdBy>
 <createdTime>2025-04-28 03:17:39 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>
@@ -53,7 +53,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ID1" id="6998080D-D893-B79C-505E-23E5EB30A733">
+<Attribute name="PRC ID" id="6998080D-D893-B79C-505E-23E5EB30A733">
 <createdBy>kyle</createdBy>
 <createdTime>2025-04-28 03:19:28 UTC</createdTime>
 <generatorID>70E1AC6D-BF19-9E50-9E5C-297D70118FFE</generatorID>
@@ -67,7 +67,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ID2" id="CEA841FB-BF94-800A-84B4-E068A7C6FDFD">
+<Attribute name="PRC USR ID" id="CEA841FB-BF94-800A-84B4-E068A7C6FDFD">
 <createdBy>kyle</createdBy>
 <createdTime>2025-04-28 03:19:28 UTC</createdTime>
 <generatorID>70E1AC6D-BF19-9E50-9E5C-297D70118FFE</generatorID>
@@ -81,7 +81,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ID3" id="CAC86AC8-032D-11DF-AE06-DEBB2EA4E694">
+<Attribute name="PRO ID" id="CAC86AC8-032D-11DF-AE06-DEBB2EA4E694">
 <createdBy>kyle</createdBy>
 <createdTime>2025-04-28 03:19:36 UTC</createdTime>
 <generatorID>11002D7F-5071-1D8D-345C-4E678C674E09</generatorID>
@@ -97,7 +97,7 @@
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="12610816-BECE-0790-41F7-51AD89344A38" name="SENTIMENTv1 PK">
+<identifier id="12610816-BECE-0790-41F7-51AD89344A38" name="SEN_PK">
 <createdBy>kyle</createdBy>
 <createdTime>2025-04-28 03:18:39 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>

@@ -1,10 +1,10 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="0019F5E7-4808-02D7-5682-650D17CE3F28" name="ROLE">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="0019F5E7-4808-02D7-5682-650D17CE3F28" name="ROLES">
 <createdBy>kyle</createdBy>
 <createdTime>2025-04-27 07:53:12 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>
 <engineerTo>
-<item key="DE7E3573-1F5A-78A7-FDEB-388079DE0C13" value="true"/>
+<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
 </engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
@@ -21,7 +21,7 @@
 <createdTime>2025-04-27 07:53:24 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>
 <engineerTo>
-<item key="DE7E3573-1F5A-78A7-FDEB-388079DE0C13" value="true"/>
+<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -33,7 +33,7 @@
 <createdTime>2025-04-27 07:53:37 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>
 <engineerTo>
-<item key="DE7E3573-1F5A-78A7-FDEB-388079DE0C13" value="true"/>
+<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -48,19 +48,19 @@
 <createdTime>2025-04-27 07:53:32 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>
 <engineerTo>
-<item key="DE7E3573-1F5A-78A7-FDEB-388079DE0C13" value="true"/>
+<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>D4A76D97-D7C0-897B-5678-EE45C37E174A</attributeRef>
 </usedAttributes>
 </identifier>
-<identifier id="207B7914-A75B-7176-CE22-3D29C1CCDC8C" name="role_name_uk">
+<identifier id="207B7914-A75B-7176-CE22-3D29C1CCDC8C" name="ROLE_Role_Name_UN">
 <createdBy>kyle</createdBy>
 <createdTime>2025-04-27 07:54:31 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>
 <engineerTo>
-<item key="DE7E3573-1F5A-78A7-FDEB-388079DE0C13" value="true"/>
+<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
 </engineerTo>
 <newElementsIDs>DC4A61DB-F5AA-6732-F697-811973395A05</newElementsIDs>
 <usedAttributes>

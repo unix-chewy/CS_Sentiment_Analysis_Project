@@ -32,7 +32,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="USER_ID" id="D0EBA0BD-3221-E793-4A68-265D75403FE4">
+<Column name="USR_ID" id="D0EBA0BD-3221-E793-4A68-265D75403FE4">
 <createdBy>kyle</createdBy>
 <createdTime>2025-04-28 03:24:57 UTC</createdTime>
 <generatorID>88241992-3AC9-7250-F7F5-26320A4BB609</generatorID>
@@ -47,7 +47,7 @@
 <colAssociation fkAssociation="A12FC964-86B0-14CC-2BA0-30792BAB15EE" referredColumn="0C157430-2AE4-6C57-85DF-24CEF328E6BA"/>
 </associations>
 </Column>
-<Column name="PRODUCT_ID" id="5880A50F-F381-FBDD-8C44-93A8AAB56541">
+<Column name="PRO_ID" id="5880A50F-F381-FBDD-8C44-93A8AAB56541">
 <createdBy>kyle</createdBy>
 <createdTime>2025-04-28 03:24:57 UTC</createdTime>
 <generatorID>98A3FF6C-16CD-5024-B353-B868FF8397DA</generatorID>

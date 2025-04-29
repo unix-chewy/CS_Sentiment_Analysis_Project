@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="355D32AE-1B8C-01E4-0A4D-2D97DA1D4B02" name="PRODUCT">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="355D32AE-1B8C-01E4-0A4D-2D97DA1D4B02" name="PRODUCTS">
 <createdBy>kyle</createdBy>
 <createdTime>2025-04-25 09:03:36 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>
@@ -80,7 +80,7 @@
 <dataTypeScale>2</dataTypeScale>
 <ownDataTypeParameters>,10,2</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ID1" id="9752D897-AA7E-F24B-B8AB-C6CACFF638E7">
+<Attribute name="CAT ID" id="9752D897-AA7E-F24B-B8AB-C6CACFF638E7">
 <createdBy>kyle</createdBy>
 <createdTime>2025-04-27 15:30:58 UTC</createdTime>
 <generatorID>BA0204DA-DD6C-30BE-7E81-1D81C609D3DA</generatorID>
@@ -96,7 +96,7 @@
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="D0A9EBB6-F563-41EA-53DB-E939F8BC2C63" name="PRODUCT PK">
+<identifier id="D0A9EBB6-F563-41EA-53DB-E939F8BC2C63" name="PRO_PK">
 <createdBy>kyle</createdBy>
 <createdTime>2025-04-27 15:18:31 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>

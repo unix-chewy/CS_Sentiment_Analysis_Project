@@ -44,7 +44,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="USER_ID" id="10B04D87-22D3-7FBE-0D91-2F6360462659">
+<Column name="USR_ID" id="10B04D87-22D3-7FBE-0D91-2F6360462659">
 <createdBy>kyle</createdBy>
 <createdTime>2025-04-28 03:24:57 UTC</createdTime>
 <generatorID>3C6F734B-ECDE-0788-F60A-556F1A5C6A2D</generatorID>
