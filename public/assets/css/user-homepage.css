@@ -137,4 +137,6 @@ form.d-flex.flex-grow-1 .btn:hover {
   position: relative;
 }
 
-
+.price-text{
+  color:#EE4D2D !important;
+}
