@@ -1,4 +1,5 @@
-<?php include "../../config/login-config.php";
+<?php
+include "../../config/login-config.php";
 $sql = "SELECT id, name, photo, price FROM products";
 $result = $conn->query($sql);
 
@@ -7,7 +8,7 @@ if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
         $link = $row["id"]; // next time ko na lang illink sa actual product.
         $name = $row["name"];
-        $photo = $row["photo"];
+        $photo = $row["photo"];  
         $price = $row["price"];
 
         // HTML structure
@@ -17,7 +18,7 @@ if ($result->num_rows > 0) {
                 <a href='#' class='text-decoration-none text-dark d-flex flex-column h-100'>
                     <!-- Image Container -->
                     <div class='position-relative' style='padding-top: 100%;'>
-                        <img src='$photo' class='position-absolute top-0 start-0 w-100 h-100 object-fit-contain' alt='Product Image'>
+                        <img src='../../../public/assets/images/products/" . $photo . "' class='position-absolute top-0 start-0 w-100 h-100 object-fit-contain' alt='Product Image'>
                     </div>
                     <!-- Product Info -->
                     <div class='card-body d-flex flex-column justify-content-between p-2'>
@@ -33,7 +34,8 @@ if ($result->num_rows > 0) {
                 </a>
             </div>
         </div>
-        ";
+    ";
+    
     }
 } else {
     echo "No products found.";
