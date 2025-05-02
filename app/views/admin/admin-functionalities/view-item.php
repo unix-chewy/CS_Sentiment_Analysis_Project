@@ -3,10 +3,12 @@
    <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
       <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
       <link rel="stylesheet" href="../../../../public/assets/css/admin-homepage.css">
+      <script src = "../../../../public/assets/js/view-item.js"> </script>
       <title>Admin Homepage </title>
    </head>
    <body>
@@ -150,26 +152,35 @@
             </button>
         </form>
 
-        <div class="main-content">
-         <div class="admin-card">
-            <div class="admin-profile">
-               <img src="placeholder" alt="Product 1">
-               <div>
-                  <h6 class="mb-0">Product Placeholder</h6>
+      <!-- Form for viewing, editing, and deleting products -->
+        <form id ="viewItem-Form"> 
+         <div class="main-content">
+            <div class="admin-card">
+               <div class="admin-profile">
+                  <table class = "table">
+                     <thead class = "table-dark">
+                        <tr>
+                              <th>ID</th>
+                              <th>Product Name</th>
+                              <th>Image</th>
+                              <th>Description</th>
+                              <th>Price</th>
+                              <th>Category</th>
+                              <th>ACCESS</th>
+                        </tr>
+                     </thead>
+                     <tbody id="viewItem-Table">
+                     <!-- Table list will be loaded here via AJAX -->
+                     </tbody>
+                  </table>
                </div>
-            </div>
-            <div class="admin-profile">
-               <img src="placeholder" alt="Product 2">
-               <div>
-                  <h6 class="mb-0">Product Placeholder</h6>
-               </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Edit</button>
-                <button type="submit" class="btn btn-primary">Delete</button>
+               <!--<div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Edit</button>
+                  <button type="submit" class="btn btn-primary">Delete</button>
+               </div> -->
             </div>
          </div>
-        </div>
+        </form>
       </div>
 
 
