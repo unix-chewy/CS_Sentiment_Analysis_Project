@@ -61,7 +61,7 @@ CREATE TABLE PRODUCTS
     ( 
      ID          INT AUTO_INCREMENT NOT NULL , 
      Name        VARCHAR (100)  NOT NULL , 
-     Photo       BLOB  NOT NULL , 
+     Photo       VARCHAR (100)  NOT NULL , 
      Description VARCHAR (255)  NOT NULL , 
      Price       DECIMAL(10,2)  NOT NULL , 
      CATEGORY_ID INT  NOT NULL 
