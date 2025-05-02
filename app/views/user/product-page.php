@@ -1,3 +1,4 @@
+<?php include '../../models/user-review.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -7,6 +8,10 @@
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
       <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
       <link rel="stylesheet" href="../../../public/assets/css/product-page.css">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+      <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
       <title>User Homepage </title>
    </head>
    <body>
@@ -62,13 +67,43 @@
          </div>
          </div>
       </header>
-
-          <!-- Homepage -->
-          <div class="container my-5">
-      <div class="row g-4">
-        <?php include '../../models/product-controller.php'; ?>
+      <!-- Homepage -->
+      <div class="container my-5">
+         <div class="row g-4">
+            <?php include '../../models/product-controller.php'; ?>
+         </div>
+         <!-- The Modals -->
+         <!-- Add Item -->
+         <div class="modal fade" id="rate-item-modal" tabindex="-1" aria-labelledby="rate-item-modal-label" aria-hidden="true">
+            <div class="modal-dialog">
+               <div class="modal-content">
+                  <div class="wrapper">
+                     <h3><?php echo htmlspecialchars($product['name']); ?></h3>
+                     <p>Description: <?php echo htmlspecialchars($product['description']); ?></p>
+                     <p>Price: <?php echo htmlspecialchars($product['price']); ?></p>
+                     <form action= "../../controllers/product-getreview.php" method = "POST" id = "ReviewForm" >
+                        <input type="hidden" name="user_id" value="<?php echo htmlspecialchars($user_id); ?>">
+                        <input type="hidden" name="product_id" value="<?php echo htmlspecialchars($product_id); ?>">
+                        <div class="rating">
+                           <input type="number" name="rating" hidden>
+                           <i class='bx bx-star star' style="--i: 0;"></i>
+                           <i class='bx bx-star star' style="--i: 1;"></i>
+                           <i class='bx bx-star star' style="--i: 2;"></i>
+                           <i class='bx bx-star star' style="--i: 3;"></i>
+                           <i class='bx bx-star star' style="--i: 4;"></i>
+                        </div>
+                        <textarea name="review" cols="30" rows="5" placeholder="Your opinion..."></textarea>
+                        <div class="btn-group">
+                           <button type="submit" class="btn submit">Submit</button>
+                           <button type="button" class="btn cancel" data-bs-dismiss="modal">Cancel</button>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
          </div>
       </div>
+      <script src="../../../public/assets/js/add_item.js"> </script>
+      <script src="../../../public/assets/js/product-review-star.js"> </script>
    </body>
 </html>
-

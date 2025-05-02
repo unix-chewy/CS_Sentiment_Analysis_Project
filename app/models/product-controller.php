@@ -31,11 +31,13 @@ if (isset($_GET['id'])) {
                     <div class='mt-4'>
                         <p>" . $description . "</p>
                     </div>
-                    <button class='btn btn-primary mt-3'>Rate Now!</button>
-                </div>
+                    <a class='nav-link' data-bs-toggle='modal' data-bs-target='#rate-item-modal'>
+                        <button class='btn btn-primary mt-3'>Rate Now!</button>
+                    </a>
+                    </div>
             </div>
         </div>";
-        
+
     } else {
         echo "Product not found.";
     }
