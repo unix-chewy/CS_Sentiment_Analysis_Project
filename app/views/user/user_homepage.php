@@ -41,6 +41,11 @@
                      <i class="bi bi-globe2"></i> English
                      </a>
                   </li>
+                  <li class="nav-item">
+                     <a href="../login.php" class="nav-link">
+                     <i class="bi bi-box-arrow-right"></i> Logout
+                     </a>
+                  </li>
                </ul>
             </nav>
             <!-- Logo + Search -->
