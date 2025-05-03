@@ -6,7 +6,7 @@
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
       <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-      <link rel="stylesheet" href="../../../public/assets/css/user-homepage.css">
+      <link rel="stylesheet" href="../../../public/assets/css/user-review-list.css">
       <title>User Homepage </title>
    </head>
    <body>
@@ -63,7 +63,7 @@
                <div class="ratings-wrapper">
                   <div class="star-icon-container">
                      <a href = "user-review-list.php">
-                        <i class="bi bi-star"></i>
+                     <i class="bi bi-star"></i>
                      </a>
                   </div>
                </div>
@@ -71,13 +71,42 @@
          </div>
          </div>
       </header>
-
-    <!-- Homepage -->
-      <div class="container my-5">
-      <div class="row g-4">
-        <?php include '../../models/fetch-products.php'; ?>
-         </div>
+      <!-- Main Content  -->
+      <div class="main-content">
+         <h1 class="mb-4">Ratings</h1>
+         <form class="d-flex flex-grow-1 mx-3">
+            <input class="form-control" type="search" placeholder="Search..." aria-label="Search">
+            <button class="btn btn-outline-primary" type="submit">
+            <i class="bi bi-search"></i>
+            </button>
+         </form>
+         <!-- Form for editing and deleting products -->
+         <form id ="viewItem-Form">
+            <div class="main-content">
+               <div class="review-wrapper">
+                  <div class="admin-profile">
+                     <table class = "table">
+                        <thead class = "table-dark">
+                           <tr>
+                              <th>Product Name</th>
+                              <th>Review</th>
+                              <th>Ratings</th>
+                              <th>ACCESS</th>
+                           </tr>
+                        </thead>
+                        <tbody id="viewItem-Table">
+                           <!-- Table list will be loaded here via AJAX -->
+                           <?php include '../../models/user-models/user-crud.php'; ?>
+                        </tbody>
+                     </table>
+                  </div>
+                  <!--<div class="modal-footer">
+                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Edit</button>
+                     <button type="submit" class="btn btn-primary">Delete</button>
+                     </div> -->
+               </div>
+            </div>
+         </form>
       </div>
-
    </body>
 </html>
