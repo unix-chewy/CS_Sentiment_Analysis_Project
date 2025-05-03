@@ -45,7 +45,7 @@
                     </form>
 
                     <div class="footer-links">
-                        <a href="#" class="forgot-password">Forgot Password</a>
+                        <a href="./reset_password/confirm_email.php" class="forgot-password">Forgot Password</a>
                         <div class="or-divider">──────────    OR    ──────────</div>
                         <div class="social-login">
                             <button class="btn-social facebook"><i class="icon-fb"></i>Facebook</button>
