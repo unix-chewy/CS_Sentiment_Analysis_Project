@@ -154,21 +154,20 @@ $result_category = $stmt_category->get_result();
       <!-- Main Content  -->
       <div class="main-content">
          <h1 class="mb-4">Product</h1>
-      <form class="d-flex flex-grow-1 mx-3">
+         <form class="d-flex flex-grow-1 mx-3">
             <input class="form-control" type="search" placeholder="Search..." aria-label="Search">
             <button class="btn btn-outline-primary" type="submit">
             <i class="bi bi-search"></i>
             </button>
-        </form>
-
-      <!-- Form for viewing, editing, and deleting products -->
-        <form id ="viewItem-Form"> 
-         <div class="main-content">
-            <div class="admin-card">
-               <div class="admin-profile">
-                  <table class = "table">
-                     <thead class = "table-dark">
-                        <tr>
+         </form>
+         <!-- Form for viewing, editing, and deleting products -->
+         <form id ="viewItem-Form">
+            <div class="main-content">
+               <div class="admin-card">
+                  <div class="admin-profile">
+                     <table class = "table">
+                        <thead class = "table-dark">
+                           <tr>
                               <th>ID</th>
                               <th>Product Name</th>
                               <th>Image</th>
@@ -191,8 +190,6 @@ $result_category = $stmt_category->get_result();
          </div>
         </form>
       </div>
-
-
       <!-- The Modals -->
       <!-- Add Item -->
       <div class="modal fade" id="add-item-modal" tabindex="-1" aria-labelledby="add-item-modal-label" aria-hidden="true">

@@ -50,17 +50,21 @@
             </nav>
             <!-- Logo + Search -->
             <div class="d-flex align-items-center justify-content-between mt-3">
-               <div class="logo">
-               </div>
+               <a href = "user_homepage.php">
+                  <div class="logo">
+                  </div>
+               </a>
                <form class="d-flex flex-grow-1 mx-3">
                   <input class="form-control" type="search" placeholder="Search..." aria-label="Search">
                   <button class="btn btn-outline-primary" type="submit">
                   <i class="bi bi-search"></i>
                   </button>
                </form>
-               <div class="cart-wrapper">
-                  <div class="cart-icon-container">
-                     <a href="#" class="cart-icon"></a>
+               <div class="ratings-wrapper">
+                  <div class="star-icon-container">
+                     <a href = "user-review-list.php">
+                        <i class="bi bi-star"></i>
+                     </a>
                   </div>
                </div>
             </div>

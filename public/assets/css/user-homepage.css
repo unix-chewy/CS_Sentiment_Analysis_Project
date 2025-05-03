@@ -116,25 +116,25 @@ form.d-flex.flex-grow-1 .btn:hover {
 }
 
 /* Cart */
-.cart-wrapper {
+/* Star */
+.ratings-wrapper {
   width: 120px;
   display: flex;
   justify-content: flex-end;
 }
 
-.cart-icon-container {
+.star-icon-container {
   position: relative;
 }
 
-.cart-icon {
-  display: block;
+.bi-star{
+  display:inline;
   width: 40px;
   height: 40px;
-  background-image: url('../images/icons/shopping-cart.png'); 
-  background-size: 24px;
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
+  color: white;
 }
 
 .price-text{
