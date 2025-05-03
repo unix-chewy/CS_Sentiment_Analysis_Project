@@ -1,3 +1,11 @@
+<?php  include '../../config/login-config.php';
+
+session_start();
+
+// To get current user login ID
+$user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : null;
+?>
+
 <!DOCTYPE html>
 <html lang="en">
    <head>
