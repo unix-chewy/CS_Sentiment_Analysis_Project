@@ -89,6 +89,7 @@
                         <thead class = "table-dark">
                            <tr>
                               <th>Product Name</th>
+                              <th>Review</th>
                               <th>Ratings</th>
                               <th>ACCESS</th>
                            </tr>
