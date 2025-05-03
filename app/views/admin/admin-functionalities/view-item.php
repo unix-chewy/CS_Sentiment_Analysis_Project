@@ -142,7 +142,7 @@ $result_category = $stmt_category->get_result();
                         </a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="../../login.php">
                         <i class="bi bi-box-arrow-right"></i> Sign Out
                         </a>
                   </ul>
@@ -292,5 +292,6 @@ $result_category = $stmt_category->get_result();
             </div>
          </div>
       </div>
+    <script src="../../../../public/assets/js/add_item.js"> </script>
    </body>
 </html>
