@@ -38,6 +38,7 @@ if (isset($_POST['reset-password'])) {
     
     if ($result = $conn->query($update_stmt)) {
         echo "Password reset successful!";
+        header("Location: ../views/login.php");
         exit();
     } else {
         echo "Error: " . $conn->error;
