@@ -145,21 +145,20 @@
       <!-- Main Content  -->
       <div class="main-content">
          <h1 class="mb-4">Product</h1>
-      <form class="d-flex flex-grow-1 mx-3">
+         <form class="d-flex flex-grow-1 mx-3">
             <input class="form-control" type="search" placeholder="Search..." aria-label="Search">
             <button class="btn btn-outline-primary" type="submit">
             <i class="bi bi-search"></i>
             </button>
-        </form>
-
-      <!-- Form for viewing, editing, and deleting products -->
-        <form id ="viewItem-Form"> 
-         <div class="main-content">
-            <div class="admin-card">
-               <div class="admin-profile">
-                  <table class = "table">
-                     <thead class = "table-dark">
-                        <tr>
+         </form>
+         <!-- Form for viewing, editing, and deleting products -->
+         <form id ="viewItem-Form">
+            <div class="main-content">
+               <div class="admin-card">
+                  <div class="admin-profile">
+                     <table class = "table">
+                        <thead class = "table-dark">
+                           <tr>
                               <th>ID</th>
                               <th>Product Name</th>
                               <th>Image</th>
@@ -167,23 +166,21 @@
                               <th>Price</th>
                               <th>Category</th>
                               <th>ACCESS</th>
-                        </tr>
-                     </thead>
-                     <tbody id="viewItem-Table">
-                     <!-- Table list will be loaded here via AJAX -->
-                     </tbody>
-                  </table>
+                           </tr>
+                        </thead>
+                        <tbody id="viewItem-Table">
+                           <!-- Table list will be loaded here via AJAX -->
+                        </tbody>
+                     </table>
+                  </div>
+                  <!--<div class="modal-footer">
+                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Edit</button>
+                     <button type="submit" class="btn btn-primary">Delete</button>
+                     </div> -->
                </div>
-               <!--<div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Edit</button>
-                  <button type="submit" class="btn btn-primary">Delete</button>
-               </div> -->
             </div>
-         </div>
-        </form>
+         </form>
       </div>
-
-
       <!-- The Modals -->
       <!-- Add Item -->
       <div class="modal fade" id="add-item-modal" tabindex="-1" aria-labelledby="add-item-modal-label" aria-hidden="true">
