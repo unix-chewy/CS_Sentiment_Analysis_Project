@@ -26,8 +26,8 @@
                 <td>{$row['price']}</td>
                 <td>{$row['product_category']}</td>
                  <td>
-                    <button class='btn btn-secondary' data-bs-dismiss= 'modal' id = 'btn-edit' data-id='{$row['id']}' data-name='{$row['name']}' data-photo='{$row['photo']}' 
-                    data-description='{$row['description']}' data-price='{$row['price']}' data-name='{$row['product_category']}'> Edit </button>
+                    <button class='btn btn-secondary btn-edit' data-bs-toggle='modal' data-bs-target='#editModal' data-id='{$row['id']}' data-name='{$row['name']}' data-photo='{$row['photo']}' 
+                    data-description='{$row['description']}' data-price='{$row['price']}' data-category='{$row['product_category']}'> Edit </button>
                     <button class='btn btn-primary' id='btn-delete' data-id='{$row['id']}'>Delete</button>
                 </td>
             </tr>";

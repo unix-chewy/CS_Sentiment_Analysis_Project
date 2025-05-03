@@ -1,5 +1,4 @@
-<?php
-include '../config/login-config.php';
+<?php include '../config/login-config.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $id = $_POST["id"]; 
