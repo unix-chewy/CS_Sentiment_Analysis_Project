@@ -16,7 +16,7 @@ $result_category = $stmt_category->get_result();
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
       <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-      <link rel="stylesheet" href="../../../../public/assets/css/admin-homepage.css">
+      <link rel="stylesheet" href="../../../../public/assets/css/view-item.css">
       <script src = "../../../../public/assets/js/view-item.js"> </script>
       <title>Admin Homepage </title>
    </head>
@@ -163,8 +163,8 @@ $result_category = $stmt_category->get_result();
          <!-- Form for viewing, editing, and deleting products -->
          <form id ="viewItem-Form">
             <div class="main-content">
-               <div class="admin-card">
-                  <div class="admin-profile">
+               <div class="list-card">
+                  <div class="item-list">
                      <table class = "table">
                         <thead class = "table-dark">
                            <tr>
@@ -191,11 +191,12 @@ $result_category = $stmt_category->get_result();
         </form>
       </div>
       <!-- The Modals -->
+
       <!-- Add Item -->
       <div class="modal fade" id="add-item-modal" tabindex="-1" aria-labelledby="add-item-modal-label" aria-hidden="true">
          <div class="modal-dialog">
             <div class="modal-content">
-               <form action="#" method="post" enctype="multipart/form-data">
+               <form action="../../../controllers/add-item-controller.php" method="post" enctype="multipart/form-data">
                   <!-- Connect PHP here -->
                   <div class="modal-header">
                      <h5 class="modal-title" id="add-item-modal-label">Add New Item</h5>

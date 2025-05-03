@@ -84,7 +84,7 @@
          <form id ="viewItem-Form">
             <div class="main-content">
                <div class="review-wrapper">
-                  <div class="admin-profile">
+                  <div class="review-profile">
                      <table class = "table">
                         <thead class = "table-dark">
                            <tr>
