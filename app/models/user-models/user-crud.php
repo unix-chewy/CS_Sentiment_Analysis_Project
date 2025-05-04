@@ -1,15 +1,16 @@
-<?php
-// Fetch products and their ratings from the database
-include "../../config/login-config.php";
+<?php include "../../config/login-config.php";
 
+// Below uses Inner Join to return rows that match both data entries (product reviews exists within a product). 
+// Where statement to indicate that current user's reviews should only be displayed
 $query = "SELECT
             products.id,
             products.name,
             product_review_comments.review_text,
             product_votes.votes
-        FROM products
-        LEFT JOIN product_review_comments ON product_review_comments.product_id = products.id
+        FROM product_review_comments
+        INNER JOIN products ON product_review_comments.product_id = products.id 
         LEFT JOIN product_votes ON product_votes.product_id = products.id
+        WHERE product_review_comments.user_id = {$user_id} AND product_votes.user_id = {$user_id}
         ORDER BY products.name ASC;";
     $result = $conn->query($query);
     $output = "";

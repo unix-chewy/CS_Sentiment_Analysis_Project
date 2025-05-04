@@ -319,7 +319,7 @@
   }
   
   .btn-group .btn.submit {
-    background: var(--primary-color); /* Blue submit button */
+    background: var(--primary-color); 
     color: #FFF;
   }
   
