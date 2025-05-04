@@ -20,8 +20,9 @@
         </div>
     </header>
 
+    <!-- Main -->
     <div class="wrapper">
-        <form method="POST" action="../../controllers/reset_password.php">
+        <form method="POST" action="../../controllers/reset_password.php">  <!-- reset_password.php -->
             <div class="">
                 <a class="text-decoration-none" href="../login.php">
                     <i class="bi bi-arrow-left"></i> Back
@@ -31,6 +32,11 @@
             <div class="form-group">
                 <label for="email">Email address</label>
                 <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" required>
+
+                <!-- This php code checks if there is an error passed from URL and the error is account_not_found then displays error msg. -->
+                <?php if (isset($_GET['error']) && $_GET['error'] === 'account_not_found'): ?>    
+                    <div class="text-danger mt-1">Account does not exist.</div>
+                <?php endif;?>
                 <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
             </div>
             <button type="submit" class="btn btn-primary" name="confirm-email">Continue</button>
