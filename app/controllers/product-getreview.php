@@ -3,8 +3,8 @@
 session_start();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $user_id = isset($_POST['user_id']) ? $_POST['user_id'] : null;
-    $product_id = isset($_POST['product_id']) ? $_POST['product_id'] : null;
+    $user_id = $_POST['user_id'] ?? null;
+    $product_id = $_POST['product_id'] ?? null;
     $review_text = $_POST['review'];
     $rating = $_POST['rating'];
 

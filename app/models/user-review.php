@@ -1,7 +1,7 @@
 <?php include '../../config/login-config.php';
     session_start();  
 
-    $user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : null;  // code ni Fritzch for checking user acc
+    $user_id = $_SESSION['user_id'] ?? null;  // code ni Fritzch for checking user acc
 
     if (isset($_GET['id'])) {  // reused code and tweaked, refer to product-controller.php for explanation
         $product_id = intval($_GET['id']);

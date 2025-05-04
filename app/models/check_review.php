@@ -2,7 +2,7 @@
     header('Content-Type: application/json');
     include '../config/login-config.php';
     session_start();  
-    $user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : null;  // code ni Fritzch for checking user acc
+    $user_id = $_SESSION['user_id'] ?? null;  // code ni Fritzch for checking user acc
 
     if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         
