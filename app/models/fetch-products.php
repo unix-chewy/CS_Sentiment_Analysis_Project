@@ -15,7 +15,7 @@ if ($result->num_rows > 0) {
         echo "
         <div class='col-6 col-md-2'>
             <div class='card h-100 border border-secondary-subtle shadow-sm position-relative group overflow-hidden'>
-                <a href='../../views/user/product-page.php?id=" . $link . "' class='text-decoration-none text-dark d-flex flex-column h-100'>                    
+                <a href='../../views/user/product-page.php?id=" . urlencode($link) . "' class='text-decoration-none text-dark d-flex flex-column h-100'>                    
                 <!-- Image Container -->
                     <div class='position-relative' style='padding-top: 100%;'>
                         <img src='../../../public/assets/images/products/" . $photo . "' class='position-absolute top-0 start-0 w-100 h-100 object-fit-contain' alt='Product Image'>

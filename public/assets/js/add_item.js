@@ -8,4 +8,8 @@ $(document).ready(function(){
             $("#new-category").prop("required", false);
         }
     });
+
+    $("#rate-btn").click(function() {
+        alert("TITE");
+    });
   });

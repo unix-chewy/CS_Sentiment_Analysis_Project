@@ -32,7 +32,7 @@ if (isset($_GET['id'])) {
                         <p>" . $description . "</p>
                     </div>
                     <a class='nav-link' data-bs-toggle='modal' data-bs-target='#rate-item-modal'>
-                        <button class='btn btn-primary mt-3'>Rate Now!</button>
+                        <button class='btn btn-primary mt-3' id='rate-btn'>Rate Now!</button>
                     </a>
                     </div>
             </div>
