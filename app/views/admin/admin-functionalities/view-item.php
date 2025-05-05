@@ -17,7 +17,6 @@ $result_category = $stmt_category->get_result();
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
       <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
       <link rel="stylesheet" href="../../../../public/assets/css/view-item.css">
-      <script src = "../../../../public/assets/js/view-item.js"> </script>
       <title>Admin Homepage </title>
    </head>
    <body>
@@ -293,6 +292,6 @@ $result_category = $stmt_category->get_result();
             </div>
          </div>
       </div>
-    <script src="../../../../public/assets/js/add_item.js"> </script>
+    <script src="../../../../public/assets/js/item-crud.js"> </script>
    </body>
 </html>

@@ -99,7 +99,7 @@
                         </div>
                         <textarea name="review" cols="30" rows="5" placeholder="Your opinion..."></textarea>
                         <div class="btn-group">
-                           <button type="submit" class="btn submit">Submit</button>
+                           <button type="submit" class="btn submit" name="add-review">Submit</button>
                            <button type="button" class="btn cancel" data-bs-dismiss="modal">Cancel</button>
                         </div>
                      </form>
@@ -108,7 +108,7 @@
             </div>
          </div>
       </div>
-      <script src="../../../public/assets/js/add_item.js"> </script>
+      <script src="../../../public/assets/js/review-crud.js"> </script>
       <script src="../../../public/assets/js/product-review-star.js"> </script>
    </body>
 </html>

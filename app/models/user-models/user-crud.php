@@ -3,11 +3,13 @@
 // Below uses Inner Join to return rows that match both data entries (product reviews exists within a product). 
 // Where statement to indicate that current user's reviews should only be displayed
 $query = "SELECT
-            products.id,
+            product_review_comments.id,
+            product_review_comments.user_id,
+            product_review_comments.product_id,
+            product_review_comments.prv_id,
+            product_review_comments.review_text,
             products.name,
             products.description,
-            products.price,
-            product_review_comments.review_text,
             product_votes.votes
         FROM product_review_comments
         INNER JOIN products ON product_review_comments.product_id = products.id 
@@ -24,11 +26,13 @@ $query = "SELECT
                 <td>{$row['review_text']}</td>
                 <td>{$row['votes']}</td>
                  <td>
-                    <a class='nav-link' data-bs-toggle='modal' data-bs-target='#edit-item-modal'>
-                    <button class='btn btn-secondary btn-edit' data-bs-dismiss= 'modal' id = 'btn-edit' data-id='{$row['id']}' data-name='{$row['name']}'  
-                    data-description='{$row['description']}' data-price='{$row['price']}' data-review='{$row['review_text']}' data-votes='{$row['votes']}'> Edit </button>
+                    <a class='nav-link' data-bs-toggle='modal' data-bs-target='#edit-review-modal'>
+                        <button class='btn btn-secondary btn-edit' data-bs-dismiss= 'modal' id = 'btn-edit' data-prc-id='{$row['id']}' 
+                        data-user-id='{$row['user_id']}' data-product-id='{$row['product_id']}' data-prv-id='{$row['prv_id']}' 
+                        data-review='{$row['review_text']}' data-name='{$row['name']}' data-description='{$row['description']}' 
+                        data-votes='{$row['votes']}'> Edit </button>
                     </a>
-                    <button class='btn btn-primary' id='btn-delete' data-id='{$row['id']}'>Delete</button>
+                    <button class='btn btn-primary' id='btn-delete' data-prc-id='{$row['id']}' data-prv-id='{$row['prv_id']}'>Delete</button>
                 </td>
             </tr>";
     }

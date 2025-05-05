@@ -225,6 +225,6 @@ $result_category = $stmt_category->get_result();
             </div>
          </div>
       </div>
-    <script src="../../../public/assets/js/add_item.js"> </script>
+    <script src="../../../public/assets/js/item-crud.js"> </script>
    </body>
 </html>
