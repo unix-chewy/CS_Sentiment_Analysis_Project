@@ -5,6 +5,8 @@
 $query = "SELECT
             products.id,
             products.name,
+            products.description,
+            products.price,
             product_review_comments.review_text,
             product_votes.votes
         FROM product_review_comments
@@ -22,8 +24,10 @@ $query = "SELECT
                 <td>{$row['review_text']}</td>
                 <td>{$row['votes']}</td>
                  <td>
-                    <button class='btn btn-secondary' data-bs-dismiss= 'modal' id = 'btn-edit' data-id='{$row['id']}' data-name='{$row['name']}' 
-                    data-review='{$row['review_text']}' data-votes='{$row['votes']}'> Edit </button>
+                    <a class='nav-link' data-bs-toggle='modal' data-bs-target='#edit-item-modal'>
+                    <button class='btn btn-secondary btn-edit' data-bs-dismiss= 'modal' id = 'btn-edit' data-id='{$row['id']}' data-name='{$row['name']}'  
+                    data-description='{$row['description']}' data-price='{$row['price']}' data-review='{$row['review_text']}' data-votes='{$row['votes']}'> Edit </button>
+                    </a>
                     <button class='btn btn-primary' id='btn-delete' data-id='{$row['id']}'>Delete</button>
                 </td>
             </tr>";

@@ -11,10 +11,16 @@ $user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : null;
    <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
       <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
       <link rel="stylesheet" href="../../../public/assets/css/user-review-list.css">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+      <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
       <title>User Homepage </title>
    </head>
    <body>
@@ -108,13 +114,39 @@ $user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : null;
                         </tbody>
                      </table>
                   </div>
-                  <!--<div class="modal-footer">
-                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Edit</button>
-                     <button type="submit" class="btn btn-primary">Delete</button>
-                     </div> -->
+                  <!-- MODAL -->
+                  <div class="modal fade" id="edit-item-modal" tabindex="-1" aria-labelledby="edit-item-modal-label" aria-hidden="true">
+                     <div class="modal-dialog">
+                        <div class="modal-content">
+                           <div class="wrapper">
+                              <h3 id="item-name"></h3>
+                              <p>Description: <i id="item-description"></i> </p>
+                              <form action= "../../controllers/product-getreview.php" method = "POST" id = "ReviewForm" >
+                                 <input name="user_id" value="<?php echo htmlspecialchars($user_id); ?>" hidden>
+                                 <input name="product_id" id="product-id" hidden >
+                                 <div class="rating">
+                                    <input type="number" name="rating" hidden>
+                                    <i class='bx bx-star star' style="--i: 0;"></i>
+                                    <i class='bx bx-star star' style="--i: 1;"></i>
+                                    <i class='bx bx-star star' style="--i: 2;"></i>
+                                    <i class='bx bx-star star' style="--i: 3;"></i>
+                                    <i class='bx bx-star star' style="--i: 4;"></i>
+                                 </div>
+                                 <textarea id="review-text" name="review" cols="30" rows="5" placeholder="Your opinion..."></textarea>
+                                 <div class="btn-group">
+                                    <button type="submit" class="btn submit">Submit</button>
+                                    <button type="button" class="btn cancel" data-bs-dismiss="modal">Cancel</button>
+                                 </div>
+                              </form>
+                           </div>
+                        </div>
+
+                  </div>
                </div>
             </div>
          </form>
       </div>
+      <script src = "../../../public/assets/js/edit-item.js"> </script>
+      <script src = "../../../public/assets/js/product-review-star.js"> </script>
    </body>
 </html>
