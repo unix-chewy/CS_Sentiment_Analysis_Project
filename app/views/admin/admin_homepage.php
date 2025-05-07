@@ -15,6 +15,7 @@ $result_category = $stmt_category->get_result();
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
       <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
       <link rel="stylesheet" href="../../../public/assets/css/admin-homepage.css">
       <title>Admin Homepage </title>
@@ -82,23 +83,9 @@ $result_category = $stmt_category->get_result();
 
                <!-- Account Management -->
                <li class="nav-item">
-                  <a class="nav-link collapsed" data-bs-toggle="collapse" href="#account-management-collapse">
-                  <i class="bi bi-person-gear"></i> Account Management <i class="bi bi-chevron-down ms-auto"></i>
+                  <a class="nav-link collapsed" href="admin-functionalities/account-management.php">
+                  <i class="bi bi-person-gear"></i> Account Management 
                   </a>
-                  <div class="collapse" id="account-management-collapse">
-                     <ul class="nav flex-column ps-4">
-                        <li class="nav-item">
-                           <a class="nav-link" href="#">
-                           <i class="bi bi-person-add"></i> Add User
-                           </a>
-                        </li>
-                        <li class="nav-item">
-                           <a class="nav-link" href="#">
-                           <i class="bi bi-person-fill-add"></i> Add Administrator
-                           </a>
-                        </li>
-                     </ul>
-                  </div>
                </li>
                <li class="nav-item">
                   <a class="nav-link" href="#">
@@ -160,8 +147,10 @@ $result_category = $stmt_category->get_result();
          </div>
       </div>
       <div class="main-content">
-         <h1 class="mb-4">Statistics Page</h1>
-      </div>
+   <h2>Statistics Summary</h2>
+   <canvas id="ratings-by-user-chart" height="100"></canvas>
+</div>
+
 
       <!-- The Modals -->
       <!-- Add Item -->
@@ -216,5 +205,6 @@ $result_category = $stmt_category->get_result();
          </div>
       </div>
     <script src="../../../public/assets/js/item-crud.js"> </script>
+    <script src="../../../public/assets/js/admin/admin-homepage-chart.js"></script>
    </body>
 </html>

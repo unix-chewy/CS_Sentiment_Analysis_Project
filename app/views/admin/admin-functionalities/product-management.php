@@ -1,12 +1,9 @@
 <?php  include '../../../config/login-config.php';
-
-
-$sql_category = "SELECT id, product_category FROM categories";
-$stmt_category = $conn->prepare($sql_category);
-$stmt_category->execute();
-$result_category = $stmt_category->get_result();
-?>
-
+   $sql_category = "SELECT id, product_category FROM categories";
+   $stmt_category = $conn->prepare($sql_category);
+   $stmt_category->execute();
+   $result_category = $stmt_category->get_result();
+   ?>
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -53,7 +50,7 @@ $result_category = $stmt_category->get_result();
                   </li>
                </ul>
             </nav>
-            <!-- Logo + Search -->
+            <!-- Cart  -->
             <div class="d-flex align-items-center justify-content-between mt-3">
                <a class="logo" href="../admin_homepage.php">
                </a>
@@ -75,29 +72,15 @@ $result_category = $stmt_category->get_result();
             <ul class="nav flex-column">
                <!-- Product Management -->
                <li class="nav-item">
-                  <a class="nav-link collapsed" href="#product-management.php">
+                  <a class="nav-link collapsed" href="product-management.php">
                   <i class="bi bi-box-seam"></i> Product Management
                   </a>
                </li>
                <!-- Account Management -->
                <li class="nav-item">
-                  <a class="nav-link collapsed" data-bs-toggle="collapse" href="#account-management-collapse">
-                  <i class="bi bi-person-gear"></i> Account Management <i class="bi bi-chevron-down ms-auto"></i>
+                  <a class="nav-link collapsed" href="account-management.php">
+                  <i class="bi bi-person-gear"></i> Account Management 
                   </a>
-                  <div class="collapse" id="account-management-collapse">
-                     <ul class="nav flex-column ps-4">
-                        <li class="nav-item">
-                           <a class="nav-link" href="#">
-                           <i class="bi bi-person-add"></i> Add User
-                           </a>
-                        </li>
-                        <li class="nav-item">
-                           <a class="nav-link" href="#">
-                           <i class="bi bi-person-fill-add"></i> Add Administrator
-                           </a>
-                        </li>
-                     </ul>
-                  </div>
                </li>
                <li class="nav-item">
                   <a class="nav-link" href="#">
@@ -138,20 +121,27 @@ $result_category = $stmt_category->get_result();
       </div>
       <!-- Main Content  -->
       <div class="main-content">
-         <h1 class="mb-4">Product</h1>
-         <form class="d-flex flex-grow-1 mx-3">
-            <input class="form-control" type="search" placeholder="Search..." aria-label="Search">
-            <button class="btn btn-outline-primary" type="submit">
-            <i class="bi bi-search"></i>
-            </button>
-         </form>
-         <!-- Form for viewing, editing, and deleting products -->
-         <form id ="viewItem-Form">
-            <div class="main-content">
-               <div class="list-card">
-                  <div class="item-list">
-                     <table class = "table">
-                        <thead class = "table-dark">
+         <h1 class="mb-4">Products</h1>
+
+         <!-- Search Bar -->
+         <div class="row justify-content-center my-4">
+            <div class="col-md-8 col-lg-6">
+               <form class="d-flex flex-grow-1 mx-3">
+                  <input class="form-control" type="search" placeholder="Search Products..." aria-label="Search">
+                  <button class="btn btn-outline-primary ms-2" type="submit">
+                  <i class="bi bi-search"></i>
+                  </button>
+               </form>
+            </div>
+         </div>
+         
+         <!-- Table -->
+         <div class="row justify-content-center">
+            <div class="col-lg-10">
+               <div class="card shadow-sm">
+                  <div class="card-body table-responsive">
+                     <table class="table table-striped table-bordered align-middle text-center">
+                        <thead class="table-dark">
                            <tr>
                               <th>ID</th>
                               <th>Product Name</th>
@@ -160,27 +150,23 @@ $result_category = $stmt_category->get_result();
                               <th>Price</th>
                               <th>Category</th>
                               <th>ACCESS</th>
-                        </tr>
-                     </thead>
-                     <tbody id="viewItem-Table">
-                     <!-- Table list will be loaded here via AJAX -->
-                     </tbody>
-                  </table>
+                           </tr>
+                        </thead>
+                        <tbody id="viewItem-Table">
+                           <!-- AJAX content goes here -->
+                        </tbody>
+                     </table>
+                  </div>
                </div>
-               <!--<div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#editModal">Edit</button>
-                  <button type="submit" class="btn btn-primary">Delete</button>
-               </div> -->
             </div>
          </div>
-        </form>
-        <div class="modal-footer">
-           <a class='nav-link' data-bs-toggle='modal' data-bs-target='#add-item-modal'>
-               <button type="submit" class="btn btn-primary">Add Item</button>
+         <div class="modal-footer">
+            <a class='nav-link' data-bs-toggle='modal' data-bs-target='#add-item-modal'>
+            <button type="submit" class="btn btn-primary">Add Item</button>
             </a>
-        </div>
+         </div>
       </div>
-
+      
       <!-- The Modals -->
 
       <!-- Add Item -->
@@ -214,9 +200,9 @@ $result_category = $stmt_category->get_result();
                         <label for="item-category" class="form-label">Item Category</label>
                         <select class="form-select" id="item-category" name="item-category">
                            <?php foreach ($result_category as $row): ?>
-                                 <option value="<?php echo ($row['id']) ?>">
-                                    <?php echo ($row['product_category']) ?>
-                                 </option>
+                           <option value="<?php echo ($row['id']) ?>">
+                              <?php echo ($row['product_category']) ?>
+                           </option>
                            <?php endforeach; ?>
                            <option value="-1">Enter New Category</option>
                         </select>
@@ -246,7 +232,7 @@ $result_category = $stmt_category->get_result();
                      <h5 class="modal-title" id="add-item-modal-label">Edit Product</h5>
                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
-                  <div class="modal-body">   
+                  <div class="modal-body">
                      <div class="mb-3">
                         <label for="item-name" class="form-label">Item Name</label>
                         <input type="text" class="form-control" id="item-name" name="item-name" placeholder="Enter item name" required>
@@ -259,7 +245,7 @@ $result_category = $stmt_category->get_result();
                         <label for="item-image" class="form-label">Item Image</label>
                         <input class="form-control" type="file" id="item-image" name="item-image" accept="image/*">
                         <input type="hidden" id="old-image" name="old-image"> <!-- hidden image to get the old image in editing 
-                        (in any case the person doesnt wnna edit the product's image) -->
+                           (in any case the person doesnt wnna edit the product's image) -->
                      </div>
                      <div class="mb-3">
                         <label for="item-price" class="form-label">Item Price</label>
@@ -267,11 +253,12 @@ $result_category = $stmt_category->get_result();
                      </div>
                      <div class="mb-3">
                         <label for="item-category" class="form-label">Item Category</label>
-                        <select class="form-select" id="item-category" name="item-category"> <!-- inline php for populating list -->
+                        <select class="form-select" id="item-category" name="item-category">
+                           <!-- inline php for populating list -->
                            <?php foreach ($result_category as $row): ?>
-                                 <option value="<?php echo ($row['id']) ?>">
-                                    <?php echo ($row['product_category']) ?>
-                                 </option>
+                           <option value="<?php echo ($row['id']) ?>">
+                              <?php echo ($row['product_category']) ?>
+                           </option>
                            <?php endforeach; ?>
                         </select>
                      </div>
@@ -284,6 +271,6 @@ $result_category = $stmt_category->get_result();
             </div>
          </div>
       </div>
-    <script src="../../../../public/assets/js/item-crud.js"> </script>
+      <script src="../../../../public/assets/js/item-crud.js"> </script>
    </body>
 </html>

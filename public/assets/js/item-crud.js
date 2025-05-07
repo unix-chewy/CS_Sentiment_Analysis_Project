@@ -12,7 +12,7 @@ $(document).ready(function(){
     });
     
     // This code block only runs for view-item.php
-    if (window.location.pathname.includes("view-item.php")) {
+    if (window.location.pathname.includes("product-management.php")) {
         
         loadProducts();
 
