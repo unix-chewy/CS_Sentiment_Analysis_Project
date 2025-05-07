@@ -1,0 +1,72 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="1AC79A5D-60B1-1C83-C2E5-D66A34AA65C9" name="ORDER DETAILS">
+<createdBy>kyle</createdBy>
+<createdTime>2025-05-07 14:19:11 UTC</createdTime>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<engineerTo>
+<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<shortName>odt</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID" id="70320778-5D8C-2063-608C-9F57EB1EE438">
+<createdBy>kyle</createdBy>
+<createdTime>2025-05-07 14:19:28 UTC</createdTime>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<engineerTo>
+<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Quantity" id="51486ABB-F21E-AB07-FB14-C99C7248E196">
+<createdBy>kyle</createdBy>
+<createdTime>2025-05-07 14:19:28 UTC</createdTime>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<engineerTo>
+<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Price At Purchase" id="BE073E65-1EB1-EF14-3110-3B826404185D">
+<createdBy>kyle</createdBy>
+<createdTime>2025-05-07 14:19:59 UTC</createdTime>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<engineerTo>
+<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT043</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="DA8447D4-0035-525E-7501-AA57B6A9565B" name="Order Detail PK">
+<createdBy>kyle</createdBy>
+<createdTime>2025-05-07 14:19:55 UTC</createdTime>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<engineerTo>
+<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>70320778-5D8C-2063-608C-9F57EB1EE438</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

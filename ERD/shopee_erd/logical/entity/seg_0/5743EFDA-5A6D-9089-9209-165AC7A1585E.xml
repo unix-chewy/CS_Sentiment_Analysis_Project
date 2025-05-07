@@ -1,0 +1,96 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="5743EFDA-5A6D-9089-9209-165AC7A1585E" name="SHIPMENT">
+<createdBy>kyle</createdBy>
+<createdTime>2025-05-07 14:38:55 UTC</createdTime>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<engineerTo>
+<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<shortName>shp</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID" id="E7702B72-61FE-0AA8-B748-4A506326C592">
+<createdBy>kyle</createdBy>
+<createdTime>2025-05-07 14:39:05 UTC</createdTime>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<engineerTo>
+<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Courier" id="96616E9F-E39A-7FB3-59E1-9A80CAA2CCA6">
+<createdBy>kyle</createdBy>
+<createdTime>2025-05-07 14:39:06 UTC</createdTime>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<engineerTo>
+<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Shipping Date" id="8E933AB6-D48B-961B-5A9D-5AE48A14D22A">
+<createdBy>kyle</createdBy>
+<createdTime>2025-05-07 14:39:07 UTC</createdTime>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<engineerTo>
+<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Estimated Arrival" id="6B3A19FE-13C8-E84F-9355-169573D9D4BA">
+<createdBy>kyle</createdBy>
+<createdTime>2025-05-07 14:39:07 UTC</createdTime>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<engineerTo>
+<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Shipping Status" id="DA2EE1FB-F50B-40D3-3DB1-C13314F0F8FE">
+<createdBy>kyle</createdBy>
+<createdTime>2025-05-07 14:39:07 UTC</createdTime>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<engineerTo>
+<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="7AACE7BD-2872-6C04-A395-0C07159219A2" name="SHIPMENT PK">
+<createdBy>kyle</createdBy>
+<createdTime>2025-05-07 14:39:15 UTC</createdTime>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<engineerTo>
+<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>E7702B72-61FE-0AA8-B748-4A506326C592</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
