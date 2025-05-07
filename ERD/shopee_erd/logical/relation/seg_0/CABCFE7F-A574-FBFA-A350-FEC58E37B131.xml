@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_17" directorySegmentName="seg_0" id="CABCFE7F-A574-FBFA-A350-FEC58E37B131">
+<createdBy>Frilit</createdBy>
+<createdTime>2025-05-07 16:10:10 UTC</createdTime>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<engineerTo>
+<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
+</engineerTo>
+<sourcePk>9DEAAF8E-98ED-3F98-050D-CA138F5FFDCC</sourcePk>
+<identifying>false</identifying>
+<nameOnSource>used for</nameOnSource>
+<nameOnTarget>uses</nameOnTarget>
+<optionalSource>false</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>0959CE89-5A68-8A43-C578-DCDD07AAFBB9</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>CFB72F5E-89B5-2213-744E-74EBB9491C64</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

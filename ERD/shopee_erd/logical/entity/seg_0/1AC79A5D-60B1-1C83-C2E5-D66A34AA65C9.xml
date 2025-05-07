@@ -54,6 +54,34 @@
 <dataTypeScale>2</dataTypeScale>
 <ownDataTypeParameters>,10,2</ownDataTypeParameters>
 </Attribute>
+<Attribute name="ID1" id="710C6E2B-2A4C-8566-7384-F3BC26B9733F">
+<createdBy>Frilit</createdBy>
+<createdTime>2025-05-07 15:46:05 UTC</createdTime>
+<generatorID>5B264C92-8724-BEB7-3C6F-7C30FF392DC2</generatorID>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<engineerTo>
+<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
+</engineerTo>
+<referedAttribute>74A44195-DB19-78E1-778E-B6B3BBA227B1</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID2" id="6C2CF699-1DF1-DE6E-2709-07A259FF6BB1">
+<createdBy>Frilit</createdBy>
+<createdTime>2025-05-07 15:46:28 UTC</createdTime>
+<generatorID>5E59A33E-0B22-D34D-7D28-B9FD6E95B5FC</generatorID>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<engineerTo>
+<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
+</engineerTo>
+<referedAttribute>68AEA4A1-FF54-59BD-5BA5-D88A4BEC34BC</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="DA8447D4-0035-525E-7501-AA57B6A9565B" name="Order Detail PK">
@@ -66,6 +94,8 @@
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>70320778-5D8C-2063-608C-9F57EB1EE438</attributeRef>
+<attributeRef>710C6E2B-2A4C-8566-7384-F3BC26B9733F</attributeRef>
+<attributeRef>6C2CF699-1DF1-DE6E-2709-07A259FF6BB1</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

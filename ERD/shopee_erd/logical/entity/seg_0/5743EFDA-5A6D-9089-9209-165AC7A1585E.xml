@@ -78,6 +78,48 @@
 <dataTypeSize>50</dataTypeSize>
 <ownDataTypeParameters>50,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="ID1" id="D15BE243-20BF-D58F-99CD-69235AAAC860">
+<createdBy>Frilit</createdBy>
+<createdTime>2025-05-07 16:22:27 UTC</createdTime>
+<generatorID>A0C4C876-F263-0E91-359F-16ADA1192C1B</generatorID>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<engineerTo>
+<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
+</engineerTo>
+<referedAttribute>74A44195-DB19-78E1-778E-B6B3BBA227B1</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID2" id="2A97B552-F898-119E-23F7-78E0221597F1">
+<createdBy>Frilit</createdBy>
+<createdTime>2025-05-07 16:23:37 UTC</createdTime>
+<generatorID>74EF7FFB-DD62-D3FD-F64C-CFC76AABA3FB</generatorID>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<engineerTo>
+<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
+</engineerTo>
+<referedAttribute>538A4F34-1065-EBB4-74FE-013EF6FEB9C6</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID3" id="B5641D8A-EB51-FC57-3AB5-B86F4D421418">
+<createdBy>Frilit</createdBy>
+<createdTime>2025-05-07 16:25:09 UTC</createdTime>
+<generatorID>85BF76F4-3215-BBEF-C9F1-6844F715A65A</generatorID>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<engineerTo>
+<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
+</engineerTo>
+<referedAttribute>E5703C71-E30B-7A3D-BFB3-C13AB65459B7</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="7AACE7BD-2872-6C04-A395-0C07159219A2" name="SHIPMENT PK">

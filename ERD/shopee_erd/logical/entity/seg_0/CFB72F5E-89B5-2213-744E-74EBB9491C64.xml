@@ -67,6 +67,35 @@
 <dataTypeSize>100</dataTypeSize>
 <ownDataTypeParameters>100,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="ID1" id="DB9015C5-AB68-B4FE-E66B-DAC4D2966820">
+<createdBy>Frilit</createdBy>
+<createdTime>2025-05-07 16:01:49 UTC</createdTime>
+<generatorID>878A9C70-B4CE-DDDC-E444-ECEE04C10519</generatorID>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<engineerTo>
+<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
+</engineerTo>
+<referedAttribute>74A44195-DB19-78E1-778E-B6B3BBA227B1</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID2" id="9DEE1642-38D4-58DA-8998-E84E7BD7642A">
+<createdBy>Frilit</createdBy>
+<createdTime>2025-05-07 16:10:10 UTC</createdTime>
+<generatorID>CABCFE7F-A574-FBFA-A350-FEC58E37B131</generatorID>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<engineerTo>
+<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>D9C3506C-4A8E-B0B4-051B-06208585EE69</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="92608D9E-9CE9-6C51-4D8D-48C49E24360A" name="Payment PK">
