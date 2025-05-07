@@ -17,11 +17,11 @@
                <div class="d-flex align-items-center gap-3">
                   <a class="nav-link p-0" href="#">Seller Centre</a>
                   <a class="nav-link p-0" href="#">Start Selling</a>
-                  <a class="nav-link p-0" href="#">Download</a>
+                  <a class="nav-link p-0" href="https://shopee.ph/web">Download</a>
                   <span class="text-muted small">Follow us on</span>
                   <div class="d-flex gap-2">
-                     <a href="#" class="text-decoration-none"><i class="bi bi-facebook"></i></a>
-                     <a href="#" class="text-decoration-none"><i class="bi bi-instagram"></i></a>
+                     <a href="https://www.facebook.com/ShopeePH" class="text-decoration-none"><i class="bi bi-facebook"></i></a>
+                     <a href="https://www.instagram.com/Shopee_PH/" class="text-decoration-none"><i class="bi bi-instagram"></i></a>
                   </div>
                </div>
                <!-- Right section -->

@@ -75,24 +75,11 @@ $result_category = $stmt_category->get_result();
             <ul class="nav flex-column">
                <!-- Product Management -->
                <li class="nav-item">
-                  <a class="nav-link collapsed" data-bs-toggle="collapse" href="#product-management-collapse">
-                  <i class="bi bi-box-seam"></i> Product Management <i class="bi bi-chevron-down ms-auto"></i>
+                  <a class="nav-link collapsed" href="admin-functionalities/product-management.php">
+                  <i class="bi bi-box-seam"></i> Product Management </i>
                   </a>
-                  <div class="collapse" id="product-management-collapse">
-                     <ul class="nav flex-column ps-4">
-                        <li class="nav-item">
-                           <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#add-item-modal">
-                           <i class="bi bi-plus-lg"></i> Add Item
-                           </a>
-                        </li>
-                        <li class="nav-item">
-                           <a class="nav-link" href="admin-functionalities/view-item.php">
-                           <i class="bi-eye"></i> View Item
-                           </a>
-                        </li>
-                     </ul>
-                  </div>
                </li>
+
                <!-- Account Management -->
                <li class="nav-item">
                   <a class="nav-link collapsed" data-bs-toggle="collapse" href="#account-management-collapse">
@@ -128,6 +115,7 @@ $result_category = $stmt_category->get_result();
          <div class="sidebar-header">
          </div>
          <ul class="nav flex-column">
+
             <!-- Account  -->
             <li class="nav-item">
                <a class="nav-link collapsed" data-bs-toggle="collapse" href="#account-collapse">
@@ -150,6 +138,7 @@ $result_category = $stmt_category->get_result();
          </ul>
       </div>
       </div>
+
       <!-- Main Content  -->
       <div class="main-content">
          <h1 class="mb-4">Welcome Admin Placeholder</h1>
@@ -173,6 +162,7 @@ $result_category = $stmt_category->get_result();
       <div class="main-content">
          <h1 class="mb-4">Statistics Page</h1>
       </div>
+
       <!-- The Modals -->
       <!-- Add Item -->
       <div class="modal fade" id="add-item-modal" tabindex="-1" aria-labelledby="add-item-modal-label" aria-hidden="true">

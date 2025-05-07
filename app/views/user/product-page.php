@@ -77,8 +77,9 @@
          <div class="row g-4">
             <?php include '../../models/product-controller.php'; ?>
          </div>
+
          <!-- The Modals -->
-         <!-- Add Item -->
+         <!-- Rate Item -->
          <div class="modal fade" id="rate-item-modal" tabindex="-1" aria-labelledby="rate-item-modal-label" aria-hidden="true">
             <div class="modal-dialog">
                <div class="modal-content">
