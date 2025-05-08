@@ -1,10 +1,10 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="272ECDD7-46E7-B8D7-3B9A-3B6A602BA72A" name="CATEGORIES">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="272ECDD7-46E7-B8D7-3B9A-3B6A602BA72A" name="CATEGORY">
 <createdBy>kyle</createdBy>
 <createdTime>2025-04-25 09:03:30 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>
 <engineerTo>
-<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
+<item key="013CBFFF-F830-749C-5F32-B9C8E3781D78" value="true"/>
 </engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
@@ -21,7 +21,7 @@
 <createdTime>2025-04-27 14:21:18 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>
 <engineerTo>
-<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
+<item key="013CBFFF-F830-749C-5F32-B9C8E3781D78" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -33,7 +33,7 @@
 <createdTime>2025-04-27 15:17:43 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>
 <engineerTo>
-<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
+<item key="013CBFFF-F830-749C-5F32-B9C8E3781D78" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -48,7 +48,7 @@
 <createdTime>2025-04-27 14:21:30 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>
 <engineerTo>
-<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
+<item key="013CBFFF-F830-749C-5F32-B9C8E3781D78" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

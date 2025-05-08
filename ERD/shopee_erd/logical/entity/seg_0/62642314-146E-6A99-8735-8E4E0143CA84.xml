@@ -1,0 +1,35 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="62642314-146E-6A99-8735-8E4E0143CA84" name="CUSTOMER">
+<createdBy>kyle</createdBy>
+<createdTime>2025-05-08 10:36:48 UTC</createdTime>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="0B552060-D88A-80C1-60A3-F77F974A2AE6" value="false"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<hierarchicalParent>697B54D6-5847-3917-6399-0D92094F889B</hierarchicalParent>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<shortName>CUS</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Account Status" id="049BA7AD-BD24-1AD4-5933-937878ABD2EA">
+<createdBy>kyle</createdBy>
+<createdTime>2025-05-08 11:46:50 UTC</createdTime>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<engineerTo>
+<item key="0B552060-D88A-80C1-60A3-F77F974A2AE6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>

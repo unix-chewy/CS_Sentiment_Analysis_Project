@@ -1,0 +1,113 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="23DB38C5-A24A-A4E1-C39D-3A113D3A6C64" name="PRODUCTS">
+<createdBy>kyle</createdBy>
+<createdTime>2025-05-08 13:14:24 UTC</createdTime>
+<generatorID>355D32AE-1B8C-01E4-0A4D-2D97DA1D4B02</generatorID>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<abbreviation>PRD</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="CD005717-C5FA-B921-052B-098E8C189222">
+<createdBy>kyle</createdBy>
+<createdTime>2025-05-08 13:14:24 UTC</createdTime>
+<generatorID>68AEA4A1-FF54-59BD-5BA5-D88A4BEC34BC</generatorID>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Name" id="01458571-8713-4412-813D-39F835E8C502">
+<createdBy>kyle</createdBy>
+<createdTime>2025-05-08 13:14:24 UTC</createdTime>
+<generatorID>3AF80798-B51E-0AA0-9528-FFB4C6483AF7</generatorID>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Photo" id="27A904BE-DD47-EAA8-6ED5-D9768403FFE2">
+<createdBy>kyle</createdBy>
+<createdTime>2025-05-08 13:14:24 UTC</createdTime>
+<generatorID>63888181-AB70-5E75-A092-9A17BAE7E6B8</generatorID>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DSC" id="1A68D833-AABD-EF99-0C5A-06CD3D45B6BC">
+<createdBy>kyle</createdBy>
+<createdTime>2025-05-08 13:14:24 UTC</createdTime>
+<generatorID>4FF5CCCF-165C-53AF-9F3A-BE99FAA6271E</generatorID>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PCE" id="8A05048C-7DE2-7401-6F24-124B58A0B5C9">
+<createdBy>kyle</createdBy>
+<createdTime>2025-05-08 13:14:24 UTC</createdTime>
+<generatorID>87AD409B-5101-3478-5F8F-FA52A9985FC5</generatorID>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CATEGORIES_ID" id="EB347134-51D1-1609-6ABF-40AA842D92C5">
+<createdBy>kyle</createdBy>
+<createdTime>2025-05-08 13:14:24 UTC</createdTime>
+<generatorID>9752D897-AA7E-F24B-B8AB-C6CACFF638E7</generatorID>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B2D7486C-8A2C-3F47-4C71-5EA39242BDC0" referredColumn="5B2783AF-569F-1665-FD96-1813A951DFE4"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="41585764-F9F1-7855-B11D-641CE7766F10" name="PRO_PK">
+<createdBy>kyle</createdBy>
+<createdTime>2025-05-08 13:14:24 UTC</createdTime>
+<generatorID>D0A9EBB6-F563-41EA-53DB-E939F8BC2C63</generatorID>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CD005717-C5FA-B921-052B-098E8C189222"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6CCEB10F-FC1E-3475-C751-875DC4C9CBBE" name="PRO_CAT_FK">
+<createdBy>kyle</createdBy>
+<createdTime>2025-05-08 13:14:24 UTC</createdTime>
+<generatorID>BA0204DA-DD6C-30BE-7E81-1D81C609D3DA</generatorID>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EB347134-51D1-1609-6ABF-40AA842D92C5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,86 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2B76C6BF-5B89-CDE0-2DB7-A6639AAB8348" name="SHIPPING_METHODS">
+<createdBy>kyle</createdBy>
+<createdTime>2025-05-08 13:14:24 UTC</createdTime>
+<generatorID>4CE8E92B-9681-3C8E-9C1F-46FC1BDB906C</generatorID>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<abbreviation>SHM</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="F9658F7C-9407-34C4-FF93-3D2257767275">
+<createdBy>kyle</createdBy>
+<createdTime>2025-05-08 13:14:24 UTC</createdTime>
+<generatorID>E5703C71-E30B-7A3D-BFB3-C13AB65459B7</generatorID>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MTD_Name" id="230EF73B-C087-0C9B-C41B-FFFB4AB1B0E4">
+<createdBy>kyle</createdBy>
+<createdTime>2025-05-08 13:14:24 UTC</createdTime>
+<generatorID>567B360E-CE84-5CB7-8D36-034FDFA91073</generatorID>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DSC" id="FCDB1DF7-5F74-F4E1-ACFB-62F6B7365D10">
+<createdBy>kyle</createdBy>
+<createdTime>2025-05-08 13:14:24 UTC</createdTime>
+<generatorID>6B3DFA65-A1D8-966E-80A8-FB7992184914</generatorID>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CST" id="64D6846A-5CA9-4501-E606-C939354572ED">
+<createdBy>kyle</createdBy>
+<createdTime>2025-05-08 13:14:24 UTC</createdTime>
+<generatorID>34E62396-76F1-E6AE-5AEA-3A577E236E18</generatorID>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT043</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EST_Days" id="49C7DE06-F7C4-0798-E907-8BD36071DE65">
+<createdBy>kyle</createdBy>
+<createdTime>2025-05-08 13:14:24 UTC</createdTime>
+<generatorID>FC182F39-9FAF-3C61-0450-AD3B2E16A276</generatorID>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="EBFB2C05-4C2F-1C78-3079-D600D0004FE4" name="SHM_PK">
+<createdBy>kyle</createdBy>
+<createdTime>2025-05-08 13:14:24 UTC</createdTime>
+<generatorID>9EEDCC25-5B3B-E4B2-F03C-0D69A865D334</generatorID>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F9658F7C-9407-34C4-FF93-3D2257767275"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

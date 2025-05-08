@@ -1,0 +1,102 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="30B535B9-D98E-A5ED-35DA-023D1E6864C6" name="PRD_RVW_COMMENTS">
+<createdBy>kyle</createdBy>
+<createdTime>2025-05-08 13:14:24 UTC</createdTime>
+<generatorID>03A496B4-1C16-A870-D306-248590689FB6</generatorID>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<abbreviation>PRC</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="96672410-F786-C3EE-2F5A-55654F9C3C64">
+<createdBy>kyle</createdBy>
+<createdTime>2025-05-08 13:14:24 UTC</createdTime>
+<generatorID>50782E77-F754-F5E2-CBC8-9DF5B6245B93</generatorID>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RVW_TXT" id="CF790478-49A7-A7FB-C4DB-EB906D59D715">
+<createdBy>kyle</createdBy>
+<createdTime>2025-05-08 13:14:24 UTC</createdTime>
+<generatorID>CC2F07BB-3ADA-94DD-AEA3-D761BFC973FC</generatorID>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="USERS_USR_ID" id="31FFF2E6-857E-5CCC-2D97-E9D58569B3EB">
+<createdBy>kyle</createdBy>
+<createdTime>2025-05-08 13:14:24 UTC</createdTime>
+<generatorID>88241992-3AC9-7250-F7F5-26320A4BB609</generatorID>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="906B40D1-324E-40E9-04D9-82751F0BE5AB" referredColumn="426F8C3B-A3D2-985E-CDB2-A490F864AE5A"/>
+</associations>
+</Column>
+<Column name="PRODUCTS_ID" id="1EC25ABE-7570-F4F7-D083-B53B9A87C614">
+<createdBy>kyle</createdBy>
+<createdTime>2025-05-08 13:14:24 UTC</createdTime>
+<generatorID>98A3FF6C-16CD-5024-B353-B868FF8397DA</generatorID>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="AFE295AA-CB94-8014-8B69-E9823CA4F958" referredColumn="CD005717-C5FA-B921-052B-098E8C189222"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="670B42E0-B301-DE23-39A3-520DBD5FADD5" name="PRC_PK">
+<createdBy>kyle</createdBy>
+<createdTime>2025-05-08 13:14:24 UTC</createdTime>
+<generatorID>7CF7417E-A644-B27B-B51F-980E0BED25A0</generatorID>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="96672410-F786-C3EE-2F5A-55654F9C3C64"/>
+<colUsage columnID="31FFF2E6-857E-5CCC-2D97-E9D58569B3EB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="12DB130F-2B3C-576C-8AAF-0A8DCB587935" name="PRC_PRO_FK">
+<createdBy>kyle</createdBy>
+<createdTime>2025-05-08 13:14:24 UTC</createdTime>
+<generatorID>FBA50BBC-460F-4790-803B-A96853D98131</generatorID>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1EC25ABE-7570-F4F7-D083-B53B9A87C614"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D087B246-39BB-4FBE-F23A-BA0CB64BE0E0" name="PRC_USR_FK">
+<createdBy>kyle</createdBy>
+<createdTime>2025-05-08 13:32:29 UTC</createdTime>
+<generatorID>9B624DA1-8DC0-4FDA-8E2C-2AB2A29C4FC4</generatorID>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="31FFF2E6-857E-5CCC-2D97-E9D58569B3EB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

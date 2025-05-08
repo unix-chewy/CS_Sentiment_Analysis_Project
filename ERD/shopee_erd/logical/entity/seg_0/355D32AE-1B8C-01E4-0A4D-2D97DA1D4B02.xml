@@ -1,10 +1,10 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="355D32AE-1B8C-01E4-0A4D-2D97DA1D4B02" name="PRODUCTS">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="355D32AE-1B8C-01E4-0A4D-2D97DA1D4B02" name="PRODUCT">
 <createdBy>kyle</createdBy>
 <createdTime>2025-04-25 09:03:36 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>
 <engineerTo>
-<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
+<item key="013CBFFF-F830-749C-5F32-B9C8E3781D78" value="true"/>
 </engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
@@ -21,7 +21,7 @@
 <createdTime>2025-04-27 08:06:13 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>
 <engineerTo>
-<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
+<item key="013CBFFF-F830-749C-5F32-B9C8E3781D78" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -33,7 +33,7 @@
 <createdTime>2025-04-27 08:06:13 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>
 <engineerTo>
-<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
+<item key="013CBFFF-F830-749C-5F32-B9C8E3781D78" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -46,7 +46,7 @@
 <createdTime>2025-04-27 08:06:14 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>
 <engineerTo>
-<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
+<item key="013CBFFF-F830-749C-5F32-B9C8E3781D78" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -59,7 +59,7 @@
 <createdTime>2025-04-27 08:06:14 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>
 <engineerTo>
-<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
+<item key="013CBFFF-F830-749C-5F32-B9C8E3781D78" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -72,7 +72,7 @@
 <createdTime>2025-04-27 15:19:10 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>
 <engineerTo>
-<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
+<item key="013CBFFF-F830-749C-5F32-B9C8E3781D78" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -87,7 +87,7 @@
 <generatorID>BA0204DA-DD6C-30BE-7E81-1D81C609D3DA</generatorID>
 <ownerDesignName>shopee_erd</ownerDesignName>
 <engineerTo>
-<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
+<item key="013CBFFF-F830-749C-5F32-B9C8E3781D78" value="true"/>
 </engineerTo>
 <referedAttribute>95EF3C67-3B82-B578-6F7C-7B0FF595884A</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
@@ -101,9 +101,8 @@
 <createdBy>kyle</createdBy>
 <createdTime>2025-04-27 15:18:31 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>
-<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="false"/>
+<item key="013CBFFF-F830-749C-5F32-B9C8E3781D78" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
