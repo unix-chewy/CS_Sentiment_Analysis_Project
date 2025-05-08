@@ -140,3 +140,39 @@ form.d-flex.flex-grow-1 .btn:hover {
 .price-text{
   color:#EE4D2D !important;
 }
+.sidebar {
+  background-color: #f8f9fa;
+  height: 100vh;
+  position: fixed;
+  width: 250px;
+  color: black;
+}
+
+.sidebar-header {
+  padding: 20px;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.sidebar-menu {
+  padding: 10px 0;
+}
+
+.sidebar .nav-link,
+.sidebar .nav-link i,
+.sidebar .bi-chevron-down,
+.sidebar .nav-link.collapsed,
+.sidebar .nav.flex-column.ps-4 .nav-link {
+  color: black !important;
+}
+
+.sidebar .nav-link {
+  padding: 10px 20px;
+}
+
+.sidebar .nav-link i {
+  margin-right: 10px;
+}
+
+.sidebar .nav-link:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}

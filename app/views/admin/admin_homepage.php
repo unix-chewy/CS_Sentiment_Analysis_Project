@@ -67,6 +67,7 @@ $result_category = $stmt_category->get_result();
          </div>
          </div>
       </header>
+
       <div class="sidebar">
          <div class="sidebar-header">
             <h4>Admin Placeholder</h4>
@@ -101,8 +102,8 @@ $result_category = $stmt_category->get_result();
          </div>
          <div class="sidebar-header">
          </div>
-         <ul class="nav flex-column">
 
+         <ul class="nav flex-column">
             <!-- Account  -->
             <li class="nav-item">
                <a class="nav-link collapsed" data-bs-toggle="collapse" href="#account-collapse">
