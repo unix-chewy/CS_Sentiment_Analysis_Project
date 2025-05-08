@@ -1,10 +1,10 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="697B54D6-5847-3917-6399-0D92094F889B" name="USERS">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="697B54D6-5847-3917-6399-0D92094F889B" name="USER">
 <createdBy>kyle</createdBy>
 <createdTime>2025-04-25 09:04:07 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>
 <engineerTo>
-<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
+<item key="0B552060-D88A-80C1-60A3-F77F974A2AE6" value="true"/>
 </engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
@@ -21,7 +21,7 @@
 <createdTime>2025-04-27 08:00:17 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>
 <engineerTo>
-<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
+<item key="0B552060-D88A-80C1-60A3-F77F974A2AE6" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -33,7 +33,7 @@
 <createdTime>2025-04-27 08:01:24 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>
 <engineerTo>
-<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
+<item key="0B552060-D88A-80C1-60A3-F77F974A2AE6" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -46,7 +46,7 @@
 <createdTime>2025-04-27 08:00:26 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>
 <engineerTo>
-<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
+<item key="0B552060-D88A-80C1-60A3-F77F974A2AE6" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -59,7 +59,7 @@
 <createdTime>2025-04-27 08:01:24 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>
 <engineerTo>
-<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
+<item key="0B552060-D88A-80C1-60A3-F77F974A2AE6" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -72,7 +72,7 @@
 <createdTime>2025-04-27 08:01:24 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>
 <engineerTo>
-<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
+<item key="0B552060-D88A-80C1-60A3-F77F974A2AE6" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -85,7 +85,7 @@
 <createdTime>2025-04-27 08:01:24 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>
 <engineerTo>
-<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
+<item key="0B552060-D88A-80C1-60A3-F77F974A2AE6" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -93,20 +93,6 @@
 <logicalDatatype>LOGDT015</logicalDatatype>
 <dataTypePrecision>0</dataTypePrecision>
 <ownDataTypeParameters>,0,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="ROL ID" id="E63CCD3B-9447-ACD7-DD12-5E92C9D6B923">
-<createdBy>kyle</createdBy>
-<createdTime>2025-04-27 15:36:33 UTC</createdTime>
-<generatorID>FAE1E9C6-D5C0-C0E5-2AFD-0EAFFFD43B53</generatorID>
-<ownerDesignName>shopee_erd</ownerDesignName>
-<engineerTo>
-<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
-</engineerTo>
-<referedAttribute>D4A76D97-D7C0-897B-5678-EE45C37E174A</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
@@ -116,7 +102,7 @@
 <ownerDesignName>shopee_erd</ownerDesignName>
 <shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="false"/>
+<item key="0B552060-D88A-80C1-60A3-F77F974A2AE6" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <newElementsIDs>D9D30F5C-FCB3-2CEB-1326-B984B40DBE1E</newElementsIDs>
@@ -130,7 +116,7 @@
 <ownerDesignName>shopee_erd</ownerDesignName>
 <shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="false"/>
+<item key="0B552060-D88A-80C1-60A3-F77F974A2AE6" value="false"/>
 </engineerTo>
 <newElementsIDs>51D5E8F0-093B-B901-A0D5-998A77D43FA1</newElementsIDs>
 <usedAttributes>

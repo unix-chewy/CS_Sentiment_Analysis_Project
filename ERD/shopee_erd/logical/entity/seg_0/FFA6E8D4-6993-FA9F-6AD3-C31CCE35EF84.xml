@@ -1,10 +1,10 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="FFA6E8D4-6993-FA9F-6AD3-C31CCE35EF84" name="CART ITEMS">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="FFA6E8D4-6993-FA9F-6AD3-C31CCE35EF84" name="CART ITEM">
 <createdBy>kyle</createdBy>
 <createdTime>2025-05-07 14:23:07 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>
 <engineerTo>
-<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
+<item key="013CBFFF-F830-749C-5F32-B9C8E3781D78" value="true"/>
 </engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
@@ -21,7 +21,7 @@
 <createdTime>2025-05-07 14:24:42 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>
 <engineerTo>
-<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
+<item key="013CBFFF-F830-749C-5F32-B9C8E3781D78" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -33,7 +33,7 @@
 <createdTime>2025-05-07 14:24:43 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>
 <engineerTo>
-<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
+<item key="013CBFFF-F830-749C-5F32-B9C8E3781D78" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -45,7 +45,7 @@
 <createdTime>2025-05-07 14:29:57 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>
 <engineerTo>
-<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
+<item key="013CBFFF-F830-749C-5F32-B9C8E3781D78" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -60,7 +60,7 @@
 <generatorID>18FFC9B6-F52E-B7FE-6FD6-E075BD824026</generatorID>
 <ownerDesignName>shopee_erd</ownerDesignName>
 <engineerTo>
-<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
+<item key="013CBFFF-F830-749C-5F32-B9C8E3781D78" value="true"/>
 </engineerTo>
 <referedAttribute>D9D30F5C-FCB3-2CEB-1326-B984B40DBE1E</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
@@ -74,7 +74,7 @@
 <generatorID>9A6B4B95-F390-AF57-FADB-6713D27BF261</generatorID>
 <ownerDesignName>shopee_erd</ownerDesignName>
 <engineerTo>
-<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
+<item key="013CBFFF-F830-749C-5F32-B9C8E3781D78" value="true"/>
 </engineerTo>
 <referedAttribute>68AEA4A1-FF54-59BD-5BA5-D88A4BEC34BC</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
@@ -89,7 +89,7 @@
 <createdTime>2025-05-07 14:24:58 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>
 <engineerTo>
-<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
+<item key="013CBFFF-F830-749C-5F32-B9C8E3781D78" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

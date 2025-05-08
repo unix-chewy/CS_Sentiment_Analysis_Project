@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="EBAFEEB5-A3AA-C014-02B1-8AD52A1999AF" containerWithKeyObject="F91AD289-6642-D763-74F3-44EEF3D1F785" localFKIndex="251B5957-43AB-43EA-5AD2-EDAB437D55F5" name="SHP_SHA_FK">
+<createdBy>kyle</createdBy>
+<createdTime>2025-05-08 13:14:24 UTC</createdTime>
+<generatorID>74EF7FFB-DD62-D3FD-F64C-CFC76AABA3FB</generatorID>
+<ownerDesignName>shopee_erd</ownerDesignName>
+<referredTableLongName>SHIPPING_ADDRESSES</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>223CF2A6-AFFB-FA64-27DD-F7CF0F5EF375</referredTableID>
+<keyObject>83D09865-6DB8-11EF-8B11-970B6929E79B</keyObject>
+<referredKeyID>83D09865-6DB8-11EF-8B11-970B6929E79B</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

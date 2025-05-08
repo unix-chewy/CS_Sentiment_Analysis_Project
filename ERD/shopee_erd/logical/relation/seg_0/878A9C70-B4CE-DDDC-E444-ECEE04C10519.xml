@@ -4,13 +4,14 @@
 <createdTime>2025-05-07 16:01:29 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>
 <engineerTo>
-<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
+<item key="0B552060-D88A-80C1-60A3-F77F974A2AE6" value="true"/>
 </engineerTo>
 <sourcePk>6383971D-E9B1-8A2D-FFCF-130A3F7C78F9</sourcePk>
+<targetPk>92608D9E-9CE9-6C51-4D8D-48C49E24360A</targetPk>
 <identifying>false</identifying>
 <nameOnSource>have</nameOnSource>
 <nameOnTarget>for</nameOnTarget>
-<optionalSource>true</optionalSource>
+<optionalSource>false</optionalSource>
 <optionalTarget>false</optionalTarget>
 <sourceCardinality>1</sourceCardinality>
 <sourceEntity>BC3711F9-351B-EBFD-D343-F89876ECB527</sourceEntity>

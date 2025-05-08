@@ -1,20 +1,22 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_21" directorySegmentName="seg_0" id="A0C4C876-F263-0E91-359F-16ADA1192C1B">
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="SHP ORD FK" directorySegmentName="seg_0" id="A0C4C876-F263-0E91-359F-16ADA1192C1B">
 <createdBy>Frilit</createdBy>
 <createdTime>2025-05-07 16:22:27 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>
 <engineerTo>
-<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
+<item key="013CBFFF-F830-749C-5F32-B9C8E3781D78" value="true"/>
 </engineerTo>
 <sourcePk>6383971D-E9B1-8A2D-FFCF-130A3F7C78F9</sourcePk>
+<targetPk>7AACE7BD-2872-6C04-A395-0C07159219A2</targetPk>
+<dominantRole>BC3711F9-351B-EBFD-D343-F89876ECB527</dominantRole>
 <identifying>false</identifying>
 <nameOnSource>result</nameOnSource>
 <nameOnTarget>contains</nameOnTarget>
-<optionalSource>true</optionalSource>
+<optionalSource>false</optionalSource>
 <optionalTarget>false</optionalTarget>
 <sourceCardinality>1</sourceCardinality>
 <sourceEntity>BC3711F9-351B-EBFD-D343-F89876ECB527</sourceEntity>
-<targetCardinalityString>*</targetCardinalityString>
+<targetCardinalityString>1</targetCardinalityString>
 <targetEntity>5743EFDA-5A6D-9089-9209-165AC7A1585E</targetEntity>
 <transferable>true</transferable>
 <deleteRule>NO ACTION</deleteRule>

@@ -292,6 +292,7 @@
 			<discriminator_col value="{table abbr}_TYPE"/>
 		</constraints>
 		<glossaries>
+			<glossary_file value="/Applications/XAMPP/xamppfiles/htdocs/CS_Sentiment_Analysis_Project/ERD/shopee_glossary.glossary"/>
 		</glossaries>
 	</naming_standard_rules>
 	<comparemapping>
@@ -391,7 +392,7 @@
 	<model_compare_storage_props_filter>
 	</model_compare_storage_props_filter>
 	<naming_options>
-		<model_options objectid="C355C565-FFFC-E27C-0932-249D1DC0E934">
+		<model_options objectid="0B552060-D88A-80C1-60A3-F77F974A2AE6">
 			<naming_option class_name="oracle.dbtools.crest.model.design.relational.Table" max_name_length="30" case_type="2" valid_characters="" all_valid="true" />
 			<naming_option class_name="oracle.dbtools.crest.model.design.relational.Column" max_name_length="30" case_type="2" valid_characters="" all_valid="true" />
 			<naming_option class_name="oracle.dbtools.crest.model.design.relational.TableView" max_name_length="30" case_type="2" valid_characters="" all_valid="true" />

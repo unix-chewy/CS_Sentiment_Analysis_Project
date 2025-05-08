@@ -1,10 +1,10 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="CFB72F5E-89B5-2213-744E-74EBB9491C64" name="PAYMENTS">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="CFB72F5E-89B5-2213-744E-74EBB9491C64" name="PAYMENT">
 <createdBy>kyle</createdBy>
 <createdTime>2025-05-07 14:20:53 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>
 <engineerTo>
-<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
+<item key="0B552060-D88A-80C1-60A3-F77F974A2AE6" value="true"/>
 </engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
@@ -21,7 +21,7 @@
 <createdTime>2025-05-07 14:21:05 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>
 <engineerTo>
-<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
+<item key="0B552060-D88A-80C1-60A3-F77F974A2AE6" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -33,7 +33,7 @@
 <createdTime>2025-05-07 14:21:06 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>
 <engineerTo>
-<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
+<item key="0B552060-D88A-80C1-60A3-F77F974A2AE6" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -45,7 +45,7 @@
 <createdTime>2025-05-07 14:21:12 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>
 <engineerTo>
-<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
+<item key="0B552060-D88A-80C1-60A3-F77F974A2AE6" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -59,7 +59,7 @@
 <createdTime>2025-05-07 14:21:19 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>
 <engineerTo>
-<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
+<item key="0B552060-D88A-80C1-60A3-F77F974A2AE6" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -67,13 +67,13 @@
 <dataTypeSize>100</dataTypeSize>
 <ownDataTypeParameters>100,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ID1" id="DB9015C5-AB68-B4FE-E66B-DAC4D2966820">
-<createdBy>Frilit</createdBy>
-<createdTime>2025-05-07 16:01:49 UTC</createdTime>
+<Attribute name="ID1" id="006F5A5D-0A29-BA60-E94E-CAD3063F75C0">
+<createdBy>kyle</createdBy>
+<createdTime>2025-05-08 16:12:20 UTC</createdTime>
 <generatorID>878A9C70-B4CE-DDDC-E444-ECEE04C10519</generatorID>
 <ownerDesignName>shopee_erd</ownerDesignName>
 <engineerTo>
-<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
+<item key="0B552060-D88A-80C1-60A3-F77F974A2AE6" value="true"/>
 </engineerTo>
 <referedAttribute>74A44195-DB19-78E1-778E-B6B3BBA227B1</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
@@ -81,15 +81,14 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ID2" id="9DEE1642-38D4-58DA-8998-E84E7BD7642A">
-<createdBy>Frilit</createdBy>
-<createdTime>2025-05-07 16:10:10 UTC</createdTime>
+<Attribute name="ID2" id="0A1D5B63-6053-DD20-27CC-96FDE39EFB47">
+<createdBy>kyle</createdBy>
+<createdTime>2025-05-08 16:15:09 UTC</createdTime>
 <generatorID>CABCFE7F-A574-FBFA-A350-FEC58E37B131</generatorID>
 <ownerDesignName>shopee_erd</ownerDesignName>
 <engineerTo>
-<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
+<item key="0B552060-D88A-80C1-60A3-F77F974A2AE6" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
 <referedAttribute>D9C3506C-4A8E-B0B4-051B-06208585EE69</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -103,7 +102,7 @@
 <createdTime>2025-05-07 14:21:28 UTC</createdTime>
 <ownerDesignName>shopee_erd</ownerDesignName>
 <engineerTo>
-<item key="C355C565-FFFC-E27C-0932-249D1DC0E934" value="true"/>
+<item key="0B552060-D88A-80C1-60A3-F77F974A2AE6" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
