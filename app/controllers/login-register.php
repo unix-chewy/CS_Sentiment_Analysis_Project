@@ -1,4 +1,5 @@
-<?php include '../config/login-config.php';
+<?php
+include '../config/login-config.php';
 
 // Register
 if (isset($_POST['signup_button'])) {
@@ -9,28 +10,34 @@ if (isset($_POST['signup_button'])) {
     $confirm_password = $_POST['confirm_pass'];
 
     if ($password !== $confirm_password) {
-        echo "Passwords do not match!";
+        echo json_encode(["status" => "error", "message" => "Passwords do not match!"]);
         exit();
     }
 
     $hashed_pass = md5($password);
 
-    $check_email = "SELECT * FROM users WHERE email = '$email'";
-    $result = $conn->query($check_email);
+    // Determine role_id
+    $role_id = isset($_POST['role']) && $_POST['role'] === 'admin' ? 1 : 2; // Admin or User
+
+    // Check for existing email
+    $check_email = "SELECT * FROM users WHERE email = ?";
+    $stmt = $conn->prepare($check_email);
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
     if ($result->num_rows > 0) {
-        echo "Email already exists!";
-    } 
-    else{
+        echo json_encode(["status" => "error", "message" => "Email already exists!"]);
+    } else {
         $insert_query = "INSERT INTO users (first_name, last_name, email, password, role_id) 
-                        VALUES ('$first_name', '$last_name', '$email', '$hashed_pass', 2)";
-        
-        if ($conn->query($insert_query) === TRUE) {
-            echo "Registration successful!";
-            header("Location: ../views/login.php");
-            exit();
-        } 
-        else{
-            echo "Error: " . $conn->error;
+                         VALUES (?, ?, ?, ?, ?)";
+        $stmt = $conn->prepare($insert_query);
+        $stmt->bind_param("ssssi", $first_name, $last_name, $email, $hashed_pass, $role_id);
+
+        if ($stmt->execute()) {
+            echo json_encode(["status" => "success", "message" => "User added!"]);
+        } else {
+            echo json_encode(["status" => "error", "message" => "Error: " . $conn->error]);
         }
     }
 }
@@ -42,23 +49,24 @@ if (isset($_POST['login_button'])) {
 
     $sql = "SELECT * FROM users WHERE email = '$email' AND password = '$password'";
     $result = $conn->query($sql);
+
     if ($result->num_rows > 0) {
         session_start();
         $row = $result->fetch_assoc();
         $_SESSION['user_id'] = $row['id'];
         $_SESSION['email'] = $row['email'];
-        $_SESSION['role'] = $row['role_id']; 
+        $_SESSION['role'] = $row['role_id'];
 
-        if ($_SESSION['role'] == 1) {
-            header("Location: ../views/admin/admin_homepage.php");
-        }
-        else{
-            header("Location: ../views/user/user_homepage.php");
-        }
-        exit();
-    }
-    else{
-        echo "Incorrect email or password!";
+        // Prepare a response with role-based message
+        $message = ($_SESSION['role'] == 1) ? "Admin login successful!" : "User login successful!";
+
+        echo json_encode([
+            "status" => "success",
+            "message" => $message,
+            "role" => $_SESSION['role']
+        ]);
+    } else {
+        echo json_encode(["status" => "error", "message" => "Incorrect email or password!"]);
     }
 }
 ?>

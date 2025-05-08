@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopee Login</title>
     <link rel="stylesheet" href="../../public/assets/css/login-register.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
 
@@ -28,7 +29,7 @@
             <!-- Right  -->
             <div class="login-section">
                 <div class="login-content">
-                    <form class="login-form" method="POST" action="../controllers/login-register.php">
+                    <form class="signup-form" id="signup-form" method="POST" action="../controllers/login-register.php">
                 <div class="form-group">
                     <input type="text" name = "fname" placeholder="First Name" required>
                 </div>
@@ -58,6 +59,7 @@
             </div>
         </div>
     </div>
+    <script src="../../public/assets/js/login-register.js"> </script>
 </body>
 </html>
 

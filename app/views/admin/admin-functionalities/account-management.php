@@ -4,6 +4,7 @@
    $stmt_category->execute();
    $result_category = $stmt_category->get_result();
    ?>
+
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -82,21 +83,6 @@
                   <i class="bi bi-person-gear"></i> Account Management 
                   </a>
                </li>
-               <div class="collapse" id="account-management-collapse">
-                  <ul class="nav flex-column ps-4">
-                     <li class="nav-item">
-                        <a class="nav-link" href="#">
-                        <i class="bi bi-person-add"></i> Add User
-                        </a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="#">
-                        <i class="bi bi-person-fill-add"></i> Add Administrator
-                        </a>
-                     </li>
-                  </ul>
-               </div>
-               </li>
                <li class="nav-item">
                   <a class="nav-link" href="#">
                   <i class="bi bi-bar-chart"></i> View Analytics
@@ -134,6 +120,7 @@
          </ul>
       </div>
       </div>
+
       <!-- Main Content  -->
       <div class="main-content">
       <h1 class="mb-4">Accounts</h1>
@@ -151,9 +138,57 @@
       </div>
       <!-- Buttons for add -->
       <div class="text-center my-4">
-         <button class="btn btn-primary me-2" data-bs-toggle="modal" data-bs-target="#addUserModal">Add User</button>
-         <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addAdminModal">Add Admin</button>
+         <button class="btn btn-primary me-2" data-bs-toggle="modal" data-bs-target="#addUserModal">Add User/Admin</button>
       </div>
-      <script src="../../../../public/assets/js/item-crud.js"> </script>
+
+      <!-- The Modals -->
+
+      <div class="modal fade" id="addUserModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content p-0">
+      <div class="wrapper w-100">
+        <div class="login-page d-flex justify-content-center w-100">
+          <!-- Right Form Section Only -->
+          <div class="login-section no-image w-100">
+            <div class="login-content">
+
+              <form class="signup-form" id="signup-form" method="POST" action="../../../controllers/login-register.php">
+                <div class="form-group">
+                  <input type="text" name="fname" placeholder="First Name" required>
+                </div>
+                <div class="form-group">
+                  <input type="text" name="lname" placeholder="Last Name" required>
+                </div>
+                <div class="form-group">
+                  <input type="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                  <input type="password" name="pass" placeholder="Password" required>
+                </div>
+                <div class="form-group">
+                  <input type="password" name="confirm_pass" placeholder="Confirm Password" required>
+                </div>
+                <div class="form-group">
+                  <label for="role" class="form-label">Select Role</label>
+                  <select name="role" id="role" class="form-select" required>
+                    <option value="">-- Choose Role --</option>
+                    <option value="user">User</option>
+                    <option value="admin">Administrator</option>
+                  </select>
+                </div>
+                <button type="submit" class="btn btn-submit mt-3" name="signup_button">Create Account</button>
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Close Button -->
+      <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+  </div>
+</div>
+
+<script src="../../../../public/assets/js/login-register.js"> </script>
    </body>
 </html>
