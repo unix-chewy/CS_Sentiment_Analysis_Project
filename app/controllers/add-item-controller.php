@@ -26,17 +26,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $item_category = $conn->insert_id;  // Store last inserted ID
     }
 
-    // Moving the uploaded image to /products
-    if (move_uploaded_file($tempname, $file_path)) {
-        echo "<h3>&nbsp; Image uploaded successfully!</h3>";
-    } else {
-        echo "<h3>&nbsp; Failed to upload image!</h3>";
-    }
-
     $sql = "INSERT INTO products (name, photo, description, price, category_id) VALUES(?, ?, ?, ?, ?)";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param('sssii', $item_name, $filename, $item_description, $item_price, $item_category);
     $stmt->execute() or die("<b>Error:</b> Problem on Image Insert<br/>" . mysqli_connect_error());
-    $stmt->close();
     }
+
+    if ($stmt->execute()) {
+        echo "Item added successfully!";
+    } else {
+        echo "Error adding item: " . $conn->error;
+    }
+    
+    // Remove any HTML output if you want clean JSON responses
+    $stmt->close();
+    exit(); 
 ?>

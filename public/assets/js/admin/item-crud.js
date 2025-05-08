@@ -66,4 +66,28 @@ $(document).ready(function(){
 
     }
 
+    // Alert box
+    $("#add-item-form").submit(function(e) {
+        e.preventDefault();
+        var formData = new FormData(this);
+        
+        $.ajax({
+            url: "/CS_Sentiment_Analysis_Project/app/controllers/add-item-controller.php",
+            type: "POST",
+            data: formData,
+            contentType: false,
+            processData: false,
+            success: function(response) {
+                alert(response);
+                $("#add-item-modal").modal("hide");
+                loadProducts(); // Refresh the product list
+                $("#add-item-form")[0].reset(); 
+            },
+            error: function(xhr, status, error) {
+                alert("Error: " + error);
+            }
+        });
+    });
+
   });
+

@@ -173,7 +173,7 @@
       <div class="modal fade" id="add-item-modal" tabindex="-1" aria-labelledby="add-item-modal-label" aria-hidden="true">
          <div class="modal-dialog">
             <div class="modal-content">
-               <form action="../../../controllers/add-item-controller.php" method="post" enctype="multipart/form-data">
+               <form id="add-item-form" method="post" enctype="multipart/form-data">
                   <!-- Connect PHP here -->
                   <div class="modal-header">
                      <h5 class="modal-title" id="add-item-modal-label">Add New Item</h5>
@@ -271,6 +271,6 @@
             </div>
          </div>
       </div>
-      <script src="../../../../public/assets/js/item-crud.js"> </script>
+      <script src="../../../../public/assets/js/admin/item-crud.js"> </script>
    </body>
 </html>

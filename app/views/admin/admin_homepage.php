@@ -204,7 +204,7 @@ $result_category = $stmt_category->get_result();
             </div>
          </div>
       </div>
-    <script src="../../../public/assets/js/item-crud.js"> </script>
+    <script src="../../../public/assets/js/admin/item-crud.js"> </script>
     <script src="../../../public/assets/js/admin/admin-homepage-chart.js"></script>
    </body>
 </html>
