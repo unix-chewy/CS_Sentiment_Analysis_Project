@@ -1,5 +1,12 @@
 <?php  include '../../config/login-config.php';
+session_start();
 
+// Get admin's first name from database
+$admin_id = $_SESSION['user_id'];
+$sql = "SELECT first_name FROM users WHERE id = $admin_id";
+$result = $conn->query($sql);
+$row = $result->fetch_assoc();
+$first_name = $row['first_name'];
 
 $sql_category = "SELECT id, product_category FROM categories";
 $stmt_category = $conn->prepare($sql_category);
@@ -70,8 +77,7 @@ $result_category = $stmt_category->get_result();
 
       <div class="sidebar">
          <div class="sidebar-header">
-            <h4>Admin Placeholder</h4>
-            <!-- insert php logic here for admin name -->
+            <h4><?php echo $first_name; ?></h4>
          </div>
          <div class="sidebar-menu">
             <ul class="nav flex-column">
@@ -129,7 +135,7 @@ $result_category = $stmt_category->get_result();
 
       <!-- Main Content  -->
       <div class="main-content">
-         <h1 class="mb-4">Welcome Admin Placeholder</h1>
+         <h1 class="mb-4">Welcome <?php echo $first_name; ?></h1>
          <div class="admin-card">
             <div class="admin-profile">
                <img src="placeholder" alt="Admin 2">

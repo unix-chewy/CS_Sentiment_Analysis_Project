@@ -10,6 +10,7 @@ $(document).ready(function() {
         $("#item-name").text(btn.data("name"));
         $("#item-description").text(btn.data("description"));
         $("#review-text").val(btn.data("review"));
+        $("#sen-id").val(btn.data("sen-id"));
     });
 
     // Review submissions alert
@@ -55,11 +56,14 @@ $(document).ready(function() {
             data: { id: productID},
             success: function(response) {
                 if (response.status === "exists") {
-                    window.location.href = response.redirect;
+                    alert(response.message);
+                    $("#rate-item-modal").modal('hide');
                 } else if (response.status === "new") {
                     alert(response.message); // or show a modal to rate
+                    $("#rate-item-modal").modal('show');
                 } else {
                     console.error("Unexpected response", response);
+
                 }
             },
             error: function(xhr, status, error) {
@@ -74,7 +78,8 @@ $(document).ready(function() {
             $.post("/CS_Sentiment_Analysis_Project/app/controllers/delete-reviews.php", 
                 { 
                 prc_id: $(this).data("prc-id"), 
-                prv_id: $(this).data("prv-id") 
+                prv_id: $(this).data("prv-id"),
+                sen_id: $(this).data("sen-id")
                 },
                 function(response) {
                     alert("Deleted Successfully!");

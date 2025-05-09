@@ -3,6 +3,7 @@ include_once 'admin/sentiment-analysis.php';
 
 session_start();
 
+
 if (isset($_POST['add-review'])) {
     $user_id = $_POST['user_id'] ?? null;
     $product_id = $_POST['product_id'] ?? null;
@@ -28,8 +29,8 @@ if (isset($_POST['add-review'])) {
         $stmt->close();
 
         // Insert sentiment into sentiments table
-        $stmt = $conn->prepare("INSERT INTO sentiments (review_id, product_id, sentiment_label, sentiment_score) VALUES (?, ?, ?, ?)");
-        $stmt->bind_param("iisi", $review_id, $product_id, $sentiment_label, $sentiment_score);
+        $stmt = $conn->prepare("INSERT INTO sentiments (review_id, product_id, sentiment_label, sentiment_score, user_id) VALUES (?, ?, ?, ?, ?)");
+        $stmt->bind_param("iisii", $review_id, $product_id, $sentiment_label, $sentiment_score, $user_id);
         $stmt->execute();
         $stmt->close();
     } else {
@@ -62,8 +63,8 @@ if (isset($_POST['update-review'])) {
         $update_stmt->close();
 
         // Update sentiment in sentiments table
-        $update_stmt = $conn->prepare("UPDATE sentiments SET sentiment_label = ?, sentiment_score = ? WHERE review_id = ? AND product_id = ?");
-        $update_stmt->bind_param("siii", $sentiment_label, $sentiment_score, $prc_id, $product_id);
+        $update_stmt = $conn->prepare("UPDATE sentiments SET sentiment_label = ?, sentiment_score = ? WHERE review_id = ? AND product_id = ? AND user_id = ?");
+        $update_stmt->bind_param("siii", $sentiment_label, $sentiment_score, $prc_id, $product_id, $user_id);
         $update_stmt->execute();
         $update_stmt->close();
     } else {
