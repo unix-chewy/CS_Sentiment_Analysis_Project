@@ -1,12 +1,31 @@
 <?php
 include "../../config/login-config.php";
-$sql = "SELECT id, name, photo, price FROM products";
-$result = $conn->query($sql);
 
-// Checking for products
+// Category filter
+$category_id = isset($_GET['categories']) ? $_GET['categories'] : '';
+
+$sql = "SELECT p.id, p.name, p.photo, p.price 
+        FROM products p";
+
+// Add category filter if selected
+if ($category_id !== '') {
+    $sql .= " WHERE p.category_id = ?";
+}
+
+$stmt = $conn->prepare($sql);
+
+// Checks if category is selected
+if ($category_id !== '') {
+    $stmt->bind_param("i", $category_id);
+}
+
+$stmt->execute();
+$result = $stmt->get_result();
+
+// Display products
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
-        $link = $row["id"]; // next time ko na lang illink sa actual product.
+        $link = $row["id"];
         $name = $row["name"];
         $photo = $row["photo"];  
         $price = $row["price"];
@@ -34,7 +53,7 @@ if ($result->num_rows > 0) {
                 </a>
             </div>
         </div>
-    ";
+        ";
     }
 } else {
     echo "No products found.";

@@ -75,7 +75,7 @@ ALTER TABLE product_review_comments
 ADD prv_id INT NOT NULL,
 ADD FOREIGN KEY (prv_id) REFERENCES product_votes(id);
 
-ALTER TABLE your_table AUTO_INCREMENT = 1;
+ALTER TABLE product_review_comments AUTO_INCREMENT = 1;
 
 INSERT INTO roles (id, role_name) VALUES (2, 'User');
 INSERT INTO roles (id, role_name) VALUES (1, 'Admin');

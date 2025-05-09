@@ -95,5 +95,6 @@
       </div>
     </div>
     <script src="../../../public/assets/js/user/user-homepage.js"></script>
+    <script src="../../../public/assets/js/user/category-filter.js"></script>
   </body>
 </html>
