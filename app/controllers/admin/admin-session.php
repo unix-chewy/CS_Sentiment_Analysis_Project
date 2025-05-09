@@ -1,5 +1,5 @@
 <?php
-include_once '../../config/login-config.php';
+include_once(__DIR__ . '/../../config/login-config.php');
 session_start();
 
 if ($_SESSION['role'] != 1) {

@@ -1,7 +1,5 @@
 <?php include '../../controllers/user/user-session.php'; ?>
-<?php  include '../../config/login-config.php';
-
-session_start();
+<?php  include '../../config/login-config.php'; 
 
 // To get current user login ID
 $user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : null;
