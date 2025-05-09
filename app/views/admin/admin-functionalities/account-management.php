@@ -128,9 +128,30 @@
             </button>
          </form>
       </div>
-      <div class="row" id="account-cards-container">
-         <!-- AJAX content goes here -->
+
+      <!-- Account Table -->
+      <div class="card">
+         <div class="card-body">
+            <div class="table-responsive">
+               <table class="table table-bordered table-striped">
+                  <thead class="thead-dark">
+                     <tr>
+                        <th>User ID</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th>Actions</th>
+                     </tr>
+                  </thead>
+                  <tbody id="accounts-table">
+                     <!-- AJAX content goes here -->
+                  </tbody>
+               </table>
+            </div>
+         </div>
       </div>
+
       <!-- Buttons for add -->
       <div class="text-center my-4">
          <button class="btn btn-primary me-2" data-bs-toggle="modal" data-bs-target="#addUserModal">Add User/Admin</button>
@@ -138,52 +159,92 @@
 
       <!-- The Modals -->
 
+      <!-- Add User Modal -->
       <div class="modal fade" id="addUserModal" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content p-0">
-      <div class="wrapper w-100">
-        <div class="login-page d-flex justify-content-center w-100">
-          <!-- Right Form Section Only -->
-          <div class="login-section no-image w-100">
-            <div class="login-content">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content p-0">
+            <div class="wrapper w-100">
+              <div class="login-page d-flex justify-content-center w-100">
+                <!-- Right Form Section Only -->
+                <div class="login-section no-image w-100">
+                  <div class="login-content">
+                    <form class="signup-form" id="signup-form" method="POST" action="../../../controllers/login-register.php">
+                      <div class="form-group">
+                        <input type="text" name="fname" placeholder="First Name" required>
+                      </div>
+                      <div class="form-group">
+                        <input type="text" name="lname" placeholder="Last Name" required>
+                      </div>
+                      <div class="form-group">
+                        <input type="email" name="email" placeholder="Email" required>
+                      </div>
+                      <div class="form-group">
+                        <input type="password" name="pass" placeholder="Password" required>
+                      </div>
+                      <div class="form-group">
+                        <input type="password" name="confirm_pass" placeholder="Confirm Password" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="role" class="form-label">Select Role</label>
+                        <select name="role" id="role" class="form-select" required>
+                          <option value="">-- Choose Role --</option>
+                          <option value="user">User</option>
+                          <option value="admin">Administrator</option>
+                        </select>
+                      </div>
+                      <button type="submit" class="btn btn-submit mt-3" name="signup_button">Create Account</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Close Button -->
+            <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+        </div>
+      </div>
 
-              <form class="signup-form" id="signup-form" method="POST" action="../../../controllers/login-register.php">
-                <div class="form-group">
-                  <input type="text" name="fname" placeholder="First Name" required>
+      <!-- Edit User Modal -->
+      <div class="modal fade" id="editUserModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Edit User</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form id="editUserForm">
+                <input type="hidden" id="editUserId" name="user_id">
+                <div class="mb-3">
+                  <label for="editFirstName" class="form-label">First Name</label>
+                  <input type="text" class="form-control" id="editFirstName" name="first_name" required>
                 </div>
-                <div class="form-group">
-                  <input type="text" name="lname" placeholder="Last Name" required>
+                <div class="mb-3">
+                  <label for="editLastName" class="form-label">Last Name</label>
+                  <input type="text" class="form-control" id="editLastName" name="last_name" required>
                 </div>
-                <div class="form-group">
-                  <input type="email" name="email" placeholder="Email" required>
+                <div class="mb-3">
+                  <label for="editEmail" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="editEmail" name="email" required>
                 </div>
-                <div class="form-group">
-                  <input type="password" name="pass" placeholder="Password" required>
-                </div>
-                <div class="form-group">
-                  <input type="password" name="confirm_pass" placeholder="Confirm Password" required>
-                </div>
-                <div class="form-group">
-                  <label for="role" class="form-label">Select Role</label>
-                  <select name="role" id="role" class="form-select" required>
-                    <option value="">-- Choose Role --</option>
-                    <option value="user">User</option>
-                    <option value="admin">Administrator</option>
+                <div class="mb-3">
+                  <label for="editRole" class="form-label">Role</label>
+                  <select class="form-select" id="editRole" name="role_id" required>
+                    <option value="1">Admin</option>
+                    <option value="2">User</option>
                   </select>
                 </div>
-                <button type="submit" class="btn btn-submit mt-3" name="signup_button">Create Account</button>
               </form>
-
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" id="saveUserChanges">Save changes</button>
             </div>
           </div>
         </div>
       </div>
-      <!-- Close Button -->
-      <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
-    </div>
-  </div>
-</div>
 
-<script src="../../../../public/assets/js/login-register.js"> </script>
+<script src="../../../../public/assets/js/login-register.js"></script>
+<script src="../../../../public/assets/js/admin/account-management.js"></script>
    </body>
 </html>
