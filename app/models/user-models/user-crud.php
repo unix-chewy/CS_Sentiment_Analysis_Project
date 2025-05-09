@@ -26,7 +26,7 @@ $query = "SELECT
                 <td>{$row['review_text']}</td>
                 <td>{$row['votes']}</td>
                  <td>
-                    <a class='nav-link' data-bs-toggle='modal' data-bs-target='#edit-review-modal'>
+                    <a class='nav-link d-inline-block' data-bs-toggle='modal' data-bs-target='#edit-review-modal'>
                         <button class='btn btn-secondary btn-edit' data-bs-dismiss= 'modal' id = 'btn-edit' data-prc-id='{$row['id']}' 
                         data-user-id='{$row['user_id']}' data-product-id='{$row['product_id']}' data-prv-id='{$row['prv_id']}' 
                         data-review='{$row['review_text']}' data-name='{$row['name']}' data-description='{$row['description']}' 

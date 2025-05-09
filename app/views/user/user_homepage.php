@@ -16,7 +16,7 @@
         <nav class="d-flex justify-content-between align-items-center">
           <div class="d-flex align-items-center gap-3">
             <a class="nav-link p-0" href="#">Seller Centre</a>
-            <a class="nav-link p-0" href="#">Start Selling</a>
+            <a class="nav-link p-0" href="user_homepage.php">Start Rating</a>
             <a class="nav-link p-0" href="https://shopee.ph/web">Download</a>
             <span class="text-muted small">Follow us on</span>
             <div class="d-flex gap-2">
@@ -30,11 +30,7 @@
           </div>
           <ul class="nav">
             <li class="nav-item">
-              <a href="#" class="nav-link">
-                <i class="bi bi-bell"></i> Notifications </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">
+              <a href="https://help.shopee.ph/portal/4/ph/s" class="nav-link">
                 <i class="bi bi-question-circle"></i> Help </a>
             </li>
             <li class="nav-item">
@@ -67,6 +63,8 @@
         </div>
       </div>
     </header>
+
+    <!-- Sidebar -->
     <div class="sidebar">
       <div class="sidebar-header">
         <h4>
@@ -87,13 +85,21 @@
         </div>
       </div>
     </div>
-    <div class="container my-5">
-      <div class="row g-4" id="products-container"> 
-         <?php 
-            require_once '../../models/user-models/fetch-products.php'; 
-         ?> 
-      </div>
+
+<!-- Main Content Wrapper -->
+<div class="main-content">
+  <div class="container mt-4">
+    <div class="daily-discover-tab text-center py-2 mb-3">
+      <span>DAILY DISCOVER</span>
     </div>
+    <div class="row g-4" id="products-container"> 
+       <?php 
+          require_once '../../models/user-models/fetch-products.php'; 
+       ?> 
+    </div>
+  </div>
+</div>
+
     <script src="../../../public/assets/js/user/user-homepage.js"></script>
     <script src="../../../public/assets/js/user/category-filter.js"></script>
   </body>
