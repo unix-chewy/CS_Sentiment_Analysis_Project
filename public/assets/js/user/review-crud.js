@@ -10,9 +10,41 @@ $(document).ready(function() {
         $("#item-name").text(btn.data("name"));
         $("#item-description").text(btn.data("description"));
         $("#review-text").val(btn.data("review"));
-        //$("#review-votes").val(btn.data("votes"));
     });
 
+    // Review submissions alert
+    $("#ReviewForm").on("submit", function(e) {
+        e.preventDefault();
+        var formData = $(this).serialize();
+        formData += "&add-review=1";
+        
+        $.ajax({
+            url: "/CS_Sentiment_Analysis_Project/app/controllers/product-getreview.php",
+            method: "POST",
+            data: formData,
+            success: function(response) {
+                alert("Review Submitted!");
+                location.reload();
+            }
+        });
+    });
+
+    // Edit review submissions alert
+    $("#updateReviewForm").on("submit", function(e) {
+        e.preventDefault();
+        var formData = $(this).serialize();
+        formData += "&update-review=1";
+        
+        $.ajax({
+            url: "/CS_Sentiment_Analysis_Project/app/controllers/product-getreview.php",
+            method: "POST",
+            data: formData,
+            success: function(response) {
+                alert("Review Edited Successfully!");
+                location.reload();
+            }
+        });
+    });
 
     // The following code checks whether a product has been rated by the user.
     $("#rate-btn").click(function(e) {
@@ -34,7 +66,7 @@ $(document).ready(function() {
                 console.error("AJAX Error:", error);
             }
         });
-       });
+    });
 
     // The following code deletes the review from the database.
     $(document).on("click", "#btn-delete", function() {
@@ -45,8 +77,10 @@ $(document).ready(function() {
                 prv_id: $(this).data("prv-id") 
                 },
                 function(response) {
-                alert(response);
-            });
+                    alert("Deleted Successfully!");
+                    location.reload();
+                }
+            );
         }
     });
 });

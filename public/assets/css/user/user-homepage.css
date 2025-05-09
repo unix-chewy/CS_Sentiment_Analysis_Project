@@ -115,6 +115,16 @@ form.d-flex.flex-grow-1 .btn:hover {
   filter: brightness(1.2);
 }
 
+/* Daily Discover Tab */
+.daily-discover-tab {
+  background: #fff;
+  border-bottom: 4px solid #f53d2d;
+  color: #f53d2d;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+
+
 /* Cart */
 /* Star */
 .ratings-wrapper {
@@ -140,6 +150,12 @@ form.d-flex.flex-grow-1 .btn:hover {
 .price-text{
   color:#EE4D2D !important;
 }
+
+/* Main content should not overlap sidebar */
+.main-content {
+  margin-left: 300px;
+}
+
 .sidebar {
   background-color: #f8f9fa;
   height: 100vh;

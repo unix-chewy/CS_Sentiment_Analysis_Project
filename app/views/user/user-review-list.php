@@ -109,6 +109,7 @@ $user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : null;
                         </tbody>
                      </table>
                   </div>
+                  
                   <!-- MODAL -->
                   <div class="modal fade" id="edit-review-modal" tabindex="-1" aria-labelledby="edit-review-modal-label" aria-hidden="true">
                      <div class="modal-dialog">
