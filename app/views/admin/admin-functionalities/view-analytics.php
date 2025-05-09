@@ -158,6 +158,14 @@
                   <div class="card-header">
                      <h4>Product Reviews</h4>
                   </div>
+                  <br>
+                     <form class="d-flex flex-grow-1 search-form">
+                        <input class="form-control" type="search" placeholder="Search a Product..." aria-label="Search">
+                        <button class="btn btn-outline-primary" type="submit">
+                        <i class="bi bi-search"></i>
+                        </button>
+                        <button type="button" class="btn btn-secondary ms-2" id="reset-table">Reset</button>
+                     </form>
                   <div class="card-body">
                     <div class="card-body table-responsive">
                         <table class="table table-striped table-bordered align-middle text-center">

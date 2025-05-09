@@ -1,9 +1,11 @@
 <?php
 include "../../config/login-config.php";
-
-// Reused code from fetch-prodocuts.php
+// reused code from fetch-products.php
+// Get what user typed
 $sentiments = isset($_GET['sentiments']) ? $_GET['sentiments'] : '';
+$product = isset($_GET['product']) ? $_GET['product'] : '';
 
+// Make the basic query
 $sql = "SELECT 
             product_review_comments.id,
             users.first_name,
@@ -16,27 +18,27 @@ $sql = "SELECT
         JOIN products ON product_review_comments.product_id = products.id
         JOIN sentiments ON product_review_comments.id = sentiments.review_id";
 
-// Add sentiment filter only if sentiments are selected
-if ($sentiments !== '') {
-    $sentiment_values = explode(',', $sentiments);
-    $placeholders = str_repeat('?,', count($sentiment_values) - 1) . '?';
-    $sql .= " WHERE sentiments.sentiment_label IN ($placeholders)";
+// Add search conditions one by one
+if ($product != '') {
+    $sql = $sql . " WHERE products.name LIKE '%" . $product . "%'";
 }
 
-$sql .= " ORDER BY product_review_comments.id DESC";
-
-$stmt = $conn->prepare($sql);
-
-// Bind parameters if sentiments are selected
-if ($sentiments !== '') {
-    $types = str_repeat('s', count($sentiment_values));
-    $stmt->bind_param($types, ...$sentiment_values);
+if ($sentiments != '') {
+    $feelings = explode(',', $sentiments);
+    if ($product != '') {
+        $sql = $sql . " AND sentiments.sentiment_label IN ('" . implode("','", $feelings) . "')";
+    } else {
+        $sql = $sql . " WHERE sentiments.sentiment_label IN ('" . implode("','", $feelings) . "')";
+    }
 }
 
-$stmt->execute();
-$result = $stmt->get_result();
+// Sort by newest first
+$sql = $sql . " ORDER BY product_review_comments.id DESC";
 
-// Display reviews
+// Run the query
+$result = $conn->query($sql);
+
+// Show the reviews
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
         $first_name = $row['first_name'];
@@ -45,7 +47,6 @@ if ($result->num_rows > 0) {
         $sentiment = $row['sentiment_label'];
         $sentiment_score = $row['sentiment_score'];
         $sentimentClass = strtolower($sentiment);
-
         
         echo "<tr>";
         echo "<td>" . htmlspecialchars($first_name) . "</td>";
@@ -55,9 +56,7 @@ if ($result->num_rows > 0) {
         echo "<td>" . number_format($sentiment_score, 2) . "</td>";
         echo "</tr>";
     }
-} else {
-    echo "<tr><td colspan='5' class='text-center'>No reviews found.</td></tr>";
-}
+} 
 
 $conn->close();
 ?> 
