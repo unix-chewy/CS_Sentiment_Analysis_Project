@@ -7,6 +7,8 @@
     if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         
         $product_id = intval($_GET['id']);
+        
+        
         $sql_checkreview = "SELECT * FROM product_review_comments WHERE user_id = ? AND product_id = ?";
         $stmt_checkreview = $conn->prepare($sql_checkreview);
         $stmt_checkreview->bind_param("ii", $user_id, $product_id);
@@ -16,13 +18,14 @@
         if ($result_checkreview->num_rows > 0) {
             echo json_encode([
                 'status' => 'exists',
-                'redirect' => "../user/product-page.php?id=" . urlencode($product_id)
+                'message' => 'You have already rated this product.',
+                'redirect' => "../user/product-page.php?id=" . $product_id,
             ]);
         } else {
             echo json_encode([
                 'status' => 'new',
-                'message' => 'No review yet.'
-            ]);
+                'message' => 'No review yet.',
+            ]);       
         }
         exit;
     }

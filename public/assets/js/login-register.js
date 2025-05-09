@@ -33,7 +33,11 @@ $(document).ready(function() {
             data: $(this).serialize() + "&signup_button=1",
             success: function(response) {
                 var data = JSON.parse(response);  // Parse the JSON response
-                alert(data.message);  // Show the message
+                if (data.status === "success") {
+                    window.location.href = "/CS_Sentiment_Analysis_Project/app/views/registration_success.php";
+                } else {
+                    alert(data.message);  // Show error message if registration fails
+                }
             },
         });
     });

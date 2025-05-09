@@ -82,3 +82,7 @@ INSERT INTO roles (id, role_name) VALUES (1, 'Admin');
 INSERT INTO users (first_name, last_name, email, password, role_id) VALUES ('Admin', 'NaSaSu', 'Nasasu@gmail.com', MD5('adminpass'), 1);
 INSERT INTO users (first_name, last_name, email, password, role_id) VALUES ('User', 'Test', 'Test@gmail.com', MD5('pass'), 2);
 INSERT INTO categories (product_category) VALUES ('Men\'s Apparel');
+
+ALTER TABLE sentiments
+    ADD user_id INT NOT NULL,
+    ADD FOREIGN KEY (user_id) REFERENCES users(id);
