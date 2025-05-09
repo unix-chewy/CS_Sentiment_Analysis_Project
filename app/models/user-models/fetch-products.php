@@ -2,21 +2,24 @@
 include "../../config/login-config.php";
 
 // Category filter
-$category_id = isset($_GET['categories']) ? $_GET['categories'] : '';
+$categories = isset($_GET['categories']) ? $_GET['categories'] : '';
 
 $sql = "SELECT p.id, p.name, p.photo, p.price 
         FROM products p";
 
-// Add category filter if selected
-if ($category_id !== '') {
-    $sql .= " WHERE p.category_id = ?";
+// Add category filter only if categories are selected
+if ($categories !== '') {
+    $category_ids = explode(',', $categories);
+    $placeholders = str_repeat('?,', count($category_ids) - 1) . '?';
+    $sql .= " WHERE p.category_id IN ($placeholders)";
 }
 
 $stmt = $conn->prepare($sql);
 
-// Checks if category is selected
-if ($category_id !== '') {
-    $stmt->bind_param("i", $category_id);
+// Bind parameters if categories are selected
+if ($categories !== '') {
+    $types = str_repeat('i', count($category_ids));
+    $stmt->bind_param($types, ...$category_ids);
 }
 
 $stmt->execute();
