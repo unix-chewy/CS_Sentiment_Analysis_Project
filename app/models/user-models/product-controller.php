@@ -31,9 +31,13 @@ if (isset($_GET['id'])) {
                     <div class='mt-4'>
                         <p>" . $description . "</p>
                     </div>
-                    <a class='nav-link' data-bs-toggle='modal' data-bs-target='#rate-item-modal'>
-                        <button class='btn btn-primary mt-3' id='rate-btn' data-product-id='$id'>Rate Now!</button>
-                    </a>
+                    <button class='btn btn-primary mt-3'
+        id='rate-btn'
+        data-bs-toggle='modal'
+        data-bs-target='#rate-item-modal'
+        data-product-id='<?php echo $id; ?>'>
+   Rate Now!
+</button>
                     </div>
             </div>
         </div>";

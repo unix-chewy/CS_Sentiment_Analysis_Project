@@ -18,7 +18,7 @@ $(document).ready(function() {
     $("#rate-btn").click(function(e) {
         const productID = $(this).data("product-id");
         $.ajax({
-            url: "/CS_Sentiment_Analysis_Project/app/models/check_review.php",
+            url: "/CS_Sentiment_Analysis_Project/app/models/user-models/check_review.php",
             method: "GET",
             data: { id: productID},
             success: function(response) {

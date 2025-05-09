@@ -1,4 +1,4 @@
-<?php include '../../models/user-review.php'; ?>
+<?php include '../../models/user-models/user-review.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -7,7 +7,7 @@
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
       <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-      <link rel="stylesheet" href="../../../public/assets/css/product-page.css">
+      <link rel="stylesheet" href="../../../public/assets/css/user/product-page.css">
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
       <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
@@ -72,10 +72,11 @@
          </div>
          </div>
       </header>
+      
       <!-- Homepage -->
       <div class="container my-5">
          <div class="row g-4">
-            <?php include '../../models/product-controller.php'; ?>
+            <?php include '../../models/user-models/product-controller.php'; ?>
          </div>
 
          <!-- The Modals -->
@@ -109,7 +110,7 @@
             </div>
          </div>
       </div>
-      <script src="../../../public/assets/js/review-crud.js"> </script>
-      <script src="../../../public/assets/js/product-review-star.js"> </script>
+      <script src="../../../public/assets/js/user/review-crud.js"> </script>
+      <script src="../../../public/assets/js/user/product-review-star.js"> </script>
    </body>
 </html>

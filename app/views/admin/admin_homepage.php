@@ -17,7 +17,7 @@ $result_category = $stmt_category->get_result();
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
       <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-      <link rel="stylesheet" href="../../../public/assets/css/admin-homepage.css">
+      <link rel="stylesheet" href="../../../public/assets/css/admin/admin-homepage.css">
       <title>Admin Homepage </title>
    </head>
    <body>
@@ -151,61 +151,6 @@ $result_category = $stmt_category->get_result();
    <h2>Statistics Summary</h2>
    <canvas id="ratings-by-user-chart" height="100"></canvas>
 </div>
-
-
-      <!-- The Modals -->
-      <!-- Add Item -->
-      <div class="modal fade" id="add-item-modal" tabindex="-1" aria-labelledby="add-item-modal-label" aria-hidden="true">
-         <div class="modal-dialog">
-            <div class="modal-content">
-               <form action="../../controllers/add-item-controller.php" method="post" enctype="multipart/form-data">
-                  <!-- Connect PHP here -->
-                  <div class="modal-header">
-                     <h5 class="modal-title" id="add-item-modal-label">Add New Item</h5>
-                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                     <div class="mb-3">
-                        <label for="item-name" class="form-label">Item Name</label>
-                        <input type="text" class="form-control" id="item-name" name="item-name" placeholder="Enter item name" required>
-                     </div>
-                     <div class="mb-3">
-                        <label for="item-description" class="form-label">Description</label>
-                        <textarea class="form-control" id="item-description" name="item-description" rows="3"></textarea>
-                     </div>
-                     <div class="mb-3">
-                        <label for="item-image" class="form-label">Item Image</label>
-                        <input class="form-control" type="file" id="item-image" name="item-image" accept="image/*">
-                     </div>
-                     <div class="mb-3">
-                        <label for="item-price" class="form-label">Item Price</label>
-                        <input class="form-control" type="number" id="item-price" name="item-price" required>
-                     </div>
-                     <div class="mb-3">
-                        <label for="item-category" class="form-label">Item Category</label>
-                        <select class="form-select" id="item-category" name="item-category">
-                           <?php foreach ($result_category as $row): ?>
-                                 <option value="<?php echo ($row['id']) ?>">
-                                    <?php echo ($row['product_category']) ?>
-                                 </option>
-                           <?php endforeach; ?>
-                           <option value="-1">Enter New Category</option>
-                        </select>
-                     </div>
-                     <div class="mb-3" id="new-cat-div" style="display:none;">
-                        <label for="new-category" class="form-label">New Category</label>
-                        <input type="text" class="form-control" id="new-category" name="new-category" placeholder="Other Category">
-                     </div>
-                  </div>
-                  <div class="modal-footer">
-                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                     <button type="submit" class="btn btn-primary">Add Item</button>
-                  </div>
-               </form>
-            </div>
-         </div>
-      </div>
-    <script src="../../../public/assets/js/admin/item-crud.js"> </script>
     <script src="../../../public/assets/js/admin/admin-homepage-chart.js"></script>
    </body>
 </html>

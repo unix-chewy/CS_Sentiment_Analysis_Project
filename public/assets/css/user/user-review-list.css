@@ -91,7 +91,7 @@
   .logo {
     width: 150px;
     height: 28px;
-    background-image: url('../images/splash-arts/shopee-header-2.png');
+    background-image: url('../../images/splash-arts/shopee-header-2.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;

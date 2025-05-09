@@ -14,7 +14,7 @@ $user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : null;
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
       <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
       <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-      <link rel="stylesheet" href="../../../public/assets/css/user-review-list.css">
+      <link rel="stylesheet" href="../../../public/assets/css/user/user-review-list.css">
       <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
       <title>User Homepage </title>
@@ -142,7 +142,7 @@ $user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : null;
                </div>
             </div>
       </div>
-      <script src = "../../../public/assets/js/review-crud.js"> </script>
-      <script src = "../../../public/assets/js/product-review-star.js"> </script>
+      <script src = "../../../public/assets/js/user/review-crud.js"> </script>
+      <script src = "../../../public/assets/js/user/product-review-star.js"> </script>
    </body>
 </html>

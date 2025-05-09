@@ -38,7 +38,7 @@ $(document).ready(function(){
 
         // view-fetchProducts.php
         function loadProducts() {
-            $.get("/CS_Sentiment_Analysis_Project/app/models/view-fetchProducts.php", function(data) {
+            $.get("/CS_Sentiment_Analysis_Project/app/models/admin-models/view-fetchProducts.php", function(data) {
                 $("#viewItem-Table").html(data);
             });
         }

@@ -1,16 +1,18 @@
+/* Root Variables */
 :root {
-  --primary-color: #ff6633;
-  --secondary-color: #f53d2d;
-  --button-hover-color: #f53d2d;
+  --primary-color: #ff6633; 
+  --secondary-color: #f53d2d; 
+  --button-hover-color: #f53d2d; 
   --background-color: white;
   --text-color: #fff;
   --shadow-color: rgba(0, 0, 0, 0.1);
   --price-color: #ff6633;
-  --modal-bg: #fff;
-  --rating-color: #FFBD13;
+  --modal-bg: #FFF;
+  --rating-color: #FFBD13; 
   --hover-scale: 1.1;
 }
 
+/* Reset and base styles */
 * {
   margin: 0;
   padding: 0;
@@ -22,6 +24,7 @@ body {
   background-color: var(--background-color);
 }
 
+/* Header styles */
 header.sticky-top {
   background: linear-gradient(-180deg, var(--secondary-color), var(--primary-color));
   box-shadow: 0 1px 4px 0 var(--shadow-color);
@@ -31,18 +34,20 @@ header.sticky-top {
   color: var(--text-color);
 }
 
+/* Container inside header */
 .container-fluid {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
 }
 
+/* Top nav bar*/
 nav.d-flex {
   height: 34px;
   align-items: center;
 }
 
-.nav-link,
+.nav-link, 
 .text-muted.small,
 .d-flex.gap-2 a i {
   color: var(--text-color) !important;
@@ -57,32 +62,33 @@ nav.d-flex {
   opacity: 0.8;
 }
 
+/* Social media icons */
 .d-flex.gap-2 a i {
   font-size: 16px;
 }
 
+/* Search area */
 form.d-flex.flex-grow-1 {
-  max-width: 600px;
+  max-width: 1250px;
   width: 100%;
-  margin: 0 auto; 
+  padding-left: 20%;
   align-items: center;
 }
-
 
 form.d-flex.flex-grow-1 .form-control {
   height: 40px;
   font-size: 14px;
-  border-radius: 2px 0 0 2px;
+  border-radius: 2px 0 0 2px; 
   border: 1px solid var(--primary-color);
   flex-grow: 1;
 }
 
 form.d-flex.flex-grow-1 .btn {
   height: 40px;
-  background-color: var(--primary-color);
+  background-color: var(--primary-color); 
   color: var(--text-color);
   border: none;
-  border-radius: 0 2px 2px 0;
+  border-radius: 0 2px 2px 0; 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -92,13 +98,18 @@ form.d-flex.flex-grow-1 .btn:hover {
   filter: brightness(1.2);
 }
 
+/* Logo */
 .logo {
   width: 150px;
   height: 28px;
-  background: url('../images/splash-arts/shopee-header-2.png') center/contain no-repeat;
+  background-image: url('../../images/splash-arts/shopee-header-2.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   cursor: pointer;
 }
 
+/* Cart */
 .cart-wrapper {
   width: 120px;
   display: flex;
@@ -106,12 +117,16 @@ form.d-flex.flex-grow-1 .btn:hover {
 }
 
 .cart-icon {
+  display: block;
   width: 40px;
   height: 40px;
-  background: url('../images/icons/shopping-cart.png') center/24px no-repeat;
-  display: block;
+  background-image: url('../../images/icons/shopping-cart.png'); 
+  background-size: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
+/* Sidebar Styles */
 .sidebar {
   background-color: #f8f9fa;
   height: 100vh;
@@ -129,6 +144,7 @@ form.d-flex.flex-grow-1 .btn:hover {
   padding: 10px 0;
 }
 
+/* Sidebar */
 .sidebar .nav-link,
 .sidebar .nav-link i,
 .sidebar .bi-chevron-down,
@@ -149,6 +165,7 @@ form.d-flex.flex-grow-1 .btn:hover {
   background-color: rgba(0, 0, 0, 0.05);
 }
 
+/* Main Content  */
 .main-content {
   margin-left: 250px;
   padding: 20px;
@@ -180,63 +197,107 @@ form.d-flex.flex-grow-1 .btn:hover {
   margin-right: 15px;
 }
 
-.modal-content {
+/* Modal styles */
+#add-item-modal .modal-content {
   background: var(--modal-bg);
   border: none;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-.modal-header,
-.modal-footer {
-  border: none;
+#add-item-modal .modal-header {
+  border-bottom: none;
   padding: 1.5rem;
 }
 
-.modal-footer {
-  padding-top: 1rem;
+#add-item-modal .modal-footer {
+  border-top: none;
+  padding: 1rem 1.5rem;
 }
 
-.form-control {
-  border-radius: 4px;
-  border: 1px solid #ddd;
-  padding: 10px 15px;
+#add-item-modal .btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
 }
 
-.btn-primary {
-  background-color: var(--primary-color) !important;
-  border-color: var(--primary-color) !important;
-  color: var(--text-color);
-}
-
-.btn-primary:hover {
+#add-item-modal .btn-primary:hover {
   background-color: var(--secondary-color);
   border-color: var(--secondary-color);
 }
 
-.btn-secondary {
+#add-item-modal .btn-secondary {
   background-color: transparent;
   border-color: #ccc;
   color: #666;
 }
 
-.input-group .btn-primary:hover {
+#add-item-modal .form-control {
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  padding: 10px 15px;
+}
+
+/* Edit Modal Styles - Matching Shopee Color Scheme */
+#edit-item-modal .modal-content {
+  background: var(--modal-bg);
+  border: none;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+#edit-item-modal .modal-header {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border-bottom: none;
+  padding: 1.5rem;
+}
+
+#edit-item-modal .modal-footer {
+  border-top: none;
+  padding: 1rem 1.5rem;
+}
+
+#edit-item-modal .btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+#edit-item-modal .btn-primary:hover {
   background-color: var(--secondary-color);
   border-color: var(--secondary-color);
 }
 
-.table {
+#edit-item-modal .btn-secondary {
+  background-color: transparent;
+  border-color: #ccc;
+  color: #666;
+}
+
+#edit-item-modal .form-control {
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  padding: 10px 15px;
+}
+
+/* Search button specific styling */
+#edit-item-modal .input-group .btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+#edit-item-modal .input-group .btn-primary:hover {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+/* Table styling to match Shopee's aesthetic */
+#edit-item-modal .table {
   border-color: #eee;
 }
 
-.table thead th {
+#edit-item-modal .table thead th {
   border-bottom: 2px solid var(--primary-color);
-  background-color: var(--primary-color);
+  color: #333;
 }
 
-.list-card {
-  background: #fff;
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  margin-bottom: 2rem;
+#edit-item-modal .table-hover tbody tr:hover {
+  background-color: rgba(255, 102, 51, 0.05);
 }

@@ -1,4 +1,4 @@
-<?php include "../config/login-config.php";
+<?php include "../../config/login-config.php";
 
 // This is a model page for fetching products to be put into display within the view item modal
 // Reused code just modified 

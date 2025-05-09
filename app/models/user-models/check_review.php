@@ -1,6 +1,6 @@
 <?php 
     header('Content-Type: application/json');
-    include '../config/login-config.php';
+    include '../../config/login-config.php';
     session_start();  
     $user_id = $_SESSION['user_id'] ?? null;  // code ni Fritzch for checking user acc
 
