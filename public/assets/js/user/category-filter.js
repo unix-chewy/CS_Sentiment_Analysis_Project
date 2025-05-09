@@ -4,8 +4,12 @@ $(document).ready(function() {
 
     // Handle checkbox changes
     $('#category-filters').on('change', 'input[type="checkbox"]', function() {
-        let categoryId = $(this).val();
-        filterProducts(categoryId);
+        let selectedCategories = [];
+        // Get all checked checkboxes
+        $('#category-filters input[type="checkbox"]:checked').each(function() {
+            selectedCategories.push($(this).val());
+        });
+        filterProducts(selectedCategories);
     });
 });
 
@@ -24,11 +28,11 @@ function loadCategories() {
 }
 
 // Filter products by category
-function filterProducts(categoryId) {
+function filterProducts(selectedCategories) {
     $.ajax({
         url: '/CS_Sentiment_Analysis_Project/app/models/user-models/fetch-products.php',
         method: 'GET',
-        data: { categories: categoryId },
+        data: { categories: selectedCategories.join(',') },
         success: function(data) {
             $('#products-container').html(data);
         },
