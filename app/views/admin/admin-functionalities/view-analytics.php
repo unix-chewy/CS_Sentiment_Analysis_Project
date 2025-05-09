@@ -119,6 +119,38 @@
       <!-- Main Content  -->
       <div class="main-content">
          <h1 class="mb-4">Sentiment Analysis</h1>   
+         <!-- Sentiment Filters -->
+         <div class="row mb-4">
+            <div class="col-12">
+               <div class="card">
+                  <div class="card-header">
+                     <h4>Filter by Sentiment</h4>
+                  </div>
+                  <div class="card-body">
+                     <div id="sentiment-filters" class="d-flex gap-3">
+                        <div class="form-check">
+                           <input class="form-check-input" type="checkbox" value="positive" id="positive-filter" checked>
+                           <label class="form-check-label" for="positive-filter">
+                              Positive
+                           </label>
+                        </div>
+                        <div class="form-check">
+                           <input class="form-check-input" type="checkbox" value="negative" id="negative-filter" checked>
+                           <label class="form-check-label" for="negative-filter">
+                              Negative
+                           </label>
+                        </div>
+                        <div class="form-check">
+                           <input class="form-check-input" type="checkbox" value="neutral" id="neutral-filter" checked>
+                           <label class="form-check-label" for="neutral-filter">
+                              Neutral
+                           </label>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
          <!-- Reviews Table -->
          <div class="row mb-4">
             <div class="col-12">
@@ -147,6 +179,6 @@
                </div>
             </div>
          </div>
-         <script src="../../../../public/assets/js/admin/product-review-sentiment.js"></script>
+         <script src="../../../../public/assets/js/admin/sentiment-filter.js"></script>
    </body>
 </html> 

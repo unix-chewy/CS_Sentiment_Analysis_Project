@@ -3,11 +3,11 @@
 function SentimentAnalysis($text) {
     // For getting positive words
     $positiveWords = @file_get_contents(__DIR__ . '/../../../public/assets/lexicon-files/positive-words.txt');
-    $positiveWords = $positiveWords ? explode("\n", $positiveWords) : []; // convert to array
+    $positiveWords = $positiveWords ? array_map('trim', explode("\n", $positiveWords)) : [];   // convert to array
     
     // For getting negative words
     $negativeWords = @file_get_contents(__DIR__ . '/../../../public/assets/lexicon-files/negative-words.txt');
-    $negativeWords = $negativeWords ? explode("\n", $negativeWords) : []; // convert to array
+    $negativeWords = $negativeWords ? array_map('trim', explode("\n", $negativeWords)) : [];  // convert to array
     
 
     $words = str_word_count(strtolower($text), 1);
