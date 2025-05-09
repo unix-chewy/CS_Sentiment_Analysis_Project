@@ -1,5 +1,5 @@
 <?php  include '../../config/login-config.php';
-session_start();
+include '../../controllers/admin/admin-session.php';
 
 // Get admin's first name from database
 $admin_id = $_SESSION['user_id'];

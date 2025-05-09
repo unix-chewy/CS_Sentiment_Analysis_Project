@@ -1,7 +1,6 @@
 <?php include '../config/login-config.php';
 include_once 'admin/sentiment-analysis.php';
 
-session_start();
 
 
 if (isset($_POST['add-review'])) {

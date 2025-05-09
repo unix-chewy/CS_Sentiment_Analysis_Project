@@ -1,4 +1,5 @@
 <?php  include '../../../config/login-config.php';
+       include '../../../controllers/admin/admin-session.php';
    $sql_category = "SELECT id, product_category FROM categories";
    $stmt_category = $conn->prepare($sql_category);
    $stmt_category->execute();

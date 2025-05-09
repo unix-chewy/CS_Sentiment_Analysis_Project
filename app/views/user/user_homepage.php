@@ -1,3 +1,4 @@
+<?php include '../../controllers/user/user-session.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>

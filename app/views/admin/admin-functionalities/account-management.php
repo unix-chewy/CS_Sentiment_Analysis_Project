@@ -1,6 +1,5 @@
-<?php  include '../../../config/login-config.php';
-   ?>
-
+<?php  include '../../../config/login-config.php'; ?>
+<?php include '../../../controllers/admin/admin-session.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
    <head>

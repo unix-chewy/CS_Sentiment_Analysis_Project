@@ -1,3 +1,4 @@
+<?php include '../../controllers/user/user-session.php'; ?>
 <?php  include '../../config/login-config.php';
 
 session_start();
