@@ -29,9 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $sql = "INSERT INTO products (name, photo, description, price, category_id) VALUES(?, ?, ?, ?, ?)";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param('sssii', $item_name, $filename, $item_description, $item_price, $item_category);
-    $stmt->execute() or die("<b>Error:</b> Problem on Image Insert<br/>" . mysqli_connect_error());
-    }
-
+    
     if ($stmt->execute()) {
         echo "Item added successfully!";
     } else {
@@ -40,5 +38,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
     // Remove any HTML output if you want clean JSON responses
     $stmt->close();
-    exit(); 
+    exit();
+}
 ?>
