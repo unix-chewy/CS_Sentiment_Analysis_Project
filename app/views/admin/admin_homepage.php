@@ -89,7 +89,7 @@ $result_category = $stmt_category->get_result();
                   </a>
                </li>
                <li class="nav-item">
-                  <a class="nav-link" href="#">
+                  <a class="nav-link" href="admin-functionalities/view-analytics.php">
                   <i class="bi bi-bar-chart"></i> View Analytics
                   </a>
                </li>

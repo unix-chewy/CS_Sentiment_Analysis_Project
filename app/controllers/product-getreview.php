@@ -1,4 +1,5 @@
 <?php include '../config/login-config.php';
+include_once 'admin/sentiment-analysis.php';
 
 session_start();
 
@@ -8,29 +9,33 @@ if (isset($_POST['add-review'])) {
     $review_text = $_POST['review'];
     $rating = $_POST['rating'];
 
-    if (!empty($review_text) && !empty($rating)) {
-
+    if (!empty($review_text) && !empty($rating) && !empty($user_id)) {
+        // included sentiment analysis here
+        $sentiment = SentimentAnalysis($review_text);
+        $sentiment_label = $sentiment['sentiment_label'];
+        $sentiment_score = $sentiment['sentiment_score'];
 
         $stmt = $conn->prepare("INSERT INTO product_votes (product_id, user_id, votes) VALUES (?,?,?)");
-        $stmt -> bind_param("iii", $product_id, $user_id, $rating);
-        $stmt -> execute();
+        $stmt->bind_param("iii", $product_id, $user_id, $rating);
+        $stmt->execute();
         $prv_id = $conn->insert_id;
         $stmt->close();
 
-
         $stmt = $conn->prepare("INSERT INTO product_review_comments (user_id, product_id, review_text, prv_id) VALUES (?,?,?,?)");
-        $stmt -> bind_param("iisi", $user_id, $product_id, $review_text, $prv_id);
-        $stmt -> execute();        
+        $stmt->bind_param("iisi", $user_id, $product_id, $review_text, $prv_id);
+        $stmt->execute();        
+        $review_id = $conn->insert_id;
         $stmt->close();
 
-        
-    } 
-
-    else {
+        // Insert sentiment into sentiments table
+        $stmt = $conn->prepare("INSERT INTO sentiments (review_id, product_id, sentiment_label, sentiment_score) VALUES (?, ?, ?, ?)");
+        $stmt->bind_param("iisi", $review_id, $product_id, $sentiment_label, $sentiment_score);
+        $stmt->execute();
+        $stmt->close();
+    } else {
         echo "please fill out the review form!!!!!";
     }
 }
-
 
 if (isset($_POST['update-review'])) {
     $prc_id = $_POST['prc_id'] ?? null;
@@ -40,25 +45,29 @@ if (isset($_POST['update-review'])) {
     $review_text = $_POST['review'];
     $rating = $_POST['rating'];
 
-    if (!empty($review_text) && !empty($rating)) {
+    if (!empty($review_text) && !empty($rating) && !empty($user_id)) {
+        // included sentiment analysis here
+        $sentiment = SentimentAnalysis($review_text);
+        $sentiment_label = $sentiment['sentiment_label'];
+        $sentiment_score = $sentiment['sentiment_score'];
 
         $update_stmt = $conn->prepare("UPDATE product_votes SET votes = ? WHERE id = ?");
-        $update_stmt -> bind_param("ii", $rating, $prv_id);
-        $update_stmt -> execute();
+        $update_stmt->bind_param("ii", $rating, $prv_id);
+        $update_stmt->execute();
         $update_stmt->close();
-
 
         $update_stmt = $conn->prepare("UPDATE product_review_comments SET review_text = ? WHERE id = ?");
-        $update_stmt -> bind_param("si", $review_text, $prc_id);
-        $update_stmt -> execute();        
+        $update_stmt->bind_param("si", $review_text, $prc_id);
+        $update_stmt->execute();        
         $update_stmt->close();
 
-        
-    } 
-
-    else {
+        // Update sentiment in sentiments table
+        $update_stmt = $conn->prepare("UPDATE sentiments SET sentiment_label = ?, sentiment_score = ? WHERE review_id = ? AND product_id = ?");
+        $update_stmt->bind_param("siii", $sentiment_label, $sentiment_score, $prc_id, $product_id);
+        $update_stmt->execute();
+        $update_stmt->close();
+    } else {
         echo "please fill out the review form!!!!!";
     }
 }
-
 ?>

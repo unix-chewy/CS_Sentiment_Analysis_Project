@@ -1,6 +1,5 @@
 <?php  include '../../../config/login-config.php';
-   ?>
-
+?>
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -11,7 +10,7 @@
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
       <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
       <link rel="stylesheet" href="../../../../public/assets/css/admin/admin-functionalities/account-management.css">
-      <title>Admin Homepage </title>
+      <title>View Analytics</title>
    </head>
    <body>
       <header class="sticky-top bg-white shadow-sm">
@@ -119,72 +118,35 @@
 
       <!-- Main Content  -->
       <div class="main-content">
-      <h1 class="mb-4">Accounts</h1>
-      <!-- Search Bar -->
-      <div class="d-flex justify-content-center my-4">
-         <form class="d-flex flex-grow-1 search-form">
-            <input class="form-control" type="search" placeholder="Search accounts..." aria-label="Search">
-            <button class="btn btn-outline-primary" type="submit">
-            <i class="bi bi-search"></i>
-            </button>
-         </form>
-      </div>
-      <div class="row" id="account-cards-container">
-         <!-- AJAX content goes here -->
-      </div>
-      <!-- Buttons for add -->
-      <div class="text-center my-4">
-         <button class="btn btn-primary me-2" data-bs-toggle="modal" data-bs-target="#addUserModal">Add User/Admin</button>
-      </div>
-
-      <!-- The Modals -->
-
-      <div class="modal fade" id="addUserModal" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content p-0">
-      <div class="wrapper w-100">
-        <div class="login-page d-flex justify-content-center w-100">
-          <!-- Right Form Section Only -->
-          <div class="login-section no-image w-100">
-            <div class="login-content">
-
-              <form class="signup-form" id="signup-form" method="POST" action="../../../controllers/login-register.php">
-                <div class="form-group">
-                  <input type="text" name="fname" placeholder="First Name" required>
-                </div>
-                <div class="form-group">
-                  <input type="text" name="lname" placeholder="Last Name" required>
-                </div>
-                <div class="form-group">
-                  <input type="email" name="email" placeholder="Email" required>
-                </div>
-                <div class="form-group">
-                  <input type="password" name="pass" placeholder="Password" required>
-                </div>
-                <div class="form-group">
-                  <input type="password" name="confirm_pass" placeholder="Confirm Password" required>
-                </div>
-                <div class="form-group">
-                  <label for="role" class="form-label">Select Role</label>
-                  <select name="role" id="role" class="form-select" required>
-                    <option value="">-- Choose Role --</option>
-                    <option value="user">User</option>
-                    <option value="admin">Administrator</option>
-                  </select>
-                </div>
-                <button type="submit" class="btn btn-submit mt-3" name="signup_button">Create Account</button>
-              </form>
-
+         <h1 class="mb-4">Sentiment Analysis</h1>   
+         <!-- Reviews Table -->
+         <div class="row mb-4">
+            <div class="col-12">
+               <div class="card">
+                  <div class="card-header">
+                     <h4>Product Reviews</h4>
+                  </div>
+                  <div class="card-body">
+                    <div class="card-body table-responsive">
+                        <table class="table table-striped table-bordered align-middle text-center">
+                         <thead class="table-dark">
+                              <tr>
+                                 <th>User</th>
+                                 <th>Product</th>
+                                 <th>Review</th>
+                                 <th>Sentiment</th>
+                                 <th>Score</th>
+                              </tr>
+                           </thead>
+                           <tbody id="reviews-table">
+                            <!-- AJAX content goes here -->
+                           </tbody>
+                        </table>
+                     </div>
+                  </div>
+               </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <!-- Close Button -->
-      <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
-    </div>
-  </div>
-</div>
-
-<script src="../../../../public/assets/js/login-register.js"> </script>
+         </div>
+         <script src="../../../../public/assets/js/admin/product-review-sentiment.js"></script>
    </body>
-</html>
+</html> 
