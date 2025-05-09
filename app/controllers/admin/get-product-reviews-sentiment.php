@@ -2,6 +2,7 @@
 include '../../config/login-config.php';
 
 // Fetch product reviews with user, product, and sentiment info from the sentiments table
+// checking review commenting delete after
 $sql = "SELECT 
             product_review_comments.id,
             users.first_name,
