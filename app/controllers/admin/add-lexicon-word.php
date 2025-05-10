@@ -10,11 +10,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (empty($inputted_word)) {
         $message = "Word cannot be empty";
     } else {
-        $root = $_SERVER['DOCUMENT_ROOT'] . '/CS_Sentiment_Analysis_Project/public/assets/lexicon-files/';
         if ($type === 'positive') {
-            $file = $root . 'positive-words.txt';
+            $file = __DIR__ . '/../../../public/assets/lexicon-files/positive-words.txt';
         } else {
-            $file = $root . 'negative-words.txt';
+            $file = __DIR__ . '/../../../public/assets/lexicon-files/negative-words.txt';
         }
 
         if (!file_exists($file)) {
