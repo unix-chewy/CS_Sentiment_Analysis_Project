@@ -14,6 +14,20 @@ if (isset($_GET['id'])) {
         $price = $row["price"];
         $description = $row["description"];
 
+        // Calculate average sentiment score for this product
+        $average_sentiment_score = 0;
+        $stmt = $conn->prepare("SELECT SUM(sentiment_score) as total_score, COUNT(*) as review_count FROM sentiments WHERE product_id = ?");
+        $stmt->bind_param("i", $id);
+        $stmt->execute();
+        $stmt->bind_result($total_sentiment_score, $review_count);
+        $stmt->fetch();
+        $stmt->close();
+
+        if ($review_count > 0) {
+            $average_sentiment_score = $total_sentiment_score / $review_count;
+        }
+
+
         echo "
         <div class='container my-5'>
             <div class='row'>
@@ -29,7 +43,11 @@ if (isset($_GET['id'])) {
                         <h3 class='price'>₱" . number_format($price, 2) . "</h3>
                     </div>                    
                     <div class='mt-4'>
-                        <p>" . $description . "</p>
+                        <p>" . $description . "</p>";
+        echo "
+                        <div class='alert alert-info text-center mb-3'>
+                            Overall Sentiment Score: <strong>" . round($average_sentiment_score, 2) . "</strong>
+                        </div>
                     </div>
                     <button class='btn btn-primary mt-3'
                     id='rate-btn'

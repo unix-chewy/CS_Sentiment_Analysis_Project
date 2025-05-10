@@ -1,7 +1,7 @@
 <?php include '../config/login-config.php';
 include_once 'admin/sentiment-analysis.php';
 
-
+// HERE USERS CAN EDIT THEIR REVIEWA
 
 if (isset($_POST['add-review'])) {
     $user_id = $_POST['user_id'] ?? null;
@@ -63,7 +63,7 @@ if (isset($_POST['update-review'])) {
 
         // Update sentiment in sentiments table
         $update_stmt = $conn->prepare("UPDATE sentiments SET sentiment_label = ?, sentiment_score = ? WHERE review_id = ? AND product_id = ? AND user_id = ?");
-        $update_stmt->bind_param("siii", $sentiment_label, $sentiment_score, $prc_id, $product_id, $user_id);
+        $update_stmt->bind_param("siiii", $sentiment_label, $sentiment_score, $prc_id, $product_id, $user_id);
         $update_stmt->execute();
         $update_stmt->close();
     } else {
