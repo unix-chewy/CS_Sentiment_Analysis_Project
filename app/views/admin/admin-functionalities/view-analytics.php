@@ -10,6 +10,8 @@
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
       <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
       <link rel="stylesheet" href="../../../../public/assets/css/admin/admin-functionalities/account-management.css">
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <link href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css" rel="stylesheet">
       <title>View Analytics</title>
    </head>
    <body>
@@ -118,7 +120,8 @@
 
       <!-- Main Content  -->
       <div class="main-content">
-         <h1 class="mb-4">Sentiment Analysis</h1>   
+         <h1 class="mb-4">Analytics Dashboard</h1>   
+
          <!-- Sentiment Filters -->
          <div class="row mb-4">
             <div class="col-12">
@@ -151,12 +154,13 @@
                </div>
             </div>
          </div>
+
          <!-- Reviews Table -->
          <div class="row mb-4">
             <div class="col-12">
                <div class="card">
                   <div class="card-header">
-                     <h4>Product Reviews</h4>
+                     <h4>Product Sentiment Analysis</h4>
                   </div>
                   <br>
                      <form class="d-flex flex-grow-1 search-form">
@@ -187,6 +191,59 @@
                </div>
             </div>
          </div>
+
+<!-- Charts Section -->
+<div class="row">
+    <!-- Sentiment Distribution Pie Chart -->
+    <div class="col-md-6 mb-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Sentiment Distribution (Pie Chart)</h5>
+                <div class="chart-container" style="height: 300px;">
+                    <canvas id="sentimentChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sentiment Trend Chart -->
+    <div class="col-md-6 mb-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Sentiment Distribution (Line Chart)</h5>
+                <div class="chart-container" style="height: 300px;">
+                    <canvas id="trendChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Category Distribution Chart -->
+    <div class="col-md-6 mb-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Category Distribution</h5>
+                <div class="chart-container" style="height: 300px;">
+                    <canvas id="categoryChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Review Count Chart -->
+    <div class="col-md-6 mb-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Review Count by Product</h5>
+                <div class="chart-container" style="height: 300px;">
+                    <canvas id="reviewChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
          <script src="../../../../public/assets/js/admin/sentiment-filter.js"></script>
-   </body>
+         <script src="../../../../public/assets/js/admin/sentiment-charts.js"></script>
+      </body>
 </html> 
