@@ -1,31 +1,16 @@
-<?php  include '../../config/login-config.php';
-include '../../controllers/admin/admin-session.php';
-
-// Get admin's first name from database
-$admin_id = $_SESSION['user_id'];
-$sql = "SELECT first_name FROM users WHERE id = $admin_id";
-$result = $conn->query($sql);
-$row = $result->fetch_assoc();
-$first_name = $row['first_name'];
-
-$sql_category = "SELECT id, product_category FROM categories";
-$stmt_category = $conn->prepare($sql_category);
-$stmt_category->execute();
-$result_category = $stmt_category->get_result();
-?>
-
+<?php include '../../../config/login-config.php'; ?>
+<?php include '../../../controllers/admin/admin-session.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
    <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
       <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-      <link rel="stylesheet" href="../../../public/assets/css/admin/admin-homepage.css">
-      <title>Admin Homepage </title>
+      <link rel="stylesheet" href="../../../../public/assets/css/admin/admin-functionalities/account-management.css">
+      <title>Lexicon File Management</title>
    </head>
    <body>
       <header class="sticky-top bg-white shadow-sm">
@@ -61,10 +46,10 @@ $result_category = $stmt_category->get_result();
                   </li>
                </ul>
             </nav>
-            <!-- Logo + Search -->
+            <!-- Logo -->
             <div class="d-flex align-items-center justify-content-between mt-3">
-               <div class="logo">
-               </div>
+               <a class="logo" href="../admin_homepage.php">
+               </a>
                <div class="cart-wrapper">
                   <div class="cart-icon-container">
                      <a href="#" class="cart-icon"></a>
@@ -77,30 +62,30 @@ $result_category = $stmt_category->get_result();
 
       <div class="sidebar">
          <div class="sidebar-header">
-            <h4><?php echo $first_name; ?></h4>
+            <h4>Admin Placeholder</h4>
+            <!-- insert php logic here for admin name -->
          </div>
          <div class="sidebar-menu">
             <ul class="nav flex-column">
                <!-- Product Management -->
                <li class="nav-item">
-                  <a class="nav-link collapsed" href="admin-functionalities/product-management.php">
-                  <i class="bi bi-box-seam"></i> Product Management </i>
+                  <a class="nav-link collapsed" href="product-management.php">
+                  <i class="bi bi-box-seam"></i> Product Management
                   </a>
                </li>
-
                <!-- Account Management -->
                <li class="nav-item">
-                  <a class="nav-link collapsed" href="admin-functionalities/account-management.php">
+                  <a class="nav-link collapsed" href="account-management.php">
                   <i class="bi bi-person-gear"></i> Account Management 
                   </a>
                </li>
                <li class="nav-item">
-                  <a class="nav-link" href="admin-functionalities/view-analytics.php">
+                  <a class="nav-link" href="view-analytics.php">
                   <i class="bi bi-bar-chart"></i> View Analytics
                   </a>
                </li>
                <li class="nav-item">
-                  <a class="nav-link" href="admin-functionalities/lexicon-management.php">
+                  <a class="nav-link" href="lexicon-management.php">
                   <i class="bi bi-book"></i> Lexicon Management
                   </a>
                </li>
@@ -113,7 +98,6 @@ $result_category = $stmt_category->get_result();
          </div>
          <div class="sidebar-header">
          </div>
-
          <ul class="nav flex-column">
             <!-- Account  -->
             <li class="nav-item">
@@ -128,7 +112,7 @@ $result_category = $stmt_category->get_result();
                         </a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="../login.php">
+                        <a class="nav-link" href="../../login.php">
                         <i class="bi bi-box-arrow-right"></i> Sign Out
                         </a>
                   </ul>
@@ -140,28 +124,35 @@ $result_category = $stmt_category->get_result();
 
       <!-- Main Content  -->
       <div class="main-content">
-         <h1 class="mb-4">Welcome <?php echo $first_name; ?></h1>
-         <div class="admin-card">
-            <div class="admin-profile">
-               <img src="placeholder" alt="Admin 2">
-               <div>
-                  <h6 class="mb-0">Admin Placeholder</h6>
-                  <small class="text-muted">Last logged</small>
-               </div>
+         <h1 class="mb-4">Lexicon Management</h1>
+
+         <!-- Add Word Form -->
+         <div class="card mb-4">
+            <div class="card-header">
+               <h4>Add New Word</h4>
             </div>
-            <div class="admin-profile">
-               <img src="placeholder" alt="Admin 3">
-               <div>
-                  <h6 class="mb-0">Admin Placeholder</h6>
-                  <small class="text-muted">Last logged</small>
-               </div>
+            <div class="card-body">
+               <form action="../../../../app/controllers/admin/add-lexicon-word.php" method="POST">
+                  <div class="row">
+                     <div class="col-md-6 mb-3">
+                        <label for="word" class="form-label">Word</label>
+                        <input type="text" class="form-control" id="word" name="word" required>
+                     </div>
+                     <div class="col-md-6 mb-3">
+                        <label for="type" class="form-label">Word Type</label>
+                        <select class="form-select" id="type" name="type" required>
+                           <option value="positive">Positive</option>
+                           <option value="negative">Negative</option>
+                        </select>
+                     </div>
+                  </div>
+                  <div class="d-flex gap-2">
+                     <button type="submit" class="btn btn-primary" name="action" value="add">Add Word</button>
+                     <button type="submit" class="btn btn-danger" name="action" value="delete">Delete Word</button>
+                  </div>
+               </form>
             </div>
          </div>
-      </div>
-      <div class="main-content">
-   <h2>Statistics Summary</h2>
-   <canvas id="ratings-by-user-chart" height="100"></canvas>
-</div>
-    <script src="../../../public/assets/js/admin/admin-homepage-chart.js"></script>
+      <script src="../../../../public/assets/js/admin/lexicon-management.js"></script>
    </body>
-</html>
+</html> 

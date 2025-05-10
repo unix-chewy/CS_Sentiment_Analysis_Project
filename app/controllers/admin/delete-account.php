@@ -1,6 +1,8 @@
 <?php
 include "../../config/login-config.php";
 
+// reused code from delete-products.php
+
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['id'])) {
     $id = $_POST['id'];
     
