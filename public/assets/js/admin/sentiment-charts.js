@@ -4,11 +4,8 @@ $(document).ready(function() {
 const sentimentPieCtx = document.getElementById('sentimentChart');
 const sentimentLineCtx = document.getElementById('trendChart');
 
-fetch('/CS_Sentiment_Analysis_Project/app/config/login-config.php', {
-    headers: {
-        'X-Requested-With': 'XMLHttpRequest'  // To not show data in the header
-    }
-})
+fetch('/CS_Sentiment_Analysis_Project/app/controllers/admin/fetch-chart-data.php')
+
 .then((response) => {
     if (!response.ok) {
         throw new Error('Network response was not ok');
