@@ -227,19 +227,7 @@ include '../../../controllers/admin/admin-session.php';
     <div class="col-md-6 mb-4">
         <div class="card">
             <div class="card-body">
-                <h5 class="card-title">Sentiment Trends Report</h5>
-                <div class="chart-container" style="height: 300px;">
-                    <canvas id="trendChart"></canvas>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Category Distribution Chart -->
-    <div class="col-md-6 mb-4">
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Category Distribution</h5>
+                <h5 class="card-title">Sentiment Category Report</h5>
                 <div class="chart-container" style="height: 300px;">
                     <canvas id="categoryChart"></canvas>
                 </div>
@@ -247,14 +235,14 @@ include '../../../controllers/admin/admin-session.php';
         </div>
     </div>
 
+
     <!-- Review Count Chart -->
-    <div class="col-md-6 mb-4">
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Review Count by Product</h5>
-                <div class="chart-container" style="height: 300px;">
-                    <canvas id="reviewChart"></canvas>
-                </div>
+<div class="col-md-12 mb-4">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Review Trends by Products</h5>
+            <div class="chart-container" style="height: 400px;">
+                <canvas id="reviewTrendChart"></canvas>
             </div>
         </div>
     </div>
