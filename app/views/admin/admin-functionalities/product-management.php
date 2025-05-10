@@ -132,9 +132,9 @@
          <!-- Search Bar -->
          <div class="row justify-content-center my-4">
             <div class="col-md-8 col-lg-6">
-               <form class="d-flex flex-grow-1 mx-3">
-                  <input class="form-control" type="search" placeholder="Search Products..." aria-label="Search">
-                  <button class="btn btn-outline-primary ms-2" type="submit">
+               <form class="d-flex flex-grow-1 mx-3" method="post" id="search-form">
+                  <input class="form-control" type="search" placeholder="Search Products..." aria-label="Search" id="search-input" name="search-input">
+                  <button class="btn btn-outline-primary ms-2" type="submit" id="search-button" name="search-button">
                   <i class="bi bi-search"></i>
                   </button>
                </form>
