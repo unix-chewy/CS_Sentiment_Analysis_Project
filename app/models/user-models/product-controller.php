@@ -23,10 +23,18 @@ if (isset($_GET['id'])) {
         $stmt->fetch();
         $stmt->close();
 
+        // Calcuation for sentiment score
         if ($review_count > 0) {
             $average_sentiment_score = $total_sentiment_score / $review_count;
-        }
+        }   
 
+        // Calculation for average rating
+        $average_rating = 0;
+        $sql = "SELECT AVG(votes) as avg_rating FROM product_votes WHERE product_id = $id";
+        $result = $conn->query($sql);
+        if ($result && $row = $result->fetch_assoc()) {
+            $average_rating = $row['avg_rating'] !== null ? round($row['avg_rating'], 1) : 0;
+        }
 
         echo "
         <div class='container my-5'>
@@ -45,9 +53,6 @@ if (isset($_GET['id'])) {
                     <div class='mt-4'>
                         <p>" . $description . "</p>";
         echo "
-                        <div class='alert alert-info text-center mb-3'>
-                            Overall Sentiment Score: <strong>" . round($average_sentiment_score, 2) . "</strong>
-                        </div>
                     </div>
                     <button class='btn btn-primary mt-3'
                     id='rate-btn'

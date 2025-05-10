@@ -1,5 +1,6 @@
 <?php include '../../controllers/user/user-session.php'; ?>
 <?php include '../../models/user-models/user-review.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -76,6 +77,53 @@
          <div class="row g-4">
             <?php include '../../models/user-models/product-controller.php'; ?>
          </div>
+         
+      <!-- Product Reviews -->
+         <div class="product-reviews">
+    <div class="d-flex justify-content-between align-items-center flex-wrap mb-2">
+        <h4>Product Ratings</h4>
+    </div>
+    <div class="ratings-summary-card mb-4">
+        <div class="d-flex flex-column flex-md-row align-items-center gap-4 p-4">
+            <div class="d-flex align-items-center gap-2">
+            <span class="avg-rating-value"><?php echo $average_rating; ?></span>                <i class="bi bi-star-fill single-star"></i>
+                <span class="avg-rating-text">out of 5</span>
+            </div>
+            <div class="vr d-none d-md-block" style="height: 40px;"></div>
+            <div class="d-flex align-items-center gap-2">
+                <span class="sentiment-label">Overall Sentiment Score:</span>
+                <span class="sentiment-score">
+                     <?php echo round($average_sentiment_score, 2); ?>
+                  </span>
+            </div>
+        </div>
+    </div>
+    
+    <?php if (!empty($reviews)): ?>
+        <div class="review-list">
+        <?php foreach ($reviews as $review): ?>
+            <div class="review-card mb-3 p-3">
+                <div class="review-header d-flex align-items-center mb-1">
+                    <span class="review-username fw-semibold me-2"><?php echo ($review['username']); ?></span>
+                    <span class="review-stars">
+                        <?php for ($i = 0; $i < 5; $i++): ?>
+                            <i class="bi bi-star<?php echo $i < $review['rating'] ? '-fill' : ''; ?>"></i>
+                        <?php endfor; ?>
+                    </span>
+                </div>
+                <div class="review-body">
+                    <p class="mb-0"><?php echo ($review['review']); ?></p>
+                </div>
+            </div>
+        <?php endforeach; ?>
+        </div>
+    <?php else: ?>
+        <div class="empty-reviews text-center py-4">
+            <i class="bi bi-x" style="font-size: 3rem; color: #ccc;"></i>
+            <p class="mt-2 mb-0">No reviews yet. Be the first to review!</p>
+        </div>
+    <?php endif; ?>
+</div>
 
          <!-- The Modals -->
          <!-- Rate Item -->
@@ -108,6 +156,7 @@
             </div>
          </div>
       </div>
+      
       <script src="../../../public/assets/js/user/review-crud.js"> </script>
       <script src="../../../public/assets/js/user/product-review-star.js"> </script>
    </body>
