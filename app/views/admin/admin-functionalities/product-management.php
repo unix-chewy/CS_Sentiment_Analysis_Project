@@ -1,10 +1,19 @@
 <?php  include '../../../config/login-config.php';
        include '../../../controllers/admin/admin-session.php';
+       
+   // Get admin's first name from database
+   $admin_id = $_SESSION['user_id'];
+   $sql = "SELECT first_name FROM users WHERE id = $admin_id";
+   $result = $conn->query($sql);
+   $row = $result->fetch_assoc();
+   $first_name = $row['first_name'];
+
+   // Get categories
    $sql_category = "SELECT id, product_category FROM categories";
    $stmt_category = $conn->prepare($sql_category);
    $stmt_category->execute();
    $result_category = $stmt_category->get_result();
-   ?>
+?>
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -66,7 +75,7 @@
       </header>
       <div class="sidebar">
          <div class="sidebar-header">
-            <h4>Admin Placeholder</h4>
+            <h4><?php echo $first_name; ?></h4>
             <!-- insert php logic here for admin name -->
          </div>
          <div class="sidebar-menu">
@@ -132,9 +141,9 @@
          <!-- Search Bar -->
          <div class="row justify-content-center my-4">
             <div class="col-md-8 col-lg-6">
-               <form class="d-flex flex-grow-1 mx-3">
-                  <input class="form-control" type="search" placeholder="Search Products..." aria-label="Search">
-                  <button class="btn btn-outline-primary ms-2" type="submit">
+               <form class="d-flex flex-grow-1 mx-3" method="post" id="search-form">
+                  <input class="form-control" type="search" placeholder="Search Products..." aria-label="Search" id="search-input" name="search-input">
+                  <button class="btn btn-outline-primary ms-2" type="submit" id="search-button" name="search-button">
                   <i class="bi bi-search"></i>
                   </button>
                </form>
