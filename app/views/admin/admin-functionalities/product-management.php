@@ -89,6 +89,11 @@
                   </a>
                </li>
                <li class="nav-item">
+                  <a class="nav-link" href="lexicon-management.php">
+                  <i class="bi bi-book"></i> Lexicon Management
+                  </a>
+               </li>
+               <li class="nav-item">
                   <a class="nav-link" href="#">
                   <i class="bi bi-download"></i> Export CSV
                   </a>

@@ -84,6 +84,11 @@
                   </a>
                </li>
                <li class="nav-item">
+                  <a class="nav-link" href="lexicon-management.php">
+                  <i class="bi bi-book"></i> Lexicon Management
+                  </a>
+               </li>
+               <li class="nav-item">
                   <a class="nav-link" href="#">
                   <i class="bi bi-download"></i> Export CSV
                   </a>
@@ -119,15 +124,6 @@
       <!-- Main Content  -->
       <div class="main-content">
       <h1 class="mb-4">Accounts</h1>
-      <!-- Search Bar -->
-      <div class="d-flex justify-content-center my-4">
-         <form class="d-flex flex-grow-1 search-form">
-            <input class="form-control" type="search" placeholder="Search accounts..." aria-label="Search">
-            <button class="btn btn-outline-primary" type="submit">
-            <i class="bi bi-search"></i>
-            </button>
-         </form>
-      </div>
 
       <!-- Account Table -->
       <div class="card">
