@@ -29,7 +29,9 @@ $(document).ready(function(){
                     alert(response);
                     $("#edit-item-Form")[0].reset();        
                     $("#product-id").val("");               
-                    $("#old-image").val("");                
+                    $("#old-image").val("");
+                    $("#new-cat-div").hide();
+                    $("#new-category").prop("required", false);
                     $("#editModal").modal("hide");   
                     loadProducts();                        
                 }
@@ -79,6 +81,8 @@ $(document).ready(function(){
             processData: false,
             success: function(response) {
                 alert(response);
+                $("#new-cat-div").hide();
+                $("#new-category").prop("required", false);
                 $("#add-item-modal").modal("hide");
                 loadProducts(); // Refresh the product list
                 $("#add-item-form")[0].reset(); 

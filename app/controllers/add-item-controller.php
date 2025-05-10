@@ -16,6 +16,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Get only the file name (not the full path)
     $file_path = $folder . $filename;
 
+    // Move the uploaded image to the products folder
+    if (!move_uploaded_file($tempname, $file_path)) {
+        echo "Error uploading image!";
+        exit();
+    }
+    
     // Handles the case when ADD NEW item category was selected
     if ($item_category === "-1") {
         $new_category = $_POST['new-category']; // Get new category name
