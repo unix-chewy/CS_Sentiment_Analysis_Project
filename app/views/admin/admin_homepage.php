@@ -1,17 +1,16 @@
 <?php  include '../../config/login-config.php';
 include '../../controllers/admin/admin-session.php';
+   // Get admin's first name from database
+   $admin_id = $_SESSION['user_id'];
+   $sql = "SELECT first_name FROM users WHERE id = $admin_id";
+   $result = $conn->query($sql);
+   $row = $result->fetch_assoc();
+   $first_name = $row['first_name'];
 
-// Get admin's first name from database
-$admin_id = $_SESSION['user_id'];
-$sql = "SELECT first_name FROM users WHERE id = $admin_id";
-$result = $conn->query($sql);
-$row = $result->fetch_assoc();
-$first_name = $row['first_name'];
-
-$sql_category = "SELECT id, product_category FROM categories";
-$stmt_category = $conn->prepare($sql_category);
-$stmt_category->execute();
-$result_category = $stmt_category->get_result();
+   $sql_category = "SELECT id, product_category FROM categories";
+   $stmt_category = $conn->prepare($sql_category);
+   $stmt_category->execute();
+   $result_category = $stmt_category->get_result();
 ?>
 
 <!DOCTYPE html>
@@ -162,6 +161,6 @@ $result_category = $stmt_category->get_result();
    <h2>Statistics Summary</h2>
    <canvas id="ratings-by-user-chart" height="100"></canvas>
 </div>
-    <script src="../../../public/assets/js/admin/admin-homepage-chart.js"></script>
+    <script src="../../../public/assets/js/admin/sentiment-charts.js"></script>
    </body>
 </html>

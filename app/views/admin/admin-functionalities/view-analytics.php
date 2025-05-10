@@ -1,5 +1,18 @@
-<?php  include '../../../config/login-config.php'; ?>
-<?php include '../../../controllers/admin/admin-session.php'; ?>
+<?php  include '../../../config/login-config.php';
+include '../../../controllers/admin/admin-session.php';
+   // Get admin's first name from database
+   $admin_id = $_SESSION['user_id'];
+   $sql = "SELECT first_name FROM users WHERE id = $admin_id";
+   $result = $conn->query($sql);
+   $row = $result->fetch_assoc();
+   $first_name = $row['first_name'];
+
+   $sql_category = "SELECT id, product_category FROM categories";
+   $stmt_category = $conn->prepare($sql_category);
+   $stmt_category->execute();
+   $result_category = $stmt_category->get_result();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -11,7 +24,6 @@
       <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
       <link rel="stylesheet" href="../../../../public/assets/css/admin/admin-functionalities/account-management.css">
       <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-      <link href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css" rel="stylesheet">
       <title>View Analytics</title>
    </head>
    <body>
@@ -63,7 +75,7 @@
       </header>
       <div class="sidebar">
          <div class="sidebar-header">
-            <h4>Admin Placeholder</h4>
+            <h4><?php echo $first_name; ?></h4>
             <!-- insert php logic here for admin name -->
          </div>
          <div class="sidebar-menu">
@@ -203,7 +215,7 @@
     <div class="col-md-6 mb-4">
         <div class="card">
             <div class="card-body">
-                <h5 class="card-title">Sentiment Distribution (Pie Chart)</h5>
+                <h5 class="card-title">Sentiment Distribution</h5>
                 <div class="chart-container" style="height: 300px;">
                     <canvas id="sentimentChart"></canvas>
                 </div>
@@ -215,7 +227,7 @@
     <div class="col-md-6 mb-4">
         <div class="card">
             <div class="card-body">
-                <h5 class="card-title">Sentiment Distribution (Line Chart)</h5>
+                <h5 class="card-title">Sentiment Trends Report</h5>
                 <div class="chart-container" style="height: 300px;">
                     <canvas id="trendChart"></canvas>
                 </div>
