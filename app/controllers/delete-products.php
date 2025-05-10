@@ -3,6 +3,13 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $id = $_POST["id"]; 
 
+    // Deleting Sentiments First to ensure no foreigns key constraint blocks the deletion process
+    $delete_sentiment_stmt = "DELETE FROM sentiments where product_id = $id";
+    if ($conn->query($delete_sentiment_stmt) !== TRUE) {
+        echo "Error deleting sentiment: " . $conn->error;
+        exit; 
+    }
+
     // Deleting Reviews First to ensure no foreigns key constraint blocks the deletion process
     $delete_review_query = "DELETE FROM product_review_comments WHERE product_id = $id";
     if ($conn->query($delete_review_query) !== TRUE) {
