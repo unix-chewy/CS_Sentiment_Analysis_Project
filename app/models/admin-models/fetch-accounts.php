@@ -6,10 +6,11 @@ $sql = "SELECT
             users.first_name,
             users.last_name,
             users.email,
-            roles.role_name 
+            roles.role_name,
+            (SELECT MAX(last_login) FROM activity_logs WHERE user_id = users.id) as last_login
         FROM users 
         LEFT JOIN roles ON users.role_id = roles.id 
-        ORDER BY users.id ASC";
+        ORDER BY last_login DESC";
 $result = $conn->query($sql);
 $output = "";
 
@@ -22,10 +23,11 @@ if ($result->num_rows > 0) {
                 <td>" . htmlspecialchars($row['last_name']) . "</td>
                 <td>" . htmlspecialchars($row['email']) . "</td>
                 <td>" . htmlspecialchars($row['role_name']) . "</td>
-                <td>
+                <td>" . htmlspecialchars($row['last_login']) . "</td>
+                <!--<td>
                     <button class='btn btn-primary btn-sm edit-user' data-id='" . $row['id'] . "'>Edit</button>
                     <button class='btn btn-danger btn-sm delete-user' data-id='" . $row['id'] . "'>Delete</button>
-                </td>
+                </td>-->
             </tr>";
     }
 } else {

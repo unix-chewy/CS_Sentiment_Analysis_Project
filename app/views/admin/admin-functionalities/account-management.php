@@ -150,7 +150,8 @@ include '../../../controllers/admin/admin-session.php';
                         <th>Last Name</th>
                         <th>Email</th>
                         <th>Role</th>
-                        <th>Actions</th>
+                        <th>Last Login</th>
+                        <!--<th>Actions</th>-->
                      </tr>
                   </thead>
                   <tbody id="accounts-table">

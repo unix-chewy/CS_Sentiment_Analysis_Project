@@ -57,6 +57,10 @@ if (isset($_POST['login_button'])) {
         $_SESSION['email'] = $row['email'];
         $_SESSION['role'] = $row['role_id'];
 
+        $logTime_stmt = $conn->prepare("INSERT INTO activity_logs (user_id) VALUES (?)"); // Time is added by the database by default
+        $logTime_stmt->bind_param("i", $_SESSION['user_id']);
+        $logTime_stmt->execute();
+
         // Prepare a response with role-based message
         $message = ($_SESSION['role'] == 1) ? "Admin login successful!" : "User login successful!";
 
