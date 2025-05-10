@@ -3,23 +3,46 @@ include "../../config/login-config.php";
 
 // Category filter
 $categories = isset($_GET['categories']) ? $_GET['categories'] : '';
+$searchQuery = isset($_GET['searchQuery']) ? $_GET['searchQuery'] : '';
 
 $sql = "SELECT p.id, p.name, p.photo, p.price 
-        FROM products p";
+        FROM products p
+        WHERE 1=1"; // This is to indicate the WHERE clause agad sa SQL query
 
-// Add category filter only if categories are selected
+// Add category filter if categories are selected
 if ($categories !== '') {
     $category_ids = explode(',', $categories);
     $placeholders = str_repeat('?,', count($category_ids) - 1) . '?';
-    $sql .= " WHERE p.category_id IN ($placeholders)";
+    $sql .= " AND p.category_id IN ($placeholders)";
+}
+
+// Add search filter if search query exists
+if ($searchQuery !== '') {
+    $sql .= " AND p.name LIKE ?";
 }
 
 $stmt = $conn->prepare($sql);
 
-// Bind parameters if categories are selected
+// Initiate bind parameter variables because there are two independent parameters categories and searchQuery.
+$paramTypes = '';
+$paramValues = array();
+
+// Add category parameters
 if ($categories !== '') {
-    $types = str_repeat('i', count($category_ids));
-    $stmt->bind_param($types, ...$category_ids);
+    $paramTypes .= str_repeat('i', count($category_ids));
+    $paramValues = array_merge($paramValues, $category_ids);
+}
+
+// Add search parameter
+if ($searchQuery !== '') {
+    $paramTypes .= 's';
+    $searchPattern = "%$searchQuery%";
+    $paramValues[] = $searchPattern;
+}
+
+// Bind all parameters if there are any
+if (!empty($paramValues)) {
+    $stmt->bind_param($paramTypes, ...$paramValues);
 }
 
 $stmt->execute();
@@ -59,7 +82,11 @@ if ($result->num_rows > 0) {
         ";
     }
 } else {
-    echo "No products found.";
+    echo "<div class='col-12'>
+            <div class='alert alert-danger' role='alert'>
+                No products found
+            </div>
+        </div>";
 }
 $conn->close();
 ?>

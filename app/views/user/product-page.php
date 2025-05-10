@@ -54,9 +54,9 @@
                   <div class="logo">
                   </div>
                </a>
-               <form class="d-flex flex-grow-1 mx-3">
-                  <input class="form-control" type="search" placeholder="Search..." aria-label="Search">
-                  <button class="btn btn-outline-primary" type="submit">
+               <form class="d-flex flex-grow-1 mx-3" method = "get" id = "search-form">
+                  <input class="form-control" type="search" placeholder="Search..." aria-label="Search" id="search-product" name="search-product">
+                  <button class="btn btn-outline-primary" type="submit" id="search-button" name="search-button">
                   <i class="bi bi-search"></i>
                   </button>
                </form>

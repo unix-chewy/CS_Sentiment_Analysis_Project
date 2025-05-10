@@ -88,4 +88,11 @@ $(document).ready(function() {
             );
         }
     });
+
+    // Search button
+    $("#search-button").click(function(e) {
+        e.preventDefault();
+        var searchQuery = $("#search-product").val();
+        window.location.href = "user_homepage.php?searchQuery=" + searchQuery;
+    });
 });

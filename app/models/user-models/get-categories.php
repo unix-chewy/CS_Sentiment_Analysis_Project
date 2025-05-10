@@ -1,7 +1,19 @@
 <?php
 include '../../config/login-config.php';
 
-$sql_category = "SELECT id, product_category FROM categories";
+$isSearch = $_GET['isSearch'];
+
+if ($isSearch) {
+    $search_query = $_GET['search_query'];
+    $sql_category = "SELECT 
+                        categories.id, 
+                        categories.product_category 
+                    FROM categories 
+                    LEFT JOIN products ON products.category_id = categories.id
+                    WHERE products.name LIKE '%$search_query%'";
+} else {
+    $sql_category = "SELECT id, product_category FROM categories";
+}
 $stmt_category = $conn->prepare($sql_category);
 $stmt_category->execute();
 $result_category = $stmt_category->get_result();

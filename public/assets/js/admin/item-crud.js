@@ -48,8 +48,8 @@ $(document).ready(function(){
         // search-product.php
         $("#search-form").submit(function(e) {
             e.preventDefault();
-            var searchQuery = $("#search-input").val();
-            $.post("/CS_Sentiment_Analysis_Project/app/controllers/admin/search-product.php", { searchQuery: searchQuery }, function(displayData) {
+            var searchProductAdmin = $("#search-product").val();
+            $.post("/CS_Sentiment_Analysis_Project/app/controllers/admin/search-product.php", { searchProductAdmin: searchProductAdmin }, function(displayData) {
                 $("#viewItem-Table").empty();
                 $("#viewItem-Table").html(displayData);
             });
