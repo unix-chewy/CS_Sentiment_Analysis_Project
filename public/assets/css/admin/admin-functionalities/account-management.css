@@ -365,7 +365,6 @@ select.form-select {
     border: 2px solid #ddd;
     border-radius: 3px;
     appearance: none;
-    color-adjust: exact;
     print-color-adjust: exact;
     cursor: pointer;
     transition: all 0.2s ease;

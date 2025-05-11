@@ -67,9 +67,12 @@ $(document).ready(function() {
 
 // Function to load all accounts
 function loadAccounts() {
+
+    var page = window.location.pathname.includes('admin_homepage') ? 'admin_homepage' : 'accounts_management';
     $.ajax({
         url: '/CS_Sentiment_Analysis_Project/app/models/admin-models/fetch-accounts.php',
         method: 'GET',
+        data: { page: page },
         success: function(data) {
             $('#accounts-table').html(data);
         },

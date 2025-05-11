@@ -140,27 +140,37 @@ include '../../controllers/admin/admin-session.php';
       <!-- Main Content  -->
       <div class="main-content">
          <h1 class="mb-4">Welcome <?php echo $first_name; ?></h1>
-         <div class="admin-card">
-            <div class="admin-profile">
-               <img src="placeholder" alt="Admin 2">
-               <div>
-                  <h6 class="mb-0">Admin Placeholder</h6>
-                  <small class="text-muted">Last logged</small>
-               </div>
-            </div>
-            <div class="admin-profile">
-               <img src="placeholder" alt="Admin 3">
-               <div>
-                  <h6 class="mb-0">Admin Placeholder</h6>
-                  <small class="text-muted">Last logged</small>
+               <!-- Account Table -->
+         <h2>Users Summary</h2>
+         <div class="card">
+            <div class="card-body">
+               <div class="table-responsive">
+                  <table class="table table-striped table-bordered align-middle text-center">
+                     <thead class="table-dark">
+                        <tr>
+                           <th>User ID</th>
+                           <th>First Name</th>
+                           <th>Last Name</th>
+                           <th>Email</th>
+                           <th>Role</th>
+                           <th>Last Login</th>
+                           <!--<th>Actions</th>-->
+                        </tr>
+                     </thead>
+                     <tbody id="accounts-table">
+                        <!-- AJAX content goes here -->
+                     </tbody>
+                  </table>
                </div>
             </div>
          </div>
       </div>
+
       <div class="main-content">
    <h2>Statistics Summary</h2>
    <canvas id="ratings-by-user-chart" height="100"></canvas>
 </div>
     <script src="../../../public/assets/js/admin/sentiment-charts.js"></script>
+    <script src="../../../public/assets/js/admin/account-management.js"></script>
    </body>
 </html>

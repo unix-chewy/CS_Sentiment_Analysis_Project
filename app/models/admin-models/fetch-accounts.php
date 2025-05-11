@@ -1,6 +1,10 @@
 <?php
 include "../../config/login-config.php";
 
+
+
+
+// Fetch all users with their roles and last login date
 $sql = "SELECT 
             users.id,
             users.first_name,
@@ -11,6 +15,10 @@ $sql = "SELECT
         FROM users 
         LEFT JOIN roles ON users.role_id = roles.id 
         ORDER BY last_login DESC";
+
+if (isset($_GET['page']) && $_GET['page'] == 'admin_homepage') {
+    $sql .= " LIMIT 3";
+}
 $result = $conn->query($sql);
 $output = "";
 
