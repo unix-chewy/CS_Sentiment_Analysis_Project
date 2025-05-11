@@ -92,24 +92,31 @@ form.d-flex.flex-grow-1 .btn:hover {
   filter: brightness(1.2);
 }
 
+/* Logo container */
+.d-flex.align-items-center.justify-content-between {
+  display: flex;
+  justify-content: center !important;
+  align-items: center;
+  height: 60px;
+}
+
+/* Logo */
 .logo {
   width: 150px;
   height: 28px;
-  background: url('../../../images/splash-arts/shopee-header-2.png') center/contain no-repeat;
+  background-image: url('../../../images/splash-arts/shopee-header-2.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   cursor: pointer;
 }
 
-.cart-wrapper {
-  width: 120px;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.cart-icon {
-  width: 40px;
-  height: 40px;
-  background: url('../../../images/icons/shopping-cart.png') center/24px no-repeat;
-  display: block;
+/* Admin text */
+.admin-text {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--text-color);
+  margin-top: 8px;
 }
 
 .sidebar {

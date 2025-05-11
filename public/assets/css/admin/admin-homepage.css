@@ -41,6 +41,14 @@ header.sticky-top {
   padding: 0 15px;
 }
 
+/* Logo container */
+.d-flex.align-items-center.justify-content-between {
+  display: flex;
+  justify-content: center !important;
+  align-items: center;
+  height: 60px;
+}
+
 /* Top nav bar*/
 nav.d-flex {
   height: 34px;
@@ -109,21 +117,11 @@ form.d-flex.flex-grow-1 .btn:hover {
   cursor: pointer;
 }
 
-/* Cart */
-.cart-wrapper {
-  width: 120px;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.cart-icon {
-  display: block;
-  width: 40px;
-  height: 40px;
-  background-image: url('../../images/icons/shopping-cart.png'); 
-  background-size: 24px;
-  background-repeat: no-repeat;
-  background-position: center;
+.admin-text {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--text-color);
+  margin-top: 8px;
 }
 
 /* Sidebar Styles */
@@ -309,5 +307,10 @@ form.d-flex.flex-grow-1 .btn:hover {
 .table thead th {
   border-bottom: 2px solid var(--primary-color);
   background-color: var(--primary-color);
+}
+
+/* Remove filler divs */
+.filler {
+  display: none;
 }
 

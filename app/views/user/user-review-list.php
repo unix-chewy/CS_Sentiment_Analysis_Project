@@ -19,67 +19,62 @@ $user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : null;
       <title>User Homepage </title>
    </head>
    <body>
-      <header class="sticky-top bg-white shadow-sm">
-         <div class="container-fluid py-2">
-            <nav class="d-flex justify-content-between align-items-center">
-               <!-- Left section -->
-               <div class="d-flex align-items-center gap-3">
-                  <a class="nav-link p-0" href="#">Seller Centre</a>
-                  <a class="nav-link p-0" href="#">Start Selling</a>
-                  <a class="nav-link p-0" href="#">Download</a>
-                  <span class="text-muted small">Follow us on</span>
-                  <div class="d-flex gap-2">
-                     <a href="#" class="text-decoration-none"><i class="bi bi-facebook"></i></a>
-                     <a href="#" class="text-decoration-none"><i class="bi bi-instagram"></i></a>
-                  </div>
-               </div>
-               <!-- Right section -->
-               <ul class="nav">
-                  <li class="nav-item">
-                     <a href="#" class="nav-link">
-                     <i class="bi bi-bell"></i> Notifications
-                     </a>
-                  </li>
-                  <li class="nav-item">
-                     <a href="#" class="nav-link">
-                     <i class="bi bi-question-circle"></i> Help
-                     </a>
-                  </li>
-                  <li class="nav-item">
-                     <a href="#" class="nav-link">
-                     <i class="bi bi-globe2"></i> English
-                     </a>
-                  </li>
-                  <li class="nav-item">
-                     <a href="../login.php" class="nav-link">
-                     <i class="bi bi-box-arrow-right"></i> Logout
-                     </a>
-                  </li>
-               </ul>
-            </nav>
-            <!-- Logo + Search -->
-            <div class="d-flex align-items-center justify-content-between mt-3">
-               <a href = "user_homepage.php">
-                  <div class="logo">
-                  </div>
-               </a>
-               <form class="d-flex flex-grow-1 mx-3" method = "get" id = "search-product-form">
-                  <input class="form-control" type="search" placeholder="Search..." aria-label="Search" id="search-product" name="search-product">
-                  <button class="btn btn-outline-primary" type="submit" id="search-product-button" name="search-product-button">
-                  <i class="bi bi-search"></i>
-                  </button>
-               </form>
-               <div class="ratings-wrapper">
-                  <div class="star-icon-container">
-                     <a href = "user-review-list.php">
-                     <i class="bi bi-star"></i>
-                     </a>
-                  </div>
-               </div>
+      
+   <!-- Header -->
+    <header class="sticky-top bg-white shadow-sm">
+      <div class="container-fluid py-2">
+        <!-- Header First Part -->
+        <nav class="d-flex justify-content-between align-items-center">
+          <div class="d-flex align-items-center gap-3">
+            <a class="nav-link p-0" href="user_homepage.php">Start Rating</a>
+            <a class="nav-link p-0" href="https://shopee.ph/web">Download</a>
+            <span class="text-muted small">Follow us on</span>
+            <div class="d-flex gap-2">
+              <a href="https://www.facebook.com/ShopeePH" class="text-decoration-none">
+                <i class="bi bi-facebook"></i>
+              </a>
+              <a href="https://www.instagram.com/Shopee_PH/" class="text-decoration-none">
+                <i class="bi bi-instagram"></i>
+              </a>
             </div>
-         </div>
-         </div>
-      </header>
+          </div>
+          <ul class="nav">
+            <li class="nav-item">
+              <a href="https://help.shopee.ph/portal/4/ph/s" class="nav-link">
+                <i class="bi bi-question-circle"></i> Help </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="bi bi-globe2"></i> English </a>
+            </li>
+            <li class="nav-item">
+              <a href="../login.php" class="nav-link">
+                <i class="bi bi-box-arrow-right"></i> Logout </a>
+            </li>
+          </ul>
+        </nav>
+        <!-- Header Second Part -->
+        <div class="d-flex align-items-center justify-content-between mt-3">
+          <a href="user_homepage.php">
+            <div class="logo"></div>
+          </a>
+          <form class="d-flex flex-grow-1 mx-3" method="get" id="search-form">
+            <input class="form-control" type="search" placeholder="Search..." aria-label="Search" id="search-product" name="search-product">
+            <button class="btn btn-outline-primary" type="submit" id="search-button" name="search-button">
+              <i class="bi bi-search"></i>
+            </button>
+          </form>
+          <div class="ratings-wrapper">
+            <div class="star-icon-container">
+              <a href="user-review-list.php">
+                <i class="bi bi-star"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    
       <!-- Main Content  -->
       <div class="main-content">
          <h1 class="mb-4">Ratings</h1>

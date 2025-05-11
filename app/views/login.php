@@ -6,11 +6,12 @@
     <title>Shopee Login</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../../public/assets/css/login-register.css">
+    <link rel="stylesheet" href="../../public/assets/css/login-register.css">   
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
 
+<!-- Header -->
     <header class="promo-header">
         <div class="container-fluid">
             <div class="promo-header-links row align-items-center">
@@ -27,7 +28,7 @@
         </div>
     </header>
 
-
+<!-- Main Content -->
 <div class="wrapper">
     <div class="center-background-bar">
     <div class="login-page container">

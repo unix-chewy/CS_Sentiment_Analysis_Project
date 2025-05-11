@@ -12,11 +12,12 @@
     <title>User Homepage </title>
   </head>
   <body>
+    <!-- Header -->
     <header class="sticky-top bg-white shadow-sm">
       <div class="container-fluid py-2">
+        <!-- Header First Part -->
         <nav class="d-flex justify-content-between align-items-center">
           <div class="d-flex align-items-center gap-3">
-            <a class="nav-link p-0" href="#">Seller Centre</a>
             <a class="nav-link p-0" href="user_homepage.php">Start Rating</a>
             <a class="nav-link p-0" href="https://shopee.ph/web">Download</a>
             <span class="text-muted small">Follow us on</span>
@@ -44,6 +45,7 @@
             </li>
           </ul>
         </nav>
+        <!-- Header Second Part -->
         <div class="d-flex align-items-center justify-content-between mt-3">
           <a href="user_homepage.php">
             <div class="logo"></div>
@@ -87,7 +89,7 @@
       </div>
     </div>
 
-<!-- Main Content Wrapper -->
+<!-- Main Content  -->
 <div class="main-content">
   <div class="container mt-4">
     <div class="daily-discover-tab text-center py-2 mb-3">
