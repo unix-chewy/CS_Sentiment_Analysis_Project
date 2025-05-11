@@ -17,6 +17,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../../../public/assets/css/reset-password.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <!-- Header -->
@@ -38,62 +39,37 @@
 
     <!-- Main Content -->
     <div class="wrapper">
-        <div class="center-background-bar">
+        <div class="center-background-bar py-5">
             <div class="login-page container">
                 <div class="row g-0 justify-content-center">
-                    <!-- Right Reset Password Section -->
-                    <div class="col-md-6 bg-white p-4 p-lg-5 right-login">
+                    <!-- Reset Password Section -->
+                    <div class="col-md-10 bg-white p-4 p-lg-5 right-login">
                         <div class="login-content">
                             <!-- Back Button -->
 
                             <!-- Reset Password Form -->
-                            <form method="POST" action="../../controllers/reset_password.php">
-                                <h3 class="mb-4">Reset Your Password</h3>
-                                <p class="mb-4">Enter your email to receive a password reset link</p>
-                                
-                                <div class="form-group mb-3">
-                                    <label for="email" class="form-label">Email address</label>
-                                    <input type="email" 
-                                           class="form-control form-control-lg" 
-                                           id="email" 
-                                           name="email" 
-                                           placeholder="Enter your email"
-                                           required>
-                                    
-                                    <!-- Error message -->
-                                    <?php if (isset($_GET['error']) && $_GET['error'] === 'account_not_found'): ?>    
-                                        <div class="text-danger mt-2">Account does not exist.</div>
-                                    <?php endif; ?>
-                                    
-                                    <small id="emailHelp" class="form-text text-muted mt-2">
-                                        We'll never share your email with anyone else.
-                                    </small>
+                            <form method="POST" id="reset-password-form">
+                                <input type="hidden" id="email" name="email" value="<?php echo htmlspecialchars($email); ?>">
+                                <div class="form-group">
+                                    <label for="new-password">Enter New Password</label>
+                                    <input type="password" class="form-control" id="new-password" name="new-password" placeholder="Password" required>   <!--PLEASE ADD VIEW TOGGLE ON PASSWORD FIELD -->
                                 </div>
-
-                                <button type="submit" 
-                                        class="btn btn-primary w-100 py-2 mt-3" 
-                                        name="confirm-email">
-                                    Continue
-                                </button>
+                                <div class="form-group">
+                                    <label for="confirm-password">Confirm New Password</label>
+                                    <input type="password" class="form-control" id="confirm-password" name="confirm-password" placeholder="Confirm Password" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100 py-2 mt-3" name="reset-password">Reset Password</button>
                             </form>
-
-                            <!-- Footer Links -->
-                            <div class="footer-links mt-4">
-                                <p class="text-center text-muted">
-                                    Remember your password? 
-                                    <a href="../login.php" class="text-decoration-none text-danger">
-                                        Log In
-                                    </a>
-                                </p>
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+            
     </div>
 
     <!-- Bootstrap JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../../public/assets/js/password-management.js"></script>
 </body>
 </html>

@@ -44,8 +44,9 @@ $user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : null;
                 <i class="bi bi-question-circle"></i> Help </a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">
-                <i class="bi bi-globe2"></i> English </a>
+               <a href="../reset_password/change_password.php" class="nav-link">
+               <i class="bi bi-key"></i> Change Password
+               </a>
             </li>
             <li class="nav-item">
               <a href="../login.php" class="nav-link">
@@ -58,9 +59,9 @@ $user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : null;
           <a href="user_homepage.php">
             <div class="logo"></div>
           </a>
-          <form class="d-flex flex-grow-1 mx-3" method="get" id="search-form">
+          <form class="d-flex flex-grow-1 mx-3" method="get" id="search-product-form">
             <input class="form-control" type="search" placeholder="Search..." aria-label="Search" id="search-product" name="search-product">
-            <button class="btn btn-outline-primary" type="submit" id="search-button" name="search-button">
+            <button class="btn btn-outline-primary" type="submit" id="search-product-button" name="search-product-button">
               <i class="bi bi-search"></i>
             </button>
           </form>
