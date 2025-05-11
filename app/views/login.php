@@ -45,11 +45,8 @@
             <div class="col-md-6 bg-white p-4 p-lg-5 right-login">
                 <div class="login-content">
                     <!-- Login Options -->
-                    <div class="login-options d-flex justify-content-between align-items-center mb-4">
+                    <div class="login-options d-flex justify-content-center mb-4">
                         <h3 class="mb-0">Log In</h3>
-                        <button class="btn btn-qr btn-outline-warning py-2 px-3">
-                            Login with QR
-                        </button>
                     </div>
 
                     <!-- Login Form -->

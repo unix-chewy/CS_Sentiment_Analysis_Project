@@ -42,7 +42,7 @@
                     <!-- Right Signup Section -->
                     <div class="col-md-6 bg-white p-4 p-lg-5 right-signup">
                         <div class="signup-content">
-                            <div class="login-options d-flex justify-content-between align-items-center mb-4">
+                            <div class="signup d-flex justify-content-center mb-4">
                                 <h3 class="mb-0">Sign Up</h3>
                             </div>
                             
