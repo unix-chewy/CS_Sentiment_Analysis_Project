@@ -40,7 +40,6 @@ include '../../../controllers/admin/admin-session.php';
       <div class="sidebar">
          <div class="sidebar-header">
             <h4><?php echo $first_name; ?></h4>
-            <!-- insert php logic here for admin name -->
          </div>
          <div class="sidebar-menu">
             <ul class="nav flex-column">
@@ -53,9 +52,10 @@ include '../../../controllers/admin/admin-session.php';
                <!-- Product Management -->
                <li class="nav-item">
                   <a class="nav-link collapsed" href="product-management.php">
-                  <i class="bi bi-box-seam"></i> Product Management
+                  <i class="bi bi-box-seam"></i> Product Management </i>
                   </a>
                </li>
+
                <!-- Account Management -->
                <li class="nav-item">
                   <a class="nav-link collapsed" href="account-management.php">
@@ -81,6 +81,7 @@ include '../../../controllers/admin/admin-session.php';
          </div>
          <div class="sidebar-header">
          </div>
+
          <ul class="nav flex-column">
             <!-- Account  -->
             <li class="nav-item">

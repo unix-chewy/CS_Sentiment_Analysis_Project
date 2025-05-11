@@ -41,10 +41,10 @@
       <div class="sidebar">
          <div class="sidebar-header">
             <h4><?php echo $first_name; ?></h4>
-            <!-- insert php logic here for admin name -->
          </div>
          <div class="sidebar-menu">
             <ul class="nav flex-column">
+               <!-- Home -->
                <li class="nav-item">
                   <a class="nav-link" href="../admin_homepage.php">
                   <i class="bi bi-house"></i> Home
@@ -99,7 +99,7 @@
                            <button type="submit" class="nav-link" name="logout">
                               <i class="bi bi-box-arrow-right"></i> Sign Out
                            </button>
-                        </for>
+                        </form>
                      </li>
                   </ul>
                </div>
@@ -107,16 +107,16 @@
          </ul>
       </div>
       </div>
-      <!-- Main Content  -->
+      <!-- Main Content -->
       <div class="main-content">
          <h1 class="mb-4">Products</h1>
 
          <!-- Search Bar -->
          <div class="row justify-content-center my-4">
             <div class="col-md-8 col-lg-6">
-               <form class="d-flex flex-grow-1 mx-3" id="search-form">
+               <form class="d-flex flex-grow-1 mx-3 search-form" id="search-form">
                   <input class="form-control" type="search" placeholder="Search Products..." aria-label="Search" id="search-product" name="search-product">
-                  <button class="btn btn-outline-primary ms-2" type="submit" id="search-button">
+                  <button class="btn btn-primary ms-2" type="submit" id="search-button">
                      <i class="bi bi-search"></i>
                   </button>
                </form>
@@ -144,11 +144,8 @@
                            <!-- AJAX content goes here -->
                         </tbody>
                      </table>
-                  </div>
-                  <!-- Pagination and Add Item Container -->
-                  <div class="d-flex justify-content-between align-items-center px-3 py-2">
-                     <div id="pagination-container"></div>
-                     <div class="ms-4">
+                     <div class="d-flex justify-content-between align-items-center mt-2" style="width:100%;">
+                        <div id="pagination-container"></div>
                         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#add-item-modal">
                            <i class="bi bi-plus-circle"></i> Add Item
                         </button>

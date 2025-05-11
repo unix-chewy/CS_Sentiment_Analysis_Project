@@ -1,35 +1,37 @@
 <?php include '../config/login-config.php';
 
+header('Content-Type: application/json');
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $id = $_POST["id"]; 
+    if (!isset($_POST["id"]) || !is_numeric($_POST["id"])) {
+        echo json_encode(["success" => false, "message" => "Invalid product ID"]);
+        exit;
+    }
+    $id = intval($_POST["id"]);
 
-    // Deleting Sentiments First to ensure no foreigns key constraint blocks the deletion process
-    $delete_sentiment_stmt = "DELETE FROM sentiments where product_id = $id";
-    if ($conn->query($delete_sentiment_stmt) !== TRUE) {
-        echo "Error deleting sentiment: " . $conn->error;
-        exit; 
+    // Deleting Sentiments
+    if ($conn->query("DELETE FROM sentiments WHERE product_id = $id") !== TRUE) {
+        echo json_encode(["success" => false, "message" => "Error deleting sentiment: " . $conn->error]);
+        exit;
     }
 
-    // Deleting Reviews First to ensure no foreigns key constraint blocks the deletion process
-    $delete_review_query = "DELETE FROM product_review_comments WHERE product_id = $id";
-    if ($conn->query($delete_review_query) !== TRUE) {
-        echo "Error deleting reviews: " . $conn->error;
-        exit; 
+    // Deleting Reviews
+    if ($conn->query("DELETE FROM product_review_comments WHERE product_id = $id") !== TRUE) {
+        echo json_encode(["success" => false, "message" => "Error deleting reviews: " . $conn->error]);
+        exit;
     }
 
-    // Deleting Review Ratings First to ensure no foreigns key constraint blocks the deletion process
-    $delete_ratings_query = "DELETE FROM product_votes WHERE product_id = $id";
-    if ($conn->query($delete_ratings_query) !== TRUE) {
-        echo "Error deleting ratings : " . $conn->error;
-        exit; 
+    // Deleting Ratings
+    if ($conn->query("DELETE FROM product_votes WHERE product_id = $id") !== TRUE) {
+        echo json_encode(["success" => false, "message" => "Error deleting ratings: " . $conn->error]);
+        exit;
     }
 
     // Delete the product itself
-    $delete_product_query = "DELETE FROM products WHERE id = $id";
-    if ($conn->query($delete_product_query) === TRUE) {
-        echo "Product and related reviews deleted successfully!";
+    if ($conn->query("DELETE FROM products WHERE id = $id") === TRUE) {
+        echo json_encode(["success" => true, "message" => "Product and related reviews deleted successfully!"]);
     } else {
-        echo "Error deleting product: " . $conn->error;
+        echo json_encode(["success" => false, "message" => "Error deleting product: " . $conn->error]);
     }
 }
 ?>
