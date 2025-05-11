@@ -23,6 +23,26 @@ while ($row = $resSentiments->fetch_assoc()) {
     $sentiments[] = $row;
 }
 
+// Get most rated products data
+$most_rated_products = [];
+$sqlMostRated = "
+    SELECT 
+        p.name as product_name,
+        COUNT(prc.id) as review_count
+    FROM products p
+    LEFT JOIN product_review_comments prc ON p.id = prc.product_id
+    GROUP BY p.id, p.name
+    ORDER BY review_count DESC
+    LIMIT 3
+";
+$resMostRated = $conn->query($sqlMostRated);
+if (! $resMostRated) {
+    die("Most rated products query failed: " . $conn->error);
+}
+while ($row = $resMostRated->fetch_assoc()) {
+    $most_rated_products[] = $row;
+}
+
 // Get category data
 $categories = [];
 $sqlCategories = "
@@ -66,7 +86,8 @@ while ($row = $resTrends->fetch_assoc()) {
 echo json_encode([
     'sentiments'        => $sentiments,
     'categories'        => $categories,
-    'sentiment_trends'  => $sentiment_trends
+    'sentiment_trends'  => $sentiment_trends,
+    'most_rated_products' => $most_rated_products
 ]);
 exit;
 ?>

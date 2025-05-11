@@ -3,6 +3,7 @@ $(document).ready(function() {
     const sentimentPieCtx = document.getElementById('sentimentChart');
     const sentimentTrendCtx = document.getElementById('reviewTrendChart');
     const categoryCtx = document.getElementById('categoryChart');
+    const mostRatedProductsCtx = document.getElementById('mostRatedProducts');
 
     // Filters
     const positiveFilter = document.getElementById('positive-filter');
@@ -169,8 +170,9 @@ $(document).ready(function() {
             }
         });
     }
+
     
-    function getColor(label) {
+        function getColor(label) {
         return {
             positive: '#ff6633',
             neutral: '#cccccc',

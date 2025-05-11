@@ -139,11 +139,13 @@ include '../../controllers/admin/admin-session.php';
          </div>
       </div>
 
-      <div class="main-content">
-   <h2>Statistics Summary</h2>
-   <canvas id="ratings-by-user-chart" height="100"></canvas>
-</div>
-    <script src="../../../public/assets/js/admin/sentiment-charts.js"></script>
+      <!-- Statistics Table  -->
+
+      <div class="main-content" style="height: 400px">
+         <h2>Statistics Summary</h2>
+         <canvas id="mostRatedProducts" height="100"></canvas>
+      </div>
+    <script src="../../../public/assets/js/admin/admin-homepage-chart.js"></script>
     <script src="../../../public/assets/js/admin/account-management.js"></script>
    </body>
 </html>
