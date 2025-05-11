@@ -35,8 +35,9 @@
                 <i class="bi bi-question-circle"></i> Help </a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">
-                <i class="bi bi-globe2"></i> English </a>
+              <a href="../reset_password/change_password.php" class="nav-link">
+              <i class="bi bi-key"></i> Change Password
+              </a>
             </li>
             <li class="nav-item">
               <a href="../login.php" class="nav-link">

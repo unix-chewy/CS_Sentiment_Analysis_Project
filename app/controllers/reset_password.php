@@ -51,4 +51,20 @@ if (isset($_POST['reset-password'])) {
         echo "Error: " . $conn->error;
     }
 }
+
+if (isset($_POST['change-password'])) {
+    $email = $_POST['email'];
+    $new_password = $_POST['new-password'];
+    $hashed_pass = md5($new_password);
+    $current_password = $_POST['current-password'];
+
+    $update_stmt = "UPDATE users SET password = '$hashed_pass' WHERE email = '$email' AND password = '$current_password'";
+    if ($result = $conn->query($update_stmt)) {
+        echo "Password changed successfully!";
+        header("Location: ../views/login.php");
+        exit();
+    } else {
+        echo "Error: " . $conn->error;
+    }
+}
 ?>

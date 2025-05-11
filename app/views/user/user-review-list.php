@@ -37,17 +37,12 @@ $user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : null;
                <ul class="nav">
                   <li class="nav-item">
                      <a href="#" class="nav-link">
-                     <i class="bi bi-bell"></i> Notifications
-                     </a>
-                  </li>
-                  <li class="nav-item">
-                     <a href="#" class="nav-link">
                      <i class="bi bi-question-circle"></i> Help
                      </a>
                   </li>
                   <li class="nav-item">
-                     <a href="#" class="nav-link">
-                     <i class="bi bi-globe2"></i> English
+                     <a href="../reset_password/change_password.php" class="nav-link">
+                     <i class="bi bi-key"></i> Change Password
                      </a>
                   </li>
                   <li class="nav-item">

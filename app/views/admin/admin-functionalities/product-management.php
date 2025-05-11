@@ -108,7 +108,7 @@
                   </a>
                </li>
                <li class="nav-item">
-                  <a class="nav-link" href="#">
+                  <a class="nav-link" href="../../../controllers/admin/export-csv.php">
                   <i class="bi bi-download"></i> Export CSV
                   </a>
                </li>
