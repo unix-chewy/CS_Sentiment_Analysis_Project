@@ -28,60 +28,87 @@
     </header>
 
     <div class="wrapper">
-        <div class="center-background-bar"></div>
-        <div class="login-page container">
-            <div class="row g-0" style="min-height: 550px;">
-                <!-- Left Image Section -->
-                <div class="col-md-6 d-none d-md-flex image-section align-items-center justify-content-center">
-                    <img src="../../public/assets/images/splash-arts/shopee-1.png" 
-                         alt="Shopee" 
-                         class="image-left img-fluid h-100"
-                         style="object-fit: contain;">
-                </div>
+        <div class="center-background-bar">
+            <div class="signup-page container">
+                <div class="row g-0">
+                    <!-- Left Image Section -->
+                    <div class="col-md-6 d-none d-md-flex image-section align-items-center justify-content-center">
+                        <img src="../../public/assets/images/splash-arts/shopee-1.png" 
+                             alt="Shopee" 
+                             class="image-left img-fluid h-100"
+                             style="object-fit: contain;">
+                    </div>
 
-                <!-- Right Signup Section -->
-                <div class="col-md-6 bg-white p-4 p-lg-5">
-                    <div class="signup-content">
-                        <h2 class="signup-title text-center mb-4">Sign Up</h2>
-                        
-                        <form class="signup-form" id="signup-form" method="POST" action="../controllers/login-register.php">
-                            <div class="form-group">
-                                <input type="text" name="fname" placeholder="First Name" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="text" name="lname" placeholder="Last Name" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="email" name="email" placeholder="Email" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="password" name="pass" placeholder="Password" required>
-                            </div>
-                            <div class="form-group mb-4">
-                                <input type="password" name="confirm_pass" placeholder="Confirm Password" required>
+                    <!-- Right Signup Section -->
+                    <div class="col-md-6 bg-white p-4 p-lg-5 right-signup">
+                        <div class="signup-content">
+                            <div class="login-options d-flex justify-content-between align-items-center mb-4">
+                                <h3 class="mb-0">Sign Up</h3>
                             </div>
                             
-                            <button type="submit" class="btn btn-submit" name="signup_button">
-                                SIGN UP
-                            </button>
-                        </form>
+                            <form class="signup-form" id="signup-form" method="POST" action="../controllers/login-register.php">
+                                <div class="form-group">
+                                    <input type="text" 
+                                           name="fname" 
+                                           placeholder="First Name" 
+                                           required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" 
+                                           name="lname" 
+                                           placeholder="Last Name" 
+                                           required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" 
+                                           name="email" 
+                                           placeholder="Email" 
+                                           required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="password"
+                                           name="pass" 
+                                           placeholder="Password" 
+                                           required>
+                                </div>
+                                <div class="form-group mb-4">
+                                    <input type="password" 
+                                           name="confirm_pass" 
+                                           placeholder="Confirm Password" 
+                                           required>
+                                </div>
+                                
+                                <button type="submit" 
+                                        class="btn btn-submit" 
+                                        name="signup_button">
+                                    SIGN UP
+                                </button>
+                            </form>
 
-                        <div class="footer-links mt-4">
-                            <div class="or-divider text-center my-4">
-                                <span>────────── OR ──────────</span>
+                            <!-- OR Divider -->
+                            <div class="or-divider position-relative text-center my-4">
+                                <hr class="my-4">
+                                <span class="position-absolute top-50 start-50 translate-middle bg-white px-3 text-muted">
+                                    OR
+                                </span>
                             </div>
 
+                            <!-- Social Login -->
                             <div class="social-login d-flex gap-3 justify-content-center mb-4">
-                                <button class="btn-social">
-                                    <i class="icon-fb"></i>Facebook
-                                </button>
-                                <button class="btn-social">
-                                    <i class="icon-google"></i>Google
-                                </button>
-                            </div>
 
-                            <p class="signup-link text-center">
-                                Have an account? <a href="login.php" id="signup-href">Log in</a>
+<button class="btn-social btn btn-outline-dark d-flex align-items-center">
+    <i class="icon-fb me-2"></i>Facebook
+</button>
+<button class="btn-social btn btn-outline-dark d-flex align-items-center">
+    <i class="icon-google me-2"></i>Google
+</button>
+</div>
+
+                            <p class="signup-link text-center text-muted">
+                                Have an account? 
+                                <a href="login.php" id="signup-href" class="text-decoration-none text-danger">
+                                    Log in
+                                </a>
                             </p>
                         </div>
                     </div>

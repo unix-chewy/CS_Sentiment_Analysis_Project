@@ -35,7 +35,7 @@
             <!-- Left Image Section -->
             <div class="col-md-6 d-none d-md-flex image-section align-items-center justify-content-center">
                 <img src="../../public/assets/images/splash-arts/shopee-1.png" 
-                     alt="Placeholder Image" 
+                     alt="Shopee" 
                      class="image-left img-fluid h-100"
                      style="object-fit: contain;">
             </div>
@@ -68,7 +68,7 @@
                                    required>
                         </div>
                         <button type="submit" 
-                                class="btn btn-submit btn-danger w-100 py-2" 
+                                class="btn btn-primary w-100 py-2" 
                                 name="login_button">
                             LOG IN
                         </button>
@@ -91,10 +91,11 @@
 
                         <!-- Social Login -->
                         <div class="social-login d-flex gap-3 justify-content-center mb-4">
-                            <button class="btn-social btn btn-outline-secondary d-flex align-items-center">
+
+                            <button class="btn-social btn btn-outline-dark d-flex align-items-center">
                                 <i class="icon-fb me-2"></i>Facebook
                             </button>
-                            <button class="btn-social btn btn-outline-secondary d-flex align-items-center">
+                            <button class="btn-social btn btn-outline-dark d-flex align-items-center">
                                 <i class="icon-google me-2"></i>Google
                             </button>
                         </div>

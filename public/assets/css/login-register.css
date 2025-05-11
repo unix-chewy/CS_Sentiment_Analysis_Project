@@ -1,3 +1,20 @@
+/* CSS with variables applied */
+:root {
+    --primary-color: #ff6633;
+    --button-hover-color: #f53d2d;
+    --background-color: white;
+    --text-color: #fff;
+    --hover-primary: #f53d2d;
+    --help-link-color: #ee4d2d;
+    --image-section-bg: #ed5138;
+    --btn-primary-bg: #ee4d2d;
+    --btn-qr-border: gold;
+    --input-border: #ddd;
+    --forgot-password-color: #3da0e7;
+    --signup-link-color: #666;
+    --divider-opacity: 0.2;
+}
+
 /* Base Styles */
 html {
     overflow: hidden;
@@ -5,19 +22,17 @@ html {
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f5f5f5;
     margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
 }
 
-/* Header Styles - Updated with Bootstrap integration */
+/* Header Styles */
 .promo-header {
-    position: fixed;
-    left: 0;
-    width: 100%;
-    background-color: #f5f5f5;
-    z-index: 1000;
+    position: relative;
+    background-color: transparent;
     padding: 0.5rem 0;
+    z-index: 1000;
 }
 
 .promo-header-links {
@@ -38,45 +53,36 @@ body {
 }
 
 .shopee-login-text {
-    font-size: 1.5rem;
-    margin-left: 10px;
+    font-size: 2.5rem;
+    margin-left: 20px;
+    margin-top: 28%;
 }
 
 .shopee-header-image {
-    height: 40px;
+    height: 90px;
     width: auto;
+    margin-top: 20%;
 }
 
 .help-link {
-    color: #ee4d2d;
+    color: var(--help-link-color);
     text-decoration: none;
 }
 
-
 /* Main Container */
-
 .wrapper {
     margin: 0;
-    padding-top: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: calc(100vh - 80px);
-}
-
-.center-background-container {
-    width: 100%;
-    background-color: #ed5138;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 0;
+    min-height: 100vh;
 }
 
 .login-page {
-    width: 40%;         /* or any desired width */
-    margin: 20px auto;    /* optional: center it with space around */
+    position: relative;
+    width: 40%;
+    max-width: 1200px;
+    margin: 0 auto;
+    top: 20px;
 }
-
 
 /* Left Side */
 .image-section {
@@ -84,9 +90,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #ed5138;
-    min-height: 550px; 
-    overflow: hidden; 
+    background-color: var(--image-section-bg);
+    min-height: 550px;
+    overflow: hidden;
 }
 
 .center-background-bar {
@@ -96,8 +102,8 @@ body {
     transform: translateY(-50%);
     width: 100%;
     min-height: 600px;
-    height: 70vh; 
-    background-color: #ed5138; 
+    height: 70vh;
+    background-color: var(--image-section-bg);
     z-index: 0;
 }
 
@@ -105,7 +111,7 @@ body {
     width: auto;
     height: 100%;
     max-height: 550px;
-    object-fit: contain; 
+    object-fit: contain;
 }
 
 /* Right Side */
@@ -116,9 +122,7 @@ body {
 
 .right-login {
     border-radius: 20px;
-  
 }
-
 
 .login-options {
     display: flex;
@@ -136,14 +140,14 @@ body {
 }
 
 .btn-primary {
-    background-color: #ee4d2d;
-    color: white;
+    background-color: var(--btn-primary-bg);
+    color: var(--text-color);
 }
 
 .btn-qr {
-    background-color: #fff;
-    border: 1px solid gold;
-    color: gold;
+    background-color: var(--background-color);
+    border: 1px solid var(--btn-qr-border);
+    color: var(--btn-qr-border);
 }
 
 .login-form {
@@ -157,17 +161,9 @@ body {
 input {
     width: 100%;
     padding: 0.8rem;
-    border: 1px solid #ddd;
+    border: 1px solid var(--input-border);
     border-radius: 4px;
     box-sizing: border-box;
-}
-
-.btn-submit {
-    width: 100%;
-    background-color: #ee4d2d;
-    color: white;
-    padding: 0.8rem;
-    font-size: 1rem;
 }
 
 .footer-links {
@@ -176,7 +172,7 @@ input {
 
 .forgot-password {
     display: block;
-    color: #3da0e7;
+    color: var(--forgot-password-color);
     font-size: 0.6rem;
     text-decoration: none;
     margin: 0.1rem 0 1rem 0;
@@ -194,20 +190,41 @@ input {
 
 .btn-social {
     padding: 0.5rem 1rem;
-    border: 1px solid #ddd;
+    border: 1px solid var(--input-border);
     background: none;
     border-radius: 4px;
     cursor: pointer;
 }
 
 .signup-link {
-    color: #666;
+    color: var(--signup-link-color);
 }
 
 #signup-href {
-    color: #ee4d2d;
+    color: var(--help-link-color);
 }
 
 .or-divider {
-    opacity: 0.2;
+    opacity: var(--divider-opacity);
+}
+
+/* Hover Effects */
+.btn-primary:hover {
+    background-color: var(--hover-primary);
+}
+
+.btn-qr:hover {
+    background-color: gold;
+    color: var(--text-color);
+    border-color: gold;
+}
+
+.btn-social:hover {
+    background-color: #f0f0f0;
+}
+
+.btn-outline-dark.btn-social:hover {
+    background-color: #343a40;
+    color: var(--text-color);
+    border-color: #343a40;
 }

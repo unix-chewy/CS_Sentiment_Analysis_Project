@@ -1,130 +1,118 @@
-/* Base Styles */
+/* CSS with updated variables */
+:root {
+    --primary-color: #ff6633;
+    --hover-primary: #f53d2d;
+    --text-color: #fff;
+    --border-color: #ddd;
+    --image-section-bg: #ed5138;
+    --btn-primary-bg: #ee4d2d;
+}
+
 html {
-    overflow: hidden; 
+    overflow: hidden;
     padding: 0;
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f5f5f5;
     margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
 }
 
 /* Header Styles */
 .promo-header {
-    position: fixed; 
-    left: 0;
-    width: 100%;
-    background-color: #f5f5f5;
+    position: relative;
+    background-color: transparent;
+    padding: 0.5rem 0;
     z-index: 1000;
 }
-
 .promo-header-links {
     width: 100%;
-    max-width: 1200px; 
-    margin: auto;
-    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
-.shopee-login{
+.shopee-login {
     color: inherit;
     text-decoration: none;
-    margin-top: 2%;
+    display: flex;
+    align-items: center;
 }
-
 .shopee-login-text {
-    margin-top: 50%;
-    position: relative;  
-    top: 30px;       
-    font-size: 45px;
-    margin-left: 15px;
+    font-size: 2.5rem;
+    margin-left: 20px;
+    margin-top: 28%;
 }
-
-.shopee-header-image{
-    vertical-align: middle; 
-    width: 30%; 
-    height: 100%; 
-    margin-right: 8px;
+.shopee-header-image {
+    height: 90px;
+    width: auto;
+    margin-top: 20%;
 }
-
-.help-link{
-    color: #ee4d2d;
-    margin-top: 6%;
+.help-link {
+    color: var(--image-section-bg);
     text-decoration: none;
 }
 
 /* Main Container */
-
 .wrapper {
     margin: 0;
-    padding-top: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: calc(100vh - 80px); 
+    padding: 0;
+    min-height: 100vh;
 }
-
-.login-page {
-    display: flex;
-    width: 900px;
-    max-width: 90%; 
-    height: 550px;
-    position: relative;
-    margin-top: 20px; 
-}
-
-/* Left Side */
-.image-section {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #ed5138;
-    min-height: 550px; 
-    overflow: hidden; 
-}
-
 .center-background-bar {
     position: absolute;
     top: 55%;
     left: 0;
     transform: translateY(-50%);
     width: 100%;
-    height: 600px; 
-    background-color: #ed5138; 
+    min-height: 600px;
+    height: 70vh;
+    background-color: var(--image-section-bg);
     z-index: 0;
 }
+.signup-page {
+    position: relative;
+    width: 40%;
+    max-width: 1000px;
+    margin: 0 auto;
+    top: 20px;
+}
 
+/* Left Side */
+.image-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--image-section-bg);
+    min-height: 450px;
+    overflow: hidden;
+}
 .image-left {
     width: auto;
     height: 100%;
     max-height: 550px;
-    object-fit: contain; 
+    object-fit: contain;
 }
 
 /* Right Side */
-.login-section {
-    width: 350px;
-    background: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.1);
-}
-
-.login-content {
+.signup-content {
     width: 100%;
     padding: 2rem;
 }
-
+.right-signup {
+    border-radius: 20px;
+}
 .login-options {
     display: flex;
     gap: 1rem;
     margin-bottom: 2rem;
+}
+.signup-form,
+.form-group {
+    margin-bottom: 1rem;
 }
 
 .btn {
@@ -136,54 +124,20 @@ body {
     font-weight: bold;
 }
 
-.btn-primary {
-    background-color: #ee4d2d;
-    color: white;
-}
-
-.btn-qr {
-    background-color: #fff;
-    border: 1px solid gold;
-    color: gold;
-}
-
-.login-form {
-    margin-bottom: 1rem;
-}
-
-.form-group {
-    margin-bottom: 1rem;
+.btn-submit {
+    width: 100%;
+    background-color: var(--btn-primary-bg);
+    color: var(--text-color);
+    padding: 0.8rem;
+    font-size: 1rem;
 }
 
 input {
     width: 100%;
     padding: 0.8rem;
-    border: 1px solid #ddd;
+    border: 1px solid var(--border-color);
     border-radius: 4px;
     box-sizing: border-box;
-}
-
-.btn-submit {
-    width: 100%;
-    background-color: #ee4d2d;
-    color: white;
-    padding: 0.8rem;
-    font-size: 1rem;
-}
-
-.footer-links {
-    text-align: center;
-}
-
-.forgot-password {
-    display: block;
-    color: #3da0e7;
-    font-size: 0.6rem;
-    text-decoration: none;
-    margin: 0.1rem 0 1rem 0;
-    text-align: left;
-    position: relative;
-    top: -5px;
 }
 
 .social-login {
@@ -192,23 +146,33 @@ input {
     justify-content: center;
     margin: 2rem 0;
 }
-
 .btn-social {
     padding: 0.5rem 1rem;
-    border: 1px solid #ddd;
+    border: 1px solid var(--border-color);
     background: none;
     border-radius: 4px;
     cursor: pointer;
 }
 
 .signup-link {
-    color: #666;
+    color: var(--text-color);
 }
-
 #signup-href {
-    color: #ee4d2d;
+    color: var(--primary-color);
 }
-
 .or-divider {
     opacity: 0.2;
+}
+
+/* Hover Effects */
+.btn-submit:hover {
+    background-color: var(--hover-primary);
+}
+.btn-social:hover {
+    background-color: #f0f0f0;
+}
+.btn-outline-dark.btn-social:hover {
+    background-color: #343a40;
+    color: var(--text-color);
+    border-color: #343a40;
 }
