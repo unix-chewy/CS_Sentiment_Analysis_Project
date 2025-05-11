@@ -27,50 +27,14 @@ include '../../controllers/admin/admin-session.php';
       <title>Admin Homepage </title>
    </head>
    <body>
+      <!-- Header -->
       <header class="sticky-top bg-white shadow-sm">
          <div class="container-fluid py-2">
-            <nav class="d-flex justify-content-between align-items-center">
-               <!-- Left section -->
-               <div class="d-flex align-items-center gap-3">
-                  <a class="nav-link p-0" href="#">Seller Centre</a>
-                  <a class="nav-link p-0" href="#">Start Selling</a>
-                  <a class="nav-link p-0" href="#">Download</a>
-                  <span class="text-muted small">Follow us on</span>
-                  <div class="d-flex gap-2">
-                     <a href="#" class="text-decoration-none"><i class="bi bi-facebook"></i></a>
-                     <a href="#" class="text-decoration-none"><i class="bi bi-instagram"></i></a>
-                  </div>
-               </div>
-               <!-- Right section -->
-               <ul class="nav">
-                  <li class="nav-item">
-                     <a href="#" class="nav-link">
-                     <i class="bi bi-bell"></i> Notifications
-                     </a>
-                  </li>
-                  <li class="nav-item">
-                     <a href="#" class="nav-link">
-                     <i class="bi bi-question-circle"></i> Help
-                     </a>
-                  </li>
-                  <li class="nav-item">
-                     <a href="#" class="nav-link">
-                     <i class="bi bi-globe2"></i> English
-                     </a>
-                  </li>
-               </ul>
-            </nav>
-            <!-- Logo + Search -->
-            <div class="d-flex align-items-center justify-content-between mt-3">
-               <div class="logo">
-               </div>
-               <div class="cart-wrapper">
-                  <div class="cart-icon-container">
-                     <a href="#" class="cart-icon"></a>
-                  </div>
-               </div>
+            <!-- Logo -->
+            <div class="d-flex align-items-center justify-content-between">
+               <div class="logo"></div>
+               <span class="admin-text"> Admin Center </span>
             </div>
-         </div>
          </div>
       </header>
 
