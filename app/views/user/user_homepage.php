@@ -41,8 +41,11 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="../login.php" class="nav-link">
-                <i class="bi bi-box-arrow-right"></i> Logout </a>
+              <form action="../../controllers/user/user-session.php" method="POST">
+                <button type="submit" class="nav-link" name="logout">
+                  <i class="bi bi-box-arrow-right"></i> Logout 
+                </button>
+              </form>
             </li>
           </ul>
         </nav>

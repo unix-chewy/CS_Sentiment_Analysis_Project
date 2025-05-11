@@ -95,9 +95,12 @@
                         </a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="../../login.php">
-                        <i class="bi bi-box-arrow-right"></i> Sign Out
-                        </a>
+                        <form action="../../../controllers/admin/admin-session.php" method="POST">
+                           <button type="submit" class="nav-link" name="logout">
+                              <i class="bi bi-box-arrow-right"></i> Sign Out
+                           </button>
+                        </for>
+                     </li>
                   </ul>
                </div>
             </li>
