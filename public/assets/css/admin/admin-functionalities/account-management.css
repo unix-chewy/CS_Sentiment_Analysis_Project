@@ -428,3 +428,121 @@ select.form-select {
     color: #6c757d;
     font-weight: 500;
 }
+
+/* Navigation Styles */
+.nav-link {
+    color: #333;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--primary-color);
+    background-color: rgba(0, 123, 255, 0.1);
+}
+
+.nav-link i {
+    margin-right: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.nav-link.active {
+    color: var(--primary-color);
+    background-color: rgba(0, 123, 255, 0.1);
+    font-weight: 500;
+}
+
+.nav-link.collapsed {
+    color: #666;
+}
+
+.nav-link.collapsed:hover {
+    color: var(--primary-color);
+}
+
+/* Account Collapse Styles */
+#account-collapse {
+    background-color: #f8f9fa;
+    border-radius: 0.25rem;
+    margin: 0.25rem 0;
+}
+
+#account-collapse .nav-link {
+    padding-left: 2.5rem;
+    font-size: 0.9rem;
+}
+
+#account-collapse .nav-link:hover {
+    background-color: rgba(0, 123, 255, 0.05);
+}
+
+/* Sidebar Active State */
+.sidebar .nav-item .nav-link.active {
+    border-left: 3px solid var(--primary-color);
+    padding-left: calc(1rem - 3px);
+}
+
+/* Chevron Animation */
+.nav-link .bi-chevron-down {
+    transition: transform 0.3s ease;
+}
+
+.nav-link:not(.collapsed) .bi-chevron-down {
+    transform: rotate(180deg);
+}
+
+/* Pagination Styles */
+.pagination {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.page-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2.5rem;
+    height: 2.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    background-color: #fff;
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.page-link:hover {
+    color: #fff;
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    text-decoration: none;
+}
+
+.page-item.active .page-link {
+    color: #fff;
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.page-item.disabled .page-link {
+    color: #6c757d;
+    background-color: #fff;
+    border-color: #dee2e6;
+    cursor: not-allowed;
+    opacity: 0.65;
+}
+
+.page-item.disabled .page-link:hover {
+    color: #6c757d;
+    background-color: #fff;
+    border-color: #dee2e6;
+}

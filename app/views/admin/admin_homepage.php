@@ -132,6 +132,10 @@ include '../../controllers/admin/admin-session.php';
                      </tbody>
                   </table>
                </div>
+               <!-- Pagination Container -->
+               <div class="d-flex justify-content-between align-items-center px-3 py-2">
+                  <div id="pagination-container"></div>
+               </div>
             </div>
          </div>
       </div>
@@ -143,6 +147,6 @@ include '../../controllers/admin/admin-session.php';
          <canvas id="mostRatedProducts" height="100"></canvas>
       </div>
     <script src="../../../public/assets/js/admin/admin-homepage-chart.js"></script>
-    <script src="../../../public/assets/js/admin/account-management.js"></script>
+    <script src="../../../public/assets/js/admin/admin-homepage.js"></script>
    </body>
 </html>

@@ -247,3 +247,38 @@ form.d-flex.flex-grow-1 .btn:hover {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   margin-bottom: 2rem;
 }
+
+/* Pagination Styles */
+.pagination {
+    gap: 0.5rem;
+}
+
+.pagination .page-link {
+    border: none;
+    padding: 0.375rem 0.75rem;
+    margin: 0;
+    border-radius: 0.25rem;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.pagination .page-item.disabled .page-link {
+    background-color: #e9ecef;
+    color: #6c757d;
+    border-color: #e9ecef;
+    cursor: not-allowed;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border-color: var(--primary-color);
+}
+
+.pagination .page-link:hover:not(.disabled) {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border-color: var(--primary-color);
+}

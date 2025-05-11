@@ -130,6 +130,10 @@ include '../../../controllers/admin/admin-session.php';
                   </tbody>
                </table>
             </div>
+            <!-- Pagination Container -->
+            <div class="d-flex justify-content-between align-items-center px-3 py-2">
+               <div id="pagination-container"></div>
+            </div>
          </div>
       </div>
 

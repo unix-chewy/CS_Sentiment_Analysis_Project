@@ -14,68 +14,166 @@ $(document).ready(function(){
     // This code block only runs for view-item.php
     if (window.location.pathname.includes("product-management.php")) {
         
+        let currentPage = 1;
+
+        // Function to load products with pagination and search
+        function loadProducts(page = 1, searchQuery = '') {
+            $.ajax({
+                url: '/CS_Sentiment_Analysis_Project/app/models/admin-models/view-fetchProducts.php',
+                method: 'GET',
+                data: { 
+                    page: page,
+                    search: searchQuery
+                },
+                success: function(response) {
+                    const data = JSON.parse(response);
+                    $('#viewItem-Table').html(data.html);
+                    updatePagination(data.pagination);
+                },
+                error: function() {
+                    $('#viewItem-Table').html('<tr><td colspan="7" class="text-center">Error loading products</td></tr>');
+                }
+            });
+        }
+
+        // Function to update pagination controls
+        function updatePagination(pagination) {
+            const { current_page, total_pages } = pagination;
+            currentPage = current_page;
+
+            let paginationHtml = `
+                <nav aria-label="Page navigation">
+                    <ul class="pagination mb-0">
+                        <li class="page-item ${current_page === 1 ? 'disabled' : ''}">
+                            <a class="page-link btn btn-outline-secondary" href="#" data-page="${current_page - 1}">Previous</a>
+                        </li>`;
+
+            // Add page numbers
+            for (let i = 1; i <= total_pages; i++) {
+                paginationHtml += `
+                    <li class="page-item ${current_page === i ? 'active' : ''}">
+                        <a class="page-link ${current_page === i ? 'btn btn-secondary' : 'btn btn-outline-secondary'}" href="#" data-page="${i}">${i}</a>
+                    </li>`;
+            }
+
+            paginationHtml += `
+                        <li class="page-item ${current_page === total_pages ? 'disabled' : ''}">
+                            <a class="page-link btn btn-outline-secondary" href="#" data-page="${current_page + 1}">Next</a>
+                        </li>
+                    </ul>
+                </nav>`;
+            
+            // Update pagination container
+            $('#pagination-container').html(paginationHtml);
+        }
+
+        // Load initial products
         loadProducts();
 
-        $("#edit-item-Form").submit(function(e) { // ajax form since manipulating of content type and process data is needed for file uploads
+        // Handle pagination clicks - using event delegation
+        $('#pagination-container').on('click', '.page-link', function(e) {
             e.preventDefault();
-            var formData = new FormData(this);    
+            const page = $(this).data('page');
+            if (page && page !== currentPage) {
+                loadProducts(page);
+            }
+        });
+
+        // Handle search
+        $('#search-form').on('submit', function(e) {
+            e.preventDefault();
+            const searchQuery = $('#search-product').val().trim();
+            loadProducts(1, searchQuery); // Reset to first page when searching
+        });
+
+        // Handle search input changes
+        let searchTimeout;
+        $('#search-product').on('input', function() {
+            clearTimeout(searchTimeout);
+            const searchQuery = $(this).val().trim();
+            
+            // Add a small delay to prevent too many requests
+            searchTimeout = setTimeout(() => {
+                loadProducts(1, searchQuery);
+            }, 500);
+        });
+
+        // Handle add item form submission
+        $('#add-item-form').on('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+
             $.ajax({
-                url: "/CS_Sentiment_Analysis_Project/app/controllers/edit-products.php",
-                type: "POST",
+                url: '/CS_Sentiment_Analysis_Project/app/models/admin-models/add-item.php',
+                method: 'POST',
                 data: formData,
-                contentType: false, 
-                processData: false, 
+                processData: false,
+                contentType: false,
                 success: function(response) {
-                    alert(response);
-                    $("#edit-item-Form")[0].reset();        
-                    $("#product-id").val("");               
-                    $("#old-image").val("");
-                    $("#new-cat-div").hide();
-                    $("#new-category").prop("required", false);
-                    $("#editModal").modal("hide");   
-                    loadProducts();                        
+                    $('#add-item-modal').modal('hide');
+                    loadProducts(currentPage); // Reload current page
+                    $('#add-item-form')[0].reset();
+                },
+                error: function() {
+                    alert('Error adding item');
                 }
             });
         });
 
-        // view-fetchProducts.php
-        function loadProducts() {
-            $.get("/CS_Sentiment_Analysis_Project/app/models/admin-models/view-fetchProducts.php", function(data) {
-                $("#viewItem-Table").html(data);
-            });
-        }
-
-        // search-product.php
-        $("#search-form").submit(function(e) {
+        // Handle edit item form submission
+        $('#edit-item-Form').on('submit', function(e) {
             e.preventDefault();
-            var searchProductAdmin = $("#search-product").val();
-            $.post("/CS_Sentiment_Analysis_Project/app/controllers/admin/search-product.php", { searchProductAdmin: searchProductAdmin }, function(displayData) {
-                $("#viewItem-Table").empty();
-                $("#viewItem-Table").html(displayData);
+            const formData = new FormData(this);
+
+            $.ajax({
+                url: '/CS_Sentiment_Analysis_Project/app/models/admin-models/edit-item.php',
+                method: 'POST',
+                data: formData,
+                processData: false,
+                contentType: false,
+                success: function(response) {
+                    $('#editModal').modal('hide');
+                    loadProducts(currentPage); // Reload current page
+                },
+                error: function() {
+                    alert('Error updating item');
+                }
             });
         });
-        
 
-
-        // (delete-products.php) The following code deletes the product from the database
-        $(document).on("click", "#btn-delete", function() {
-            if (confirm("Are you sure?")) {
-                $.post("/CS_Sentiment_Analysis_Project/app/controllers/delete-products.php", { id: $(this).data("id") }, function(response) {
-                    alert(response);
-                    loadProducts();
+        // Handle delete item
+        $(document).on('click', '#btn-delete', function() {
+            if (confirm('Are you sure you want to delete this item?')) {
+                const id = $(this).data('id');
+                $.ajax({
+                    url: '/CS_Sentiment_Analysis_Project/app/models/admin-models/delete-item.php',
+                    method: 'POST',
+                    data: { id: id },
+                    success: function(response) {
+                        loadProducts(currentPage); // Reload current page
+                    },
+                    error: function() {
+                        alert('Error deleting item');
+                    }
                 });
             }
         });
 
-        $(document).on("click", ".btn-edit", function () { // stop it from inserting and updates the row  
-            var btn = $(this);
-            $("#product-id").val(btn.data("id"));
-            $("#item-name").val(btn.data("name"));
-            $("#item-description").val(btn.data("description"));
-            $("#item-price").val(btn.data("price"));
-            $("#item-category").val(btn.data("category"));
-            $("#old-image").val(btn.data("photo"));
-            $("#item-image").val(""); 
+        // Handle edit button click
+        $(document).on('click', '.btn-edit', function() {
+            const id = $(this).data('id');
+            const name = $(this).data('name');
+            const photo = $(this).data('photo');
+            const description = $(this).data('description');
+            const price = $(this).data('price');
+            const category = $(this).data('category');
+
+            $('#product-id').val(id);
+            $('#edit-item-Form #item-name').val(name);
+            $('#edit-item-Form #item-description').val(description);
+            $('#edit-item-Form #item-price').val(price);
+            $('#edit-item-Form #old-image').val(photo);
+            $('#edit-item-Form #item-category').val(category);
         });
 
     }

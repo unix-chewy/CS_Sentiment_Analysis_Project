@@ -111,10 +111,10 @@
          <!-- Search Bar -->
          <div class="row justify-content-center my-4">
             <div class="col-md-8 col-lg-6">
-               <form class="d-flex flex-grow-1 mx-3" method="post" id="search-form">
+               <form class="d-flex flex-grow-1 mx-3" id="search-form">
                   <input class="form-control" type="search" placeholder="Search Products..." aria-label="Search" id="search-product" name="search-product">
-                  <button class="btn btn-outline-primary ms-2" type="submit" id="search-button" name="search-button">
-                  <i class="bi bi-search"></i>
+                  <button class="btn btn-outline-primary ms-2" type="submit" id="search-button">
+                     <i class="bi bi-search"></i>
                   </button>
                </form>
             </div>
@@ -142,14 +142,19 @@
                         </tbody>
                      </table>
                   </div>
+                  <!-- Pagination and Add Item Container -->
+                  <div class="d-flex justify-content-between align-items-center px-3 py-2">
+                     <div id="pagination-container"></div>
+                     <div class="ms-4">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#add-item-modal">
+                           <i class="bi bi-plus-circle"></i> Add Item
+                        </button>
+                     </div>
+                  </div>
                </div>
             </div>
          </div>
-         <div class="modal-footer">
-            <a class='nav-link' data-bs-toggle='modal' data-bs-target='#add-item-modal'>
-            <button type="submit" class="btn btn-primary">Add Item</button>
-            </a>
-         </div>
+
       </div>
       
       <!-- The Modals -->
@@ -256,6 +261,7 @@
             </div>
          </div>
       </div>
+
       <script src="../../../../public/assets/js/admin/item-crud.js"> </script>
    </body>
 </html>

@@ -150,18 +150,17 @@ include '../../../controllers/admin/admin-session.php';
                   <div class="card-header">
                      <h4>Product Sentiment Analysis</h4>
                   </div>
-                  <br>
-                     <form class="d-flex flex-grow-1 search-form">
+                  <div class="card-body">
+                     <form class="d-flex flex-grow-1 search-form mb-3">
                         <input class="form-control" type="search" placeholder="Search a Product..." aria-label="Search">
                         <button class="btn btn-outline-primary" type="submit">
                         <i class="bi bi-search"></i>
                         </button>
                         <button type="button" class="btn btn-secondary ms-2" id="reset-table">Reset</button>
                      </form>
-                  <div class="card-body">
-                    <div class="card-body table-responsive">
+                     <div class="table-responsive">
                         <table class="table table-striped table-bordered align-middle text-center">
-                         <thead class="table-dark">
+                           <thead class="table-dark">
                               <tr>
                                  <th>User</th>
                                  <th>Product</th>
@@ -171,9 +170,12 @@ include '../../../controllers/admin/admin-session.php';
                               </tr>
                            </thead>
                            <tbody id="reviews-table">
-                            <!-- AJAX content goes here -->
+                              <!-- AJAX content goes here -->
                            </tbody>
                         </table>
+                     </div>
+                     <div class="d-flex justify-content-center mt-3">
+                        <div id="pagination-container"></div>
                      </div>
                   </div>
                </div>
