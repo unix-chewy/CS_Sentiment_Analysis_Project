@@ -63,9 +63,9 @@ $user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : null;
                   <div class="logo">
                   </div>
                </a>
-               <form class="d-flex flex-grow-1 mx-3">
-                  <input class="form-control" type="search" placeholder="Search..." aria-label="Search">
-                  <button class="btn btn-outline-primary" type="submit">
+               <form class="d-flex flex-grow-1 mx-3" method = "get" id = "search-product-form">
+                  <input class="form-control" type="search" placeholder="Search..." aria-label="Search" id="search-product" name="search-product">
+                  <button class="btn btn-outline-primary" type="submit" id="search-product-button" name="search-product-button">
                   <i class="bi bi-search"></i>
                   </button>
                </form>
@@ -83,12 +83,14 @@ $user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : null;
       <!-- Main Content  -->
       <div class="main-content">
          <h1 class="mb-4">Ratings</h1>
-         <form class="d-flex flex-grow-1 mx-3">
-            <input class="form-control" type="search" placeholder="Search..." aria-label="Search">
-            <button class="btn btn-outline-primary" type="submit">
+         <div class="row justify-content-center my-4">
+         <form class="d-flex flex-grow-1 mx-3" method = "get" id = "search-review-form">
+            <input class="form-control" type="search" placeholder="Search by product name..." aria-label="Search" id="search-review" name="search-review">
+            <button class="btn btn-outline-primary" type="submit" id="search-review-button" name="search-review-button">
             <i class="bi bi-search"></i>
             </button>
          </form>
+         </div>
          <!-- Form for editing and deleting products -->
             <div class="main-content">
                <div class="review-wrapper">

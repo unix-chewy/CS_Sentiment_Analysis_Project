@@ -16,8 +16,14 @@ $query = "SELECT
         INNER JOIN products ON product_review_comments.product_id = products.id 
         LEFT JOIN product_votes ON product_votes.product_id = products.id AND product_votes.user_id = {$user_id}
         LEFT JOIN sentiments ON sentiments.product_id = products.id AND sentiments.user_id = {$user_id}
-        WHERE product_review_comments.user_id = {$user_id}
-        ORDER BY products.name ASC;";
+        WHERE product_review_comments.user_id = {$user_id}";
+
+        if (!empty($_GET['searchQuery'])) {
+            $searchQuery = $_GET['searchQuery'];
+            $query .= " AND products.name LIKE '%{$searchQuery}%'";
+        }
+
+        $query .= " ORDER BY products.name ASC;";
     $result = $conn->query($query);
     $output = "";
 

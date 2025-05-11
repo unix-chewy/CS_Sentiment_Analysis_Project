@@ -112,6 +112,8 @@
     border-radius: 2px 0 0 2px;
     border: 1px solid #FA593E;
     flex-grow: 1;
+    margin: 0 auto;
+    justify-content: center;
   }
   
   form.d-flex.flex-grow-1 .btn {
@@ -197,6 +199,11 @@
   }
   
   /* Form search bar inside main-content */
+  .main-content form.d-flex.flex-grow-1 {
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+  }
   
   .main-content .btn-outline-primary:hover {
     background-color: var(--primary-color);

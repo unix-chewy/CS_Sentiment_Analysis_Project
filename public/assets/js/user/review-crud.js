@@ -89,10 +89,17 @@ $(document).ready(function() {
         }
     });
 
-    // Search button
-    $("#search-button").click(function(e) {
+    // Search product button
+    $("#search-product-button").click(function(e) {
         e.preventDefault();
         var searchQuery = $("#search-product").val();
         window.location.href = "user_homepage.php?searchQuery=" + searchQuery;
+    });
+
+    // Search review button
+    $("#search-review-button").click(function(e) {
+        e.preventDefault();
+        var searchQuery = $("#search-review").val();
+        window.location.href = "user-review-list.php?searchQuery=" + searchQuery;
     });
 });
