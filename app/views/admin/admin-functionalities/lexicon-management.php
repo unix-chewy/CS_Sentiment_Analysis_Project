@@ -80,6 +80,12 @@ include '../../../controllers/admin/admin-session.php';
          </div>
          <div class="sidebar-menu">
             <ul class="nav flex-column">
+               <!-- Home -->
+               <li class="nav-item">
+                  <a class="nav-link" href="../admin_homepage.php">
+                  <i class="bi bi-house"></i> Home
+                  </a>
+               </li>
                <!-- Product Management -->
                <li class="nav-item">
                   <a class="nav-link collapsed" href="product-management.php">
