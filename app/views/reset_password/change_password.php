@@ -1,6 +1,7 @@
 <?php
     session_start();
     $email = $_SESSION['email'];
+    $user_role = $_SESSION['role'];
 ?>
 
 <!DOCTYPE html>
@@ -27,23 +28,25 @@
     </header>
 
     <div class="wrapper">
-        <form class="form-group">
+        <form class="form-group" id="change-password-form">
             <div class="">
-                <a class="text-decoration-none" href="./confirm_email.php">
+                <input type="hidden" id="user-role" name="user-role" value="<?php echo htmlspecialchars($user_role); ?>">
+                <a class="text-decoration-none" id="back-button">
                     <i class="bi bi-arrow-left"></i> Back
                 </a>
             </div>
             <div class="form-group">
                 <label for="current-password">Current Password</label>
-                <input type="" class="form-control" id="current-password" name="current-password" placeholder="Password" required>
+                <input type="password" class="form-control" id="current-password" name="current-password" placeholder="Password" required>
+                <a href="confirm_email.php" style="text-decoration: none;">Forgot Password?</a>
             </div>
             <div>
                 <?php echo htmlspecialchars($email); ?>
-                <input type="hidden" name="email" value="<?php echo htmlspecialchars($email); ?>">  
+                <input type="hidden" id="email" name="email" value="<?php echo htmlspecialchars($email); ?>">  
             </div>
             <div class="form-group">
                 <label for="new-password">New Password</label>
-                <input type="" class="form-control" id="new-password" name="new-password" placeholder="Password" required>   <!--PLEASE ADD VIEW TOGGLE ON PASSWORD FIELD -->
+                <input type="password" class="form-control" id="new-password" name="new-password" placeholder="Password" required>   <!--PLEASE ADD VIEW TOGGLE ON PASSWORD FIELD -->
             </div>
             <button type="submit" class="btn btn-primary" id="change-password" name="change-password">Change Password</button>
         </form>

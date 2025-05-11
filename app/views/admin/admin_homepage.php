@@ -92,7 +92,7 @@ include '../../controllers/admin/admin-session.php';
                <div class="collapse" id="account-collapse">
                   <ul class="nav flex-column ps-4">
                      <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="../reset_password/change_password.php">
                         <i class="bi bi-person-gear"></i> Change Password
                         </a>
                      </li>

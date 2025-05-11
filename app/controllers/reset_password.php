@@ -22,9 +22,9 @@ if (isset($_POST['confirm-email'])) {
 }
 
 // This code block resets the password of the user
-if (isset($_POST['reset-password'])) {
+if (isset($_POST['reset_password'])) {
     $email = $_POST['email'];
-    $new_password = $_POST['new-password'];
+    $new_password = $_POST['new_password'];
     $hashed_pass = md5($new_password);
 
     // Look for account from db and get ID
@@ -35,7 +35,7 @@ if (isset($_POST['reset-password'])) {
         $user_id = $row['id'];
     } 
     else {
-        echo "ACCOUNT DOES NOT EXIST!";
+        echo json_encode(['success' => false, 'message' => 'Account does not exist!']);
         exit();
     }
 
@@ -44,27 +44,31 @@ if (isset($_POST['reset-password'])) {
     
     // This code runs the statement and redirects to the login page if SUCCESSFUL
     if ($result = $conn->query($update_stmt)) {
-        echo "Password reset successful!";
-        header("Location: ../views/login.php");
+        echo json_encode(['success' => true, 'message' => 'Password reset successful!']);
         exit();
     } else {
-        echo "Error: " . $conn->error;
+        echo json_encode(['success' => false, 'message' => 'Error: ' . $conn->error]);
+        exit();
     }
 }
 
-if (isset($_POST['change-password'])) {
+if (isset($_POST['change_password'])) {
     $email = $_POST['email'];
-    $new_password = $_POST['new-password'];
+    $new_password = $_POST['new_password'];
     $hashed_pass = md5($new_password);
-    $current_password = $_POST['current-password'];
+    $current_password = md5($_POST['current_password']);
 
     $update_stmt = "UPDATE users SET password = '$hashed_pass' WHERE email = '$email' AND password = '$current_password'";
     if ($result = $conn->query($update_stmt)) {
-        echo "Password changed successfully!";
-        header("Location: ../views/login.php");
+        if ($conn->affected_rows > 0) {
+            echo json_encode(['success' => true, 'message' => 'Password changed successfully!']);
+        } else {
+            echo json_encode(['success' => false, 'message' => 'Current password is incorrect']);
+        }
         exit();
     } else {
-        echo "Error: " . $conn->error;
+        echo json_encode(['success' => false, 'message' => 'Error: ' . $conn->error]);
+        exit();
     }
 }
 ?>
