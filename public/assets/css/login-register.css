@@ -26,21 +26,9 @@
         padding: 0;
         }
 
-    body,
-.nav-link,
-h4,
-h1,
-h2,
-th,
-td,
-label,
-button,
-input,
-span,
-div,
-textarea {
-  font-family: 'Poppins', sans-serif;
-}
+    body, span, a, button, p{
+    font-family: 'Poppins', sans-serif;
+    }
 
 
     /* Header Styles */
@@ -131,7 +119,7 @@ textarea {
         transform: translateY(-50%);
         width: 100%;
         min-height: 500px; 
-        height: 70vh; 
+        height: 75vh; 
         background-color: var(--image-section-bg);
         z-index: 0;
     }
