@@ -1,3 +1,10 @@
+<?php
+session_start();
+include_once(__DIR__ . '/../config/login-config.php');
+
+// Ensure role is set, default to empty if not
+$role = isset($_SESSION['role']) ? $_SESSION['role'] : '';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -68,13 +75,16 @@
         }
 
     </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/CS_Sentiment_Analysis_Project/public/assets/js/access-error.js"></script>
 </head>
 <body>
     <div class="error-container">
         <div class="error-icon">⚠️</div>
         <h1>Access Error</h1>
         <p>Sorry, an error occurred while trying to access this page. Please try again or return to the homepage.</p>
-        <a href="/" class="home-button">Return to Homepage</a>
+        <input type="hidden" id="role" value="<?php echo htmlspecialchars($role); ?>">
+        <a id="home-button" class="home-button">Return to Homepage</a>
     </div>
 </body>
 </html> 
