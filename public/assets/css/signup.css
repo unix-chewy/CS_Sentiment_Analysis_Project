@@ -113,13 +113,10 @@ textarea {
     flex-direction: row;
     width: 100%;
     max-width: 1000px;
-    margin: 0 auto;
     height: 100%;
-    background: none;
-    box-shadow: none;
-    border-radius: 0;
     padding: 0;
     position: relative;
+
 }
 
 /* Left Side */
@@ -140,7 +137,7 @@ textarea {
 
 /* Right Side */
 .right-signup {
-    margin-top: 10px;
+    margin-top: 50px;
     background: white;
     border-radius: 20px;
     width: 50%;

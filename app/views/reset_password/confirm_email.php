@@ -82,7 +82,7 @@
                                 <p class="text-center text-muted">
                                     Remember your password? 
                                     <a href="../login.php" class="text-decoration-none text-danger">
-                                        Log In
+                                        <br>Log In
                                     </a>
                                 </p>
                             </div>
