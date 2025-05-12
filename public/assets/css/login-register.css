@@ -24,8 +24,24 @@
     body {
         margin: 0;
         padding: 0;
-        font-family: 'Arial', sans-serif;
-    }
+        }
+
+    body,
+.nav-link,
+h4,
+h1,
+h2,
+th,
+td,
+label,
+button,
+input,
+span,
+div,
+textarea {
+  font-family: 'Poppins', sans-serif;
+}
+
 
     /* Header Styles */
     .promo-header {

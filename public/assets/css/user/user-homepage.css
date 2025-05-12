@@ -25,6 +25,22 @@ body {
   background-color: #f5f5f5;
 }
 
+body,
+.nav-link,
+h4,
+h1,
+h2,
+th,
+td,
+label,
+button,
+input,
+span,
+div,
+textarea {
+  font-family: 'Poppins', sans-serif;
+}
+
 /* Header styles */
 header.sticky-top {
   background: linear-gradient(-180deg, var(--gradient-start), var(--gradient-end));

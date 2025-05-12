@@ -22,6 +22,24 @@ body {
   background-color: var(--background-color);
 }
 
+
+body,
+.nav-link,
+h1,
+h2,
+h3,
+h4,
+th,
+td,
+label,
+button,
+input,
+p,
+.btn,
+a,
+span {
+  font-family: 'Poppins', sans-serif;
+}
 header.sticky-top {
   background: linear-gradient(-180deg, var(--secondary-color), var(--primary-color));
   box-shadow: 0 1px 4px 0 var(--shadow-color);
@@ -427,4 +445,34 @@ background-color: #d94427;
 .sentiment-neutral {
   color: #6c757d;
   font-weight: 500;
+}
+
+.pagination {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.page-item {
+  margin: 0 4px;
+}
+
+.page-link {
+  padding: 8px 12px;
+  background: var(--background-color);
+  color: var(--primary-color);
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.page-item.active .page-link {
+  background: var(--primary-color);
+  color: var(--text-color);
+  border-color: var(--shadow-color);
+}
+
+.page-link:hover:not(.disabled) {
+  background: var(--button-hover-color);
+  color: var(--text-color);
 }

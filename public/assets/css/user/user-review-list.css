@@ -22,7 +22,26 @@
   
   body {
     background-color: var(--background-color);
+    font-family: 'Poppins', sans-serif;
   }
+body,
+.nav-link,
+h1,
+h2,
+h3,
+h4,
+th,
+td,
+label,
+button,
+input,
+p,
+.btn,
+select,
+span {
+  font-family: 'Poppins', sans-serif;
+}
+
   
   /* Header styles */
   header.sticky-top {

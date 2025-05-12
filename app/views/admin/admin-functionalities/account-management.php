@@ -23,6 +23,9 @@ include '../../../controllers/admin/admin-session.php';
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
       <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
       <link rel="stylesheet" href="../../../../public/assets/css/admin/admin-functionalities/account-management.css">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
       <title>Admin Homepage </title>
    </head>
    <body>
@@ -134,17 +137,20 @@ include '../../../controllers/admin/admin-session.php';
                   </tbody>
                </table>
             </div>
+            
             <!-- Pagination Container -->
             <div class="d-flex justify-content-between align-items-center px-3 py-2">
                <div id="pagination-container"></div>
+               <!-- Buttons for add -->
+               <div class="text-center my-4 ms-2">
+                  <button class="btn btn-primary me-2" data-bs-toggle="modal" data-bs-target="#addUserModal">
+                     <i class="bi bi-plus-circle"></i> Add User/Admin
+                  </button>
+               </div>
             </div>
          </div>
       </div>
 
-      <!-- Buttons for add -->
-      <div class="text-center my-4">
-         <button class="btn btn-primary me-2" data-bs-toggle="modal" data-bs-target="#addUserModal">Add User/Admin</button>
-      </div>
 
       <!-- The Modals -->
 

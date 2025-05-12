@@ -16,6 +16,9 @@ $user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : null;
       <link rel="stylesheet" href="../../../public/assets/css/user/user-review-list.css">
       <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
       <title>User Homepage </title>
    </head>
    <body>

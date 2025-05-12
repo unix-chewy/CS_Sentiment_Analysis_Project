@@ -24,6 +24,9 @@
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
       <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
       <link rel="stylesheet" href="../../../../public/assets/css/admin/admin-functionalities/view-item.css">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
       <title>Admin Homepage </title>
    </head>
    <body>
@@ -144,11 +147,15 @@
                            <!-- AJAX content goes here -->
                         </tbody>
                      </table>
+
+                     <!-- Pagination -->
                      <div class="d-flex justify-content-between align-items-center mt-2" style="width:100%;">
                         <div id="pagination-container"></div>
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#add-item-modal">
-                           <i class="bi bi-plus-circle"></i> Add Item
-                        </button>
+                        <div class="text-center my-4 ms-2">
+                           <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#add-item-modal">
+                              <i class="bi bi-plus-circle"></i> Add Item
+                           </button>
+                        </div>
                      </div>
                   </div>
                </div>
