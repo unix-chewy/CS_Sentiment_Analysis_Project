@@ -52,7 +52,6 @@ header.sticky-top {
   color: var(--text-color);
 }
 
-/* Container inside header */
 .container-fluid {
   max-width: 1200px;
   margin: 0 auto;
@@ -252,7 +251,6 @@ form.d-flex.flex-grow-1 .btn:hover {
   padding: 10px 15px;
 }
 
-/* Edit Modal Styles - Matching Shopee Color Scheme */
 #edit-item-modal .modal-content {
   background: var(--modal-bg);
   border: none;
@@ -293,7 +291,7 @@ form.d-flex.flex-grow-1 .btn:hover {
   padding: 10px 15px;
 }
 
-/* Search button specific styling */
+/* Search button  */
 #edit-item-modal .input-group .btn-primary {
   background-color: var(--primary-color);
   border-color: var(--primary-color);
@@ -304,7 +302,6 @@ form.d-flex.flex-grow-1 .btn:hover {
   border-color: var(--secondary-color);
 }
 
-/* Table styling to match Shopee's aesthetic */
 #edit-item-modal .table {
   border-color: #eee;
 }

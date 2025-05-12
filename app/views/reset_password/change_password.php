@@ -6,18 +6,28 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Change Password</title>
-    <link rel="stylesheet" href="../../../public/assets/css/login-register.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="../../../public/assets/css/reset-password.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Change Password</title>
+
+      <!-- CSS Links -->
+      <link rel="stylesheet" href="../../../public/assets/css/reset-password.css">
+
+      <!-- Bootstrap -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+      <!-- Icons -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+      <!-- jQuery -->
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+      <!-- Fonts -->
       <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   </head>
+
   <body>
     <!-- Header -->
     <header class="promo-header">
@@ -33,7 +43,7 @@
 <!-- Main Content -->
 <div class="wrapper">
   <div class="center-background-bar">
-    <div class="login-page container">
+    <div class="login-page">
       <div class="row g-0 justify-content-center">
         <!-- Right Change Password Section -->
         <div class="col-md-6 bg-white p-4 p-lg-5 right-login">
