@@ -14,6 +14,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
     <style>
+        :root {
+        --primary-color: #ff6633;
+        --secondary-color: #f53d2d;
+        --button-hover-color: #f53d2d;
+        --background-color: white;
+        --text-color: #fff;
+        --shadow-color: rgba(0, 0, 0, 0.1);
+        --price-color: #ff6633;
+        --modal-bg: #fff;
+        --rating-color: #FFBD13;
+        --hover-scale: 1.1;
+        }
         .success-container {
             height: 100vh;
             display: flex;
@@ -32,6 +44,13 @@
             color: #28a745;
             font-size: 4rem;
             margin-bottom: 1rem;
+        }
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        .btn-primary:hover {
+            background-color: var(--button-hover-color);
         }
     </style>
 </head>
