@@ -81,19 +81,6 @@
 <ownDataTypeParameters>,0,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="ADM_ROL" id="0CC6509D-1A31-1896-CDEA-4D0C5EF2BE2C">
-<createdBy>kyle</createdBy>
-<createdTime>2025-05-08 13:32:29 UTC</createdTime>
-<generatorID>19BFC375-983D-AA56-E3FB-CADEC053D4AF</generatorID>
-<ownerDesignName>shopee_erd</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>50</dataTypeSize>
-<ownDataTypeParameters>50,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
 <Column name="ADM_PER_LEV" id="E4CB70A6-EAAA-00E4-1F5C-0FE90CE980E0">
 <createdBy>kyle</createdBy>
 <createdTime>2025-05-08 13:32:29 UTC</createdTime>

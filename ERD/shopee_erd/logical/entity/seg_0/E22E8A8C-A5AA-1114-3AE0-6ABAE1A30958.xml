@@ -18,19 +18,6 @@
 <normalForm>Third</normalForm>
 <shortName>ADM</shortName>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="Role" id="19BFC375-983D-AA56-E3FB-CADEC053D4AF">
-<createdBy>kyle</createdBy>
-<createdTime>2025-05-08 11:46:35 UTC</createdTime>
-<ownerDesignName>shopee_erd</ownerDesignName>
-<engineerTo>
-<item key="0B552060-D88A-80C1-60A3-F77F974A2AE6" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>50</dataTypeSize>
-<ownDataTypeParameters>50,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="Permission Level" id="273C0ED2-F9F5-FB1B-C93E-1BE7053A10E2">
 <createdBy>kyle</createdBy>
 <createdTime>2025-05-08 11:47:03 UTC</createdTime>
