@@ -31,19 +31,6 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="PYM_AMT" id="EA107CF6-77A4-CE88-A635-45FE4D2830D1">
-<createdBy>kyle</createdBy>
-<createdTime>2025-05-08 13:14:24 UTC</createdTime>
-<generatorID>AD66CDB8-6565-D317-B280-4D51F21DC94D</generatorID>
-<ownerDesignName>shopee_erd</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT043</logicalDatatype>
-<dataTypePrecision>10</dataTypePrecision>
-<dataTypeScale>2</dataTypeScale>
-<ownDataTypeParameters>,10,2</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
 <Column name="STU" id="346713E4-AF5B-479F-F2C6-BB310425F90F">
 <createdBy>kyle</createdBy>
 <createdTime>2025-05-08 13:14:24 UTC</createdTime>
@@ -125,17 +112,6 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="6003AB47-AFFD-0872-37A2-941D2FCEEFC3"/>
-</indexColumnUsage>
-</ind_PK_UK>
-<ind_PK_UK id="7279A8A9-E111-D3F6-3D7C-2E6F000F28B3" name="ORDERS__IDX">
-<createdBy>kyle</createdBy>
-<createdTime>2025-05-08 13:14:24 UTC</createdTime>
-<ownerDesignName>shopee_erd</ownerDesignName>
-<indexState>Unique Plain Index</indexState>
-<isSurrogateKey>false</isSurrogateKey>
-<relationGeneratorID>6A1B90A4-7FD2-59DB-4E81-CF919AB02F30</relationGeneratorID>
-<indexColumnUsage>
-<colUsage columnID="992F18E9-92D5-C2D2-75A5-4A3E669A667B"/>
 </indexColumnUsage>
 </ind_PK_UK>
 <ind_PK_UK id="DBF9B972-8B8C-8204-08DC-8D588D914424" name="ORDERS__IDXv1">

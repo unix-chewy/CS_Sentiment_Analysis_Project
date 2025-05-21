@@ -86,30 +86,6 @@
 <colAssociation fkAssociation="B3CC8CF6-53A2-4881-CBC8-012229BB3EED" referredColumn="CBF1E21A-B51E-EB9F-9B59-4E18EAB5CEBA"/>
 </associations>
 </Column>
-<Column name="ID1" id="96951D01-5C9D-3520-7159-DED042ABB0DA">
-<createdBy>kyle</createdBy>
-<createdTime>2025-05-08 16:33:48 UTC</createdTime>
-<generatorID>006F5A5D-0A29-BA60-E94E-CAD3063F75C0</generatorID>
-<ownerDesignName>shopee_erd</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<previousColumn>false</previousColumn>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
-<Column name="ID2" id="687007E4-C39D-D1BD-1575-821583EECCDB">
-<createdBy>kyle</createdBy>
-<createdTime>2025-05-08 16:33:48 UTC</createdTime>
-<generatorID>0A1D5B63-6053-DD20-27CC-96FDE39EFB47</generatorID>
-<ownerDesignName>shopee_erd</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<previousColumn>false</previousColumn>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="0154B9D5-4104-3153-E045-1006CAB8747D" name="PAYMENTS_PK">

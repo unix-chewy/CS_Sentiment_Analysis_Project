@@ -7,6 +7,8 @@ $(document).ready(function() {
             window.location.href = '/CS_Sentiment_Analysis_Project/app/views/admin/admin_homepage.php';
         } else if (role === '2') {
             window.location.href = '/CS_Sentiment_Analysis_Project/app/views/user/user_homepage.php';
+        } else if (role === '3') {
+            window.location.href = '/CS_Sentiment_Analysis_Project/app/views/superadmin/superadmin_homepage.php';
         } else {
             window.location.href = '/CS_Sentiment_Analysis_Project/app/views/login.php';
         }

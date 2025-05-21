@@ -85,6 +85,7 @@ ALTER TABLE product_review_comments ADD COLUMN created_at DATETIME DEFAULT CURRE
 
 INSERT INTO roles (id, role_name) VALUES (2, 'User');
 INSERT INTO roles (id, role_name) VALUES (1, 'Admin');
+INSERT INTO roles (id, role_name) VALUES (3, 'Superadmin');
 INSERT INTO users (first_name, last_name, email, password, role_id) VALUES ('Admin', 'NaSaSu', 'Nasasu@gmail.com', MD5('adminpass'), 1);
 INSERT INTO users (first_name, last_name, email, password, role_id) VALUES ('User', 'Test', 'Test@gmail.com', MD5('pass'), 2);
 INSERT INTO categories (product_category) VALUES ('Men\'s Apparel');
